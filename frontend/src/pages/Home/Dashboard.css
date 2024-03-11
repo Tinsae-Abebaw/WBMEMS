@@ -41,6 +41,9 @@ body{
     background-color: rgba(0,0,0,0.3); 
     cursor: pointer;
 }
+.admin-dashboard-device-overview{
+    
+}
 .alert-and-notification-show{
     display: flex;
     background-color:rgba(0,0,0,0.1);
