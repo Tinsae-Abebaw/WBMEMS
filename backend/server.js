@@ -9,7 +9,8 @@ const deviceRegistrationRoutes = require('./routes/deviceRegistration');
 const loginRoutes = require('./routes/login');
 const requestRoutes = require('./routes/request');
 const notificationRoutes = require('./routes/alertAndNotification');
-
+const requestOptions= require('./routes/requestOptions');
+const reportOptions= require('./routes/reportOptions');
 // Middleware
 app.use(express.json()); // Body parser middleware
 app.use(cors());
@@ -20,8 +21,9 @@ app.use('/api/registration', registrationRoutes);
 app.use('/api/deviceRegistration', deviceRegistrationRoutes);
 app.use('/api/login', loginRoutes);
 app.use('/api/request', requestRoutes);
+app.use('/api/requestOptions', requestOptions);
 app.use('/api/alertAndNotification', notificationRoutes);
-
+app.use('/api/reportOptions',reportOptions );
 // Serve static files (like profile pictures)
 const uploadsDirectory = '/uploads';
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

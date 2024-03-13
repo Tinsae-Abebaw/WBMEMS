@@ -9,8 +9,8 @@ body{
     align-items: center;
     position: relative;
     justify-content: center;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     left: -15px;
     font-size: small;
     background-color: rgba(230, 4, 4, 0.9);
@@ -23,11 +23,9 @@ body{
     row-gap: 40px;
     column-gap: 20px;
     background-color: white;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 10px;
 }
 .admin-schedule-maintenance:hover,
 .admin-dashboard-device-overview:hover,
@@ -38,28 +36,35 @@ body{
 .reports:hover{
     box-shadow: 5px 5px 7px rgba(0,0,0,0.1);
     transition: all 0.3s ;
-    background-color: rgba(0,0,0,0.3); 
+    background-color: rgba(231, 229, 229, 0.3); 
     cursor: pointer;
+    color: black;
 }
 .admin-dashboard-device-overview{
     
 }
 .alert-and-notification-show{
     display: flex;
-    background-color:rgba(0,0,0,0.1);
+    background-color:white;
     color: black;
     padding-right: 10px;
     align-items: center;
+    font-size: large;
     height: 70px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     padding-left: 10px;
     border-radius: 5px;
     justify-content: center;
     font-family:-apple-system;
+    color: rgb(87, 85, 85);
+    font-weight: bold;
 }
 .dashboard-schedule-maintenance{
     display: flex;
-    background-color:rgba(0,0,0,0.1);
-    color: black;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    color: rgb(87, 85, 85);
+    font-weight: bold;
+    font-size: large;
     padding-right: 10px;
     align-items: center;
     height: 70px;
@@ -70,8 +75,10 @@ body{
 }
 .admin-dashboard-device-overview{
     display: flex;
-    background-color:rgba(0,0,0,0.1);
-    color: black;
+    background-color: white;
+    color: rgb(87, 85, 85);
+    font-weight: bold;
+    font-size: large;
     padding-right: 10px;
     align-items: center;
     height: 70px;
@@ -79,6 +86,7 @@ body{
     border-radius: 5px;
     justify-content: center;
     font-family:-apple-system;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 .schedule-maintenance{
     display: flex;
@@ -121,18 +129,31 @@ body{
     font-size: x-large;
     justify-content: center;
 }
-.dashboard-icons{
+.main-dashboard-icons{
     margin-right: 20px;
-    font-size: medium;
+    font-size:large;
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #910f86;
+    color: white;
+    padding: 7px;
+    border-radius: 50%;
 }
 .dashboard-icons-bell{
-    font-size: xx-large;
+    font-size: large;
+    background-color: #910f86;
+    padding: 7px;
+    color: white;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
 }
 .my-link{
     text-decoration: none;
     height: 70px;
+
 }
-weight
+
 .right-part{
   display: flex;
   flex-direction: column;
@@ -178,11 +199,13 @@ weight
     position: relative;
     flex-direction: row;
     align-items: center;
-    background: linear-gradient(to top left, #122855, #000000); /* Example gradient colors */
-    color: rgb(255, 255, 255);
-    height: 200px;
+    font-family:-apple-system;
+    background-color: black;
+    color: white;
+    height: 100px;
     padding-left: 30px;
     margin-bottom: 30px;
+    box-shadow: 2px 1px 10px rgba(106, 4, 189, 0.342);
     font-size: small;
 }
 
@@ -204,10 +227,10 @@ weight
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    background-color: rgb(208, 210, 211);
+    background-color: rgb(255, 255, 255);
     padding-right: 100px;
     padding-left: 100px;
-    column-gap: 20px;
+    column-gap: 0px;
 }
 .dashboard-bottom-bar{
     display: flex;

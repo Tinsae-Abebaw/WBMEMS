@@ -35,6 +35,7 @@ const AnnouncementForm = ({ setNotificationCount }) => {
           announcement_time,
         });
         alert('Announcement posted Successfully');
+        handleClear();
         handleNotification();
        
       } else {
@@ -79,9 +80,11 @@ const AnnouncementForm = ({ setNotificationCount }) => {
             value={description}
             onChange={handleDescriptionChange}
           />
-          <button className='announcement-button' onClick={handlePost}>Post</button>
-          <button className='clear-announcement-button' onClick={handleClear}>Clear</button>
-        </div>
+          <div className='the-two-buttons'>
+            <button className='announcement-button' onClick={handlePost}>Post</button>
+            <button className='clear-announcement-button' onClick={handleClear}>Clear</button>
+          </div>
+         </div>
       </div>
     </div> 
   );

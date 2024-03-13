@@ -111,9 +111,9 @@ const DeviceOverview = () => {
                   </div>
                   <div className='device-description'>
                     <div>
-                      <p className='device-name'>{device.equipmentName} </p>
+                      <p className='device-name'>{device.equipmentName} <div className='spot-light'>.</div></p>
                       <p className='device-model'>{device.model}</p>
-                      <p className='device-manufacturer'>{device.manufacturer}</p>
+                      <p className='device-manuf'>{device.manufacturer}</p>
                     </div>
                     
                   </div>
@@ -128,27 +128,27 @@ const DeviceOverview = () => {
         </div>
       )};
       {detailed && (
-        <div className='detailed-view-1'>
+        <div className='detailed-view-2'>
           <div className='detail-description'>
             <div className='device-profile-picture'>
               <img className='device-image' src={`http://localhost:7000/${detailed.equipmentImage}`} alt='Profile' />
             </div>
-            <div className='device-description'>
-              <div>
-                <p className='device-manufacturer'><p className='detail-title'>Equipment Name</p>{detailed.equipmentName}</p>
-                <p className='device-manufacturer'><p className='detail-title'>Equipment Model</p>{detailed.model}</p>
-                <p className='device-manufacturer'><p className='detail-title'>Manufacturer</p> {detailed.manufacturer}</p>
-                <p className='device-manufacturer'><p className='detail-title'>Description </p> {detailed.equipmentDescription}</p>
-                <p className='device-manufacturer'><p className='detail-title'>Maintenance History </p> {detailed.maintenanceHistory}</p>
-
-                <p className='device-manufacturer'><p className='detail-title'>Country of Origin </p> {detailed.countryOfOrigin}</p>
-                <p className='device-manufacturer'><p className='detail-title'>Warranty Expiry Date</p> {detailed.warrantyExpiryDate}</p>
-                <p className='device-manufacturer'><p className='detail-title'>Status </p> {detailed.status}</p>
+            <div >
+              <div className='de-device-description'>
+                  <p className='device-manufacturer'><p className='detail-title'>Equipment Name</p>{detailed.equipmentName}</p>
+                  <p className='device-manufacturer'><p className='detail-title'>Equipment Model</p>{detailed.model}</p>
+                  <p className='device-manufacturer'><p className='detail-title'>Manufacturer</p> {detailed.manufacturer}</p>
+                  <p className='device-manufacturer'><p className='detail-title'>Country of Origin </p> {detailed.countryOfOrigin}</p>
+                  <p className='device-manufacturer'><p className='detail-title'>Warranty Expiry Date</p> {detailed.warrantyExpiryDate}</p>
+                  <p className='device-manufacturer'><p className='detail-title'>Status </p> {detailed.status}</p>
               </div>
+                <div><p className='device-manufacturer'><p className='detail-title'>Description </p> {detailed.equipmentDescription}</p></div>
+            </div>
+
               <button onClick={handleClose} className='detail-close-button'>Close</button>
             </div>
           </div>
-        </div>
+       
       )}
     </div>
   );

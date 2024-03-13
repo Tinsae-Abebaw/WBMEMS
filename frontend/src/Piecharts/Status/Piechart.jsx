@@ -68,7 +68,7 @@ const Piechart = () => {
               font: {
                  weight: 'bold',
                  size:20,
-                 family: 'Arial'
+                 family: '-apple-system'
               }
             },
             
@@ -78,10 +78,11 @@ const Piechart = () => {
             text: 'Pie chart representation of Active and Disposed Devices',
             position:'bottom',
             color: 'black',
-            align: 'left',
+            align: 'center',
             font:{
               weight: 'bold',
-              size: 20,
+              family: '-apple-system',
+              size: 25,
             }
             
           }
@@ -93,7 +94,7 @@ const Piechart = () => {
   
   return (
     <div>
-      <canvas id="myPieChart2" width="300" height="200"></canvas>
+      <canvas id="myPieChart2" width="200" height="200"></canvas>
     </div>
   );
 };

@@ -1,0 +1,305 @@
+.show-request-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sort-by-requestType-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.sort-and-main{
+  margin-top: 20px;
+}
+.home-and-sort-title {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to top left, #000000, #000000);
+  color: rgb(251, 251, 251);
+  width: 100%;
+  padding-left: 50px;
+  height: 100px;
+  font-size: medium;
+  font-family: -apple-system;
+}
+.request-whole-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  background-color: rgb(247, 246, 246);
+}
+
+.sortt-by-request{
+  margin-left: 30px;
+  font-size: medium;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 150px;
+  font-family: -apple-system;
+  margin-bottom: 20px;
+  background-color: #ebebeb;
+}
+
+.sort-by-requestType-output {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 2px 7px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.request-by-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+
+
+.sort-by-requestType-desc {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: -apple-system;
+  background-color: rgb(247, 246, 246);
+}
+.department-color {
+  background-color: rgb(247, 246, 246);
+  font-size: medium;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: black;
+  background-color: rgb(216, 217, 218);
+  padding: 10px;
+  font-family: -apple-system;
+  font-size: large;
+  text-transform: capitalize; 
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.sort-by-requestType {
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.footer {
+  font-size: medium;
+  font:bold;
+  padding: 5px;
+  font-family: -apple-system;
+  background-color: rgb(247, 246, 246);
+}
+
+.when-accept-button {
+  padding: 7px;
+  background-color:green;
+  color: white;
+  border: none;
+  font-family: -apple-system;
+  font-size: medium;
+  cursor: pointer;
+  height: 33px;
+}
+.when-accept-button:hover{
+  background-color:rgb(14, 68, 14) ;
+}
+.viewReportButton{
+  padding: 7px;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 33px;
+  font-family: -apple-system;
+  font-size: medium;
+}
+
+.deleteButton {
+  display: none;
+}
+
+.detailed-view-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 14, 14, 0.5);
+  z-index: 999;
+}
+
+.detail-description-detailed {
+  background-color: rgb(220, 223, 226);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  max-height: 90vh; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+}
+
+.device-description-detailed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+}
+
+.detail-close-button1 {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 10px;
+  
+}
+
+.sort-by-request {
+  background-color: rgb(220, 223, 226);
+}
+
+.columnName {
+  color: rgb(0, 0, 0);
+  background-color: rgb(220, 223, 226);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Update the column value styles */
+.columnValue {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.assigned-to-dropdown-btn {
+  cursor: pointer;
+  
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+  margin-left: 10px;
+  width: fit-content;
+  
+}
+
+.dropdown-options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 10%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+.user-selecter {
+  border: none;
+  padding: 2px;
+  color:white;
+  height: 30px;
+  font-family: -apple-system;
+  font-size: medium;
+  background-color: #51206d;
+}
+
+@media (max-width: 600px) {
+  .sort-by-requestType-output {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 790px) {
+  .sort-by-requestType-output {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 810px) {
+  .sort-by-requestType-output {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1100px) {
+  .sort-by-requestType-output {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1350px) {
+  .sort-by-requestType-output {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .sort-by-requestType-output {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Decrease brightness on hover for buttons */
+.accept-button:hover,
+.viewReportButton:hover,
+.deleteButton:hover {
+  filter: brightness(80%);
+}
+
+/* Decrease brightness on hover for assigned-to-dropdown-btn */
+.assigned-to-dropdown-btn:hover {
+  filter: brightness(90%);
+}
+
+/* Decrease brightness on hover for dropdown options */
+.dropdown-option:hover {
+  filter: brightness(90%);
+}
+
+/* Decrease brightness on hover for user-select */
+.user-select:hover {
+  filter: brightness(90%);
+}
+
+/* Decrease brightness on hover for detail-close-button */
+.detail-close-button1:hover {
+  filter: brightness(80%);
+}
+
+/* Decrease brightness on hover for sort-by-requestType */
+.sort-by-requestType:hover {
+  filter: brightness(90%);
+}
+
+/* Decrease brightness on hover for columnValue */
+.columnValue:hover {
+  filter: brightness(90%);
+}

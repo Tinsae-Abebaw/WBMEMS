@@ -35,17 +35,17 @@ const DoctorDashboard = () => {
   };
 
     return ( 
-      <div className="main-class">
-      <div className="dashboard-home"></div>
-      <div className="right-part">
+      <div className="doctor-main-class">
+      <div className="doctor-dashboard-home"></div>
+      <div className="doctor-right-part">
         <div className="the-navigation-main-class"><DoctorSidebar/><h2 className="the-navigation-title">Navigation</h2></div>
-        <div className="sub-class">
-            <Link to='/DoctorDeviceShow' className='my-link'><div className="dashboard-device-overview"> <GrOverview className="dashboard-icons"/>Device Overview</div></Link>
+        <div className="doctor-sub-class">
+            <Link to='/DoctorDeviceShow' className='my-link'><div className="doctor-dashboard-device-overview"> <GrOverview className="dashboard-icons"/>Device Overview</div></Link>
             <Link to='/DoctorAnnouncement' className='my-link'><div className="alert-and-notification-show"><div className="bell-and-notification-count"> <IoNotifications className="dashboard-icons-bell"/> 
             <span className={NotificationCount !== 0 ? "notification-count-display" : 'notification-null-count'}>
             {NotificationCount !== null ? NotificationCount : ''}
             </span></div>Announcement Board</div></Link>          
-            <Link to ='/DoctorSortByDep' className='my-link'><div className="dashboard-schedule-maintenance"><FaSort className="dashboard-icons"/>Sort By Department</div></Link>
+            <Link to ='/DoctorSortByDep' className='my-link'><div className="doctor-sort-by-dep"><FaSort className="dashboard-icons"/>Sort By Department</div></Link>
         </div>
 
         <div className="piechart-in-the-dashboard">

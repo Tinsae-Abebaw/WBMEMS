@@ -1,0 +1,87 @@
+/* Specification.css */
+
+.specification-form-request {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  background: whitesmoke; /* Replace the URL with your desired pattern */
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 100px;
+  margin-top: 0px;
+}
+
+.Specification-Page-request {
+  display: flex;
+  align-items: center;
+  
+}
+
+.specification-title-request {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+  background: linear-gradient(to top left, #0a284a, #262930);
+  height: 100%;
+  
+}
+
+.main-specification-request1 {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+  font-weight: 500;
+  height: 100%;
+  background-color: whitesmoke;
+  
+}
+
+.individual {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 50px;
+}
+
+.specification-input {
+  outline: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  max-width: 500px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 0px 10px;
+  background-color: white;
+}
+
+.specification-description-input {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+  max-width: 500px;
+  min-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+.submit-buttonSpecification {
+  height: 30px;
+  width: 150px;
+  color: white;
+  background-color: green; /* Green color as an example, you can change it */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.submit-buttonSpecification:hover {
+  background-color: red;
+}

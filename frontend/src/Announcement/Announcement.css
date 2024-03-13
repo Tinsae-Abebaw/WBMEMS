@@ -13,24 +13,32 @@
 .under-title{
     display: flex;
     flex-direction: column;
-    background-color: rgb(214, 215, 216);
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 50px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 .home-container{
     display: flex;
     align-items: center;
-    background: linear-gradient(to top left, #0a284a, #262930); /* Example gradient colors */
+    background-color: black;   
     padding-left: 20px;
-    height: 150px;
+    height: 100px;
+    font-size: medium;
+    padding-left: 30px;
+    font-family: -apple-system;
 }
 .title-input{
     height: 30px;
     outline: none;
     border: none;
     margin-bottom: 30px;
-    border-radius: 5px;
+    border-radius: 3px;
+    background-color: #eaeaeb;
+    font-family: -apple-system;
+    font-size: medium;
+    padding-left: 5px;
 }
 .description-input{
     border: none;
@@ -43,6 +51,17 @@
     min-height: 200px;
     max-height: 200px;
     border-radius: 5px;
+    background-color: #eaeaeb;
+    font-family: -apple-system;
+    font-size: medium;
+}
+.title-label{
+    font-family: -apple-system;
+    font-size: large;
+}
+.description-label{
+    font-family: -apple-system;
+    font-size: large;
 }
 .ma{
     display: flex;
@@ -50,9 +69,21 @@
 }
 .clear-announcement-button{
     background-color: rgb(0, 0, 0);
-    margin-top: 10px;
     color: white;
+    font-size: medium;
+    font-family: -apple-system;
+    width: 100px;
+    border-radius: 5px;
 }
 .announcement-button{
-    background: linear-gradient(to top left, #0a284a, #262930); /* Example gradient colors */
+    background-color: rgb(56, 8, 78);
+    width: 100px;
+    font-size: medium;
+    font-family: -apple-system;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.the-two-buttons{
+    display: flex;
+    align-items: center;
 }

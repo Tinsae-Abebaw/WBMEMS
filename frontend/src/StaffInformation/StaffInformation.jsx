@@ -39,8 +39,8 @@ const StaffInformation = () => {
           <div className='individual-user' key={user.id}>
             <img className='image' src={`http://localhost:7000/${user.profilePicture}`} alt='Profile' />
             <div className='staff-description'>
-              <p className='staff-name'>{user.name} {user.lastName}</p>
-              <p className='staff-occupation'>{user.occupation}</p>
+              <p className='staff-name'>{user.name} {user.lastName} <div className='occ'>{user.occupation}</div></p>
+              <p className='staff-occupation'></p>
               <p className='staff-email'>{user.email}</p>
             </div> 
           </div>

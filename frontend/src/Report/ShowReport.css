@@ -1,0 +1,125 @@
+.sort-by-reportType-main-report {
+  background-color: rgb(255, 255, 255);
+  width: max-content;
+}
+@media (max-width: 1700px) {
+  .sort-by-reportType-main-report {
+    width:100%
+  }
+}
+.select-and-body-report{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-and-sort-title-report {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+  height: 100px;
+  width: 100%;
+  background-color: #000;
+  font-size: medium;
+  font-family: -apple-system;
+}
+.report-table-report {
+  border-collapse: collapse;
+  border-bottom: 1px solid #ddd;
+  margin: 20px;
+}
+
+.report-table-report th,
+.report-table-report td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-color: rgb(255, 255, 255);
+  font-family: -apple-system;
+  font-size: medium;
+}
+
+.report-table-report th {
+  font-weight: bold;
+  color: #000;
+  padding: 10px;
+  font-family: -apple-system;
+  font-size: medium;
+  background-color: rgb(235, 237, 238);
+  border-top: 1px solid #c9c7c7;
+}
+.report-table-report tr:nth-child(even) {
+  background-color: #be1010; /* Adjust this color as needed */
+}
+
+.sort-by-reportType-input-report {
+  padding: 5px;
+  margin: 20px;
+  border: none;
+  width: 200px;
+  background-color: #f0f0f0;
+  font-size: medium;
+  font-family: -apple-system;
+ 
+}
+
+.sort-by-reportType-output-report {
+  margin: 20px;
+  position: relative; /* Add relative positioning */
+}
+
+.search-container1 {
+  display: flex;
+  align-items:center;
+  margin-top: 20px;
+  font-size: medium;
+  font-family: -apple-system;
+}
+.search-input {
+  padding: 5px;
+  font-size: medium;
+  font-family: -apple-system;
+  border: none;
+  outline: none;
+  background-color: #dedfde;
+}
+
+.search-label {
+  font-family: -apple-system;
+  font-size: large;
+  margin-right: 10px;
+}
+
+
+.toggle-columns-btn,
+.export-btn-csv,
+.export-btn-pdf {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: -apple-system;
+  font-size: medium;
+}
+
+.toggle-columns-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.export-btn-csv {
+  background-color: rgb(28, 75, 122);
+  color: white;
+
+}
+
+.export-btn-pdf {
+  background-color: brown;
+  color: white;
+}
+
+.toggle-columns-btn:hover,
+.export-btn-csv:hover,
+.export-btn-pdf:hover {
+  filter: brightness(90%); 
+}

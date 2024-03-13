@@ -1,0 +1,85 @@
+/* Installation.css */
+
+.installation-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  background: whitesmoke; /* Replace the URL with your desired rose-like pattern */
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 100px;
+  margin-top: 0px;
+}
+
+.Installation-Page {
+  display: flex;
+  align-items: center;
+}
+
+.installation-title {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+  height: 100px;
+  background: linear-gradient(to top left, #0a284a, #262930);
+}
+
+.main-installation {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+  font-weight: 500;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.individual {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  min-width: 50px;
+}
+
+.installation-input {
+  outline: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  max-width: 500px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 0px 10px;
+  background-color: white;
+}
+
+.installation-description-input {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-family: "Arial", sans-serif;
+  padding: 10px;
+  max-width: 500px;
+  min-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+.submit-buttonInstallation {
+  height: 30px;
+  width: 150px;
+  color: white;
+  background-color: green;
+  /* Green color as an example, you can change it */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-left: 50px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+}
+
+.submit-buttonInstallation:hover {
+  background-color: red; /* Darker green on hover */
+}

@@ -7,11 +7,11 @@
     display: flex;
     align-items: center;
     color:white;
-    background: linear-gradient(to top left, #0a284a, #000000); 
-    padding-left: 10px;
-    width: 100%;
-    height: 200px;
-    padding-left: 20px;
+    background-color: black;    
+    padding-left: 30px;
+    height: 100px;
+    font-size: medium;
+    font-family: -apple-system;
 }
 .disposed-individual-device{
     display: flex;
@@ -21,13 +21,11 @@
    display: grid;
    column-gap: 20px;
    row-gap: 20px;
-   margin-left: 50px;
-   margin-right: 50px;
    margin-top: 30px;
-   background-color: rgb(87, 151, 206);
    padding: 20px;
    border-radius: 10px;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 250px )); /* Dynamic number of columns */
+   box-shadow: 5px 3px 5px 5px rgba(0,0,0,0.1);
 }
 .disposed-device-profile-picture{
     height: 170px;
@@ -42,23 +40,27 @@
 
 .disposed-device-name{
     color: black;
-    font-weight: 500;
+    font-family: -apple-system;
+    font-size: medium;
     padding: 5px;
-    background-color: rgb(220, 223, 226);
+    background-color: rgb(241, 242, 243);
 }
 .disposed-device-manufacturer{
     color: black;
-    font-weight: 500;
     padding:5px;
-    background-color: rgb(146, 147, 148);
+    font-family: -apple-system;
+    font-size: medium;
+    background-color: rgb(235, 236, 238);
 }
 .disposed-device-model{
-    background-color: rgb(185, 167, 167);
+    background-color: rgb(216, 213, 213);
     color: black;
     padding: 5px;
+    font-family: -apple-system;
+    font-size: medium;
 }
 .disposed-individual-device:hover{
-    box-shadow: 5px 5px 15px rgba(160, 55, 55, 0.2);
+    box-shadow: 5px 5px 15px rgba(190, 190, 190, 0.2);
     transition: all 0.3s;
     cursor: pointer;
 }

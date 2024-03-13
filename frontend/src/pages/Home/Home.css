@@ -1,52 +1,55 @@
  
-.main{
+.main-manu{
     display: flex;
     flex-direction: column;
     position: fixed;
     background-color: rgba(0, 0, 0);
     color: white;
-    font-weight: 500;
     width: fit-content;
     height:100vh;
     z-index: 100;
     top: 0;
     left:0;
     bottom: 0;
-    position: fixed;
     top: 0;
     left: -300px; /* Start off screen */
     transition: left 0.3s ease; 
-    width: 250px;
+    width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
     height: 100%;
 }
-.nav-bar{
+.home-nav-bar{
     display: flex;
+    margin-top: 10px;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
-    padding-left: 15px;
-    height: 100%;
-    padding-top: 20px;
+    line-height: 10px;
+    
 }
 .lists{
     display: flex;
     align-items: center;
-    line-height: 40px;
+    line-height: 38px;
     cursor: pointer;
     transition: all 0.5s;
     font-size: medium;
-    padding-left: 20px;
+    padding-left: 15px;
+    font-family:-apple-system;
+    color: rgb(150, 149, 149);
 }
 .lists:hover{
-    color: rgb(63, 165, 212);
+    color: rgb(255, 255, 255);
+    background-color: rgba(28, 28, 29, 0.918);
+    border-radius: 5px;
 }
 .icons{
-    margin-right: 10px;
-    
+    margin-right: 10px;  
 }
 .close-button{
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     text-align: center;
     border-radius: 50%;
     right: 0;
@@ -54,21 +57,20 @@
     margin-top: 10px;
     color: white;
     cursor:pointer; 
+    font-weight: bold;
 }
 .link{
     text-decoration: none;
     color: white;
 }
-.section-one{
-    background-color: rgba(11, 61, 107);
-}
 .hum-button{
     background: none;
     display: flex;
-    color: rgb(254, 254, 254);
-    font-size: larger;
+    color: white;
+    font-size: medium;
     margin-right: 20px;
     height: 100px;
+    font-family: -apple-system;
 }
   .open {
     left: 0; 

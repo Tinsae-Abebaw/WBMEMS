@@ -21,11 +21,12 @@
     row-gap: 20px;
     column-gap: 20px;
     height: 100%;
-    background-color: rgb(231, 222, 222);
+    background-color: rgb(255, 255, 255);
     grid-template-columns: repeat(auto-fit, minmax(200px, 250px )); /* Dynamic number of columns */
     padding: 20px;
     border-radius: 10px;
     margin-top: 30px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 @media (min-width: 600px) {
     .device-table {
@@ -67,38 +68,56 @@
 }
 
 .device-name{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
     color: black;
     font-weight: 500;
     padding: 5px;
-    background-color: rgb(220, 223, 226);
+    background-color: rgb(245, 244, 244);
     
 }
-.device-manufacturer{
+.device-manuf{
     color: black;
     font-weight: 500;
     padding:5px;
-    background-color: rgb(213, 214, 216);
+    background-color: rgb(248, 248, 248);
 }
+
 .device-main{
     display: flex;
     align-items: center;
-    background: linear-gradient(to top left, #0a284a, #262930); /* Example gradient colors */
-    color: rgb(251, 251, 251);
+    background-color: black;
+    color: white;
     padding-left: 50px;
-    height: 150px;
-    font-size:small;
+    height: 100px;
+    font-size: medium;
+    font-family: -apple-system;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
-.device-description{
+.de-device-description{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
 }
 .dispose-button{
-    background-color: rgb(19, 40, 63);
+    background-color: rgb(126, 10, 10);
     color: white;
     width: 100%;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
+    font-family: -apple-system;
+    font-size: medium;
+}
+.spot-light{
+  background-color: green;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  color: white;
+}
+.dispose-button:hover{
+  transition: all 0.3s;
 }
 .grand-device{
     
@@ -108,7 +127,7 @@
     
 }
 .device-model{
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(224, 220, 220);
     color: black;
     padding: 5px;
 }
@@ -161,7 +180,7 @@
   }
  
  
-.detailed-view-1 {
+.detailed-view-2 {
     position: fixed; /* Change from absolute to fixed */
     top: 0;
     right: 0;
@@ -188,12 +207,23 @@
   
   }
 .detail-title{
-    color: white;
-    background-color: #0a284a;
-    padding-right: 10px;
-    padding-left: 10px;
+    color: black;
+    font-weight: bold;
+    padding: 3px;
+    font-family: -apple-system;
+    font-size: large;
+    background-color: #ece8e8;
+}
+.device-manufacturer{
+  color: black;
+  font-weight: 500;
+  padding:5px;
+  font-size: large;
+  font-family:-apple-system;
+  background-color: rgb(255, 255, 255);
 }
  .detail-close-button{
     background-color: #0a284a;
+    margin-top: 20px;
  }
-  
+ 

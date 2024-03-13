@@ -6,13 +6,14 @@ import { GrOverview } from "react-icons/gr";
 import { MdOutlinePendingActions } from "react-icons/md";
 import { FaSort } from "react-icons/fa";
 import { TbReportAnalytics } from "react-icons/tb";
-import { GrSchedule } from "react-icons/gr";
+import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Home from "./Home";
 import Piechart from "../../Piecharts/Status/Piechart";
 import PieDepartment from "../../Piecharts/Department/pieDepartment";
 import axios from "axios";
 import BarChart from "../../Piecharts/BarChart";
+
 
 
 const Dashboard = () => {
@@ -36,20 +37,19 @@ const Dashboard = () => {
   };
   return (    
     <div className="main-class">
-      <div className="dashboard-home"></div>
       <div className="right-part">
         <div className="the-navigation-main-class"><Home/><h2 className="the-navigation-title">Navigation</h2></div>
         <div className="admin-sub-class">
-            <Link to='/DeviceOverview' className='my-link'><div className="admin-dashboard-device-overview"> <GrOverview className="dashboard-icons"/>Device Overview</div></Link>
+            <Link to='/DeviceOverview' className='my-link'><div className="admin-dashboard-device-overview"> <GrOverview className="main-dashboard-icons"/>Device Overview</div></Link>
             <Link to='/AnnouncementDisplay' className='my-link'><div className="alert-and-notification-show"><div className="bell-and-notification-count"> <IoNotifications className="dashboard-icons-bell"/> 
             <span className={NotificationCount !== 0 ? "notification-count-display" : 'notification-null-count'}>
             {NotificationCount !== null ? NotificationCount : ''}
             </span></div>Announcement Board</div></Link>
-            <Link className="my-link" to='/workorder'> <div className="dashboard-schedule-maintenance"> <GrSchedule className="dashboard-icons"/>Schedule Maintenance</div></Link>
+            <Link className="my-link" to='/workorder'> <div className="dashboard-schedule-maintenance"> <FaRegCalendarAlt className="main-dashboard-icons"/>Schedule Maintenance</div></Link>
           
-            <div className="dashboard-schedule-maintenance"><MdOutlinePendingActions className="dashboard-icons"/>Pending Requests</div>
-            <Link to ='/SortByDepartment' className='my-link'><div className="dashboard-schedule-maintenance"><FaSort className="dashboard-icons"/>Sort By Department</div></Link>
-            <div className="dashboard-schedule-maintenance"> <TbReportAnalytics className="dashboard-icons"/>Reports</div>
+            <div className="dashboard-schedule-maintenance"><MdOutlinePendingActions className="main-dashboard-icons"/>Pending Requests</div>
+            <Link to ='/SortByDepartment' className='my-link'><div className="dashboard-schedule-maintenance"><FaSort className="main-dashboard-icons"/>Sort By Department</div></Link>
+            <Link to='/Report' className="my-link"><div className="dashboard-schedule-maintenance"> <TbReportAnalytics className="main-dashboard-icons"/>Reports</div></Link>
 
         </div>
 
