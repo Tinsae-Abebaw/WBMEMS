@@ -40,6 +40,9 @@ body{
     cursor: pointer;
     color: black;
 }
+.admin-dashboard-device-overview{
+    
+}
 .alert-and-notification-show{
     display: flex;
     background-color:white;
