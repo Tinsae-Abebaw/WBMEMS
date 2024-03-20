@@ -60,6 +60,13 @@ const CreateAccount = () => {
         email.length > 0 && password.length > 0 &&
         occupation.length > 0
         ){
+            // Validate email address format
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+              alert('Please enter a valid email address');
+              return;
+            }
+
             const formData = new FormData();
             formData.append('name', name);
             formData.append('lastName', lastName);
@@ -81,11 +88,16 @@ const CreateAccount = () => {
           alert('please fill all fields')
         }  
     } catch (error) {
+  
       console.error('Error in Registration:', error);
+      if(error.message==='Request failed with status code 400'){
+        alert('Invalid E-mail, Please Enter the correct E-mail');
+      }else if(error.message==='Request failed with status code 500') {
+        alert('Taken User-Name, E-mail or Phone-Number')
+      }   
+    
     }
   };
-
-  
 
   return (
     <div className="createAccount-section">

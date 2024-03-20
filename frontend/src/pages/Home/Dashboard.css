@@ -65,8 +65,8 @@ body{
     justify-content: center;
 }
 .main-dashboard-icons{
-    margin-right: 20px;
-    font-size:medium;
+    margin-right: 10px;
+    font-size: medium;
     min-width: 15px;
     min-height:15px;
     background-color: #910f86;
@@ -179,11 +179,10 @@ body{
 }
 .analytical-device-data{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 20px;
     border-radius: 10px;
-
-   
+    padding:10px;
 }
 .analytical-data-and-buttons{
     display: flex;
@@ -198,3 +197,22 @@ body{
     border-radius: 10px;
     width: 100%;
 }
+@media (min-width: 500px) {
+    .the-two-doughnuts {
+        display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+@media (min-width: 900px) {
+    .the-two-doughnuts {
+        display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+@media (min-width: 1300px) {
+    .the-two-doughnuts {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+  }
+ 

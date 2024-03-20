@@ -153,6 +153,8 @@ const RequestForEngineer = () => {
             equipmentType: selectedRequest.equipmentType,
             department: selectedRequest.department,
             Model: selectedRequest.Model,
+            serialNumber:selectedRequest.serialNumber,
+            manufacturer:selectedRequest.manufacturer,
             requestedBy:selectedRequest.requestedBy,
             reportType:selectedRequest.requestType,
             doneBy:`${user.name} ${user.lastName}`,
@@ -170,6 +172,8 @@ const RequestForEngineer = () => {
               equipmentType: selectedRequest.equipmentType,
               department: selectedRequest.department,
               Model: selectedRequest.Model,
+              serialNumber:selectedRequest.serialNumber,
+              manufacturer:selectedRequest.manufacturer,
               requestedBy:selectedRequest.requestedBy,
               reportType:selectedRequest.requestType,
               doneBy:`${user.name} ${user.lastName}`,
@@ -187,6 +191,8 @@ const RequestForEngineer = () => {
               equipmentType: selectedRequest.equipmentType,
               department: selectedRequest.department,
               Model: selectedRequest.Model,
+              serialNumber:selectedRequest.serialNumber,
+              manufacturer:selectedRequest.manufacturer,
               requestedBy:selectedRequest.requestedBy,
               reportType:selectedRequest.requestType,
               doneBy:`${user.name} ${user.lastName}`,
@@ -205,6 +211,8 @@ const RequestForEngineer = () => {
             equipmentType: selectedRequest.equipmentType,
             department: selectedRequest.department,
             Model: selectedRequest.Model,
+            serialNumber:selectedRequest.serialNumber,
+            manufacturer:selectedRequest.manufacturer,
             requestedBy:selectedRequest.requestedBy,
             reportType:selectedRequest.requestType,
             doneBy:`${user.name} ${user.lastName}`,
@@ -252,8 +260,7 @@ const RequestForEngineer = () => {
     
       const handleFormSubmitMaintenance = async () => {
         // Perform form validation
-        if (!maintenanceFormData.serialNumber ||
-           !maintenanceFormData.manufacturer ||
+        if (
            !maintenanceFormData.location || 
            !maintenanceFormData.maintenanceDescription || 
            !maintenanceFormData.tasksPerformed || 
@@ -310,8 +317,7 @@ const RequestForEngineer = () => {
       const handleFormSubmitCalibration = async () => {
         // Perform form validation
         if (
-          !calibrationFormData.manufacturer ||
-          !calibrationFormData.serialNumber ||
+          
           !calibrationFormData.location ||
           !calibrationFormData.proceduresDescription||
           !calibrationFormData.calibrationResultsSummary||
@@ -378,8 +384,7 @@ const RequestForEngineer = () => {
         // Perform form validation
         if (
           
-          !specificationFormData.manufacturer ||
-          !specificationFormData.serialNumber ||
+          
           !specificationFormData.purpose||
           !specificationFormData.specificationDetail||
           !specificationFormData.majorComplaint||
@@ -430,8 +435,7 @@ const RequestForEngineer = () => {
         // Perform form validation
         if (
          
-          !installationFormData.manufacturer ||
-          !installationFormData.serialNumber ||
+          
           !installationFormData.location ||
           !installationFormData.recommendation||
           !installationFormData.doneBy||
@@ -684,29 +688,7 @@ const RequestForEngineer = () => {
     <div className="Maintenance-Report-Form-title">Maintenance Report Form</div>
     <div className="maintenanceReport">
       
-      <label className="maintenance-label">
-      <div className='maintenancelabel'>Serial Number</div> 
-        <input
-          type="text"
-          name="serialNumber"
-          value={maintenanceFormData.serialNumber}
-          onChange={maintenanceHandleChange}
-          className="maintenance-input-report"
-          required
-        />
-      </label>
-
-      <label className="maintenance-label">
-      <div className='maintenancelabel'>Manufacturer</div> 
-        <input
-          type="text"
-          name="manufacturer"
-          value={maintenanceFormData.manufacturer}
-          onChange={maintenanceHandleChange}
-          className="maintenance-input-report"
-          required
-        />
-      </label>
+      
 
       <label className="maintenance-label">
       <div className='maintenancelabel'>Location </div>
@@ -840,30 +822,7 @@ const RequestForEngineer = () => {
   <div className="detailed-description-calibrationReport">
     <div className="Maintenance-Report-Form-title">Calibration Report Form</div>
     <div className="calibration-report">
-      <label className="calibration-label">
-        <div className='calibration-label-text'>Manufacturer</div>
-        <input
-          type="text"
-          name="manufacturer"
-          value={calibrationFormData.manufacturer}
-          onChange={calibrationHandleChange}
-          required
-          className="calibration-input-report"
-        />
-      </label>
-
-      <label className="calibration-label">
-        <div className='calibration-label-text'>Serial Number</div>
-        <input
-          type="text"
-          name="serialNumber"
-          value={calibrationFormData.serialNumber}
-          onChange={calibrationHandleChange}
-          required
-          className="calibration-input-report"
-        />
-      </label>
-
+      
       <label className="calibration-label">
         <div className='calibration-label-text'>Location</div>
         <input
@@ -1026,29 +985,7 @@ const RequestForEngineer = () => {
     <div className="detailed-description-specificationReport">
       <div className="Specification-Report-Form-title">Specification Report Form</div>
       <div className="specification-report">
-        <label className="specification-label">
-          <div className='specification-label-text'>Serial Number</div>
-          <input
-            type="text"
-            name="serialNumber"
-            value={specificationFormData.serialNumber}
-            onChange={specificationHandleChange}
-            required
-            className="specification-input-report"
-          />
-        </label>
-
-        <label className="specification-label">
-          <div className='specification-label-text'>Manufacturer</div>
-          <input
-            type="text"
-            name="manufacturer"
-            value={specificationFormData.manufacturer}
-            onChange={specificationHandleChange}
-            required
-            className="specification-input-report"
-          />
-        </label>
+        
 
         <label className="specification-label">
           <div className='specification-label-text'>Location</div>
@@ -1128,27 +1065,7 @@ const RequestForEngineer = () => {
     <div className="detailed-description-installationReport">
       <div className="Installation-Report-Form-title">Installation Report Form</div>
       <div className="installation-report">
-        <label className="installation-label">
-          <div className='installation-label-text'>Manufacturer</div>
-          <input
-            type="text"
-            name="manufacturer"
-            value={installationFormData.manufacturer}
-            onChange={(e) => installationHandleChange(e)}
-            className="installation-input-report"
-          />
-        </label>
-
-        <label className="installation-label">
-          <div className='installation-label-text'>Serial Number</div>
-          <input
-            type="text"
-            name="serialNumber"
-            value={installationFormData.serialNumber}
-            onChange={(e) => installationHandleChange(e)}
-            className="installation-input-report"
-          />
-        </label>
+        
 
         <label className="installation-label">
           <div className='installation-label-text'>Location</div>

@@ -40,21 +40,26 @@ router.post('/procurement', async (req, res) => {
 router.post('/calibration', async (req, res) => {
   try {
     const { equipmentName,
-    equipmentType,
-    equipmentModel,
-    department,
-    calibrationReason,
-    calibrationType,
-    calibrationDueDate,
-    requestDate ,
-    requestedBy} = req.body;
+          
+      equipmentModel,
+      department,
+      manufacturer,
+      serialNumber,
+      calibrationReason,
+      calibrationType,
+      calibrationDueDate,
+      requestDate,
+      requestedBy,
+    } = req.body;
 
     // Create a new Calibration instance using the Sequelize model
     const calibration = await Requests.create({
       equipmentName:equipmentName,
-      equipmentType:equipmentType,
+      
       Model:equipmentModel,
       department:department,
+      manufacturer,
+      serialNumber,
       calibrationReason:calibrationReason,
       calibrationType:calibrationType,
       calibrationDueDate:calibrationDueDate,
@@ -75,8 +80,10 @@ router.post('/calibration', async (req, res) => {
 router.post('/maintenance', async (req, res) => {
   try {
     const { equipmentName,
-      equipmentType,
+      
       equipmentModel,
+      manufacturer,
+      serialNumber,
       department,
       issue,
       priority,
@@ -87,8 +94,10 @@ router.post('/maintenance', async (req, res) => {
     // Create a new Maintenance instance using the Sequelize model
     const maintenance = await Requests.create({
           equipmentName:equipmentName,
-          equipmentType:equipmentType,
+          
           Model:equipmentModel,
+          manufacturer,
+          serialNumber,
           department:department,
           maintenanceIssue:issue,
           maintenancePriority:priority,
@@ -110,7 +119,7 @@ router.post('/specification', async (req, res) => {
   try {
     const {
       equipmentName,
-      equipmentType,
+    
       model,
       serialNumber,
       manufacturer,
@@ -124,7 +133,7 @@ router.post('/specification', async (req, res) => {
     // Create a new Specification instance using the Sequelize model
     const specification = await Requests.create({
       equipmentName:equipmentName,
-      equipmentType:equipmentType,
+     
       Model:model,
       serialNumber:serialNumber,
       manufacturer:manufacturer,
@@ -148,7 +157,8 @@ router.post('/training', async (req, res) => {
   try {
     const {
       equipmentName,
-      equipmentType,
+      serialNumber,
+      manufacturer,
       model,
       department,
       traineeType,
@@ -162,8 +172,10 @@ router.post('/training', async (req, res) => {
     // Create a new training instance using the Sequelize model
     const training = await Requests.create({
       equipmentName:equipmentName,
-      equipmentType:equipmentType,
+      
       Model:model,
+      serialNumber,
+      manufacturer,
       department:department,
       traineeType:traineeType,
       trainingLevel:level,
@@ -186,11 +198,12 @@ router.post('/installation', async (req, res) => {
   try {
     const {
       equipmentName,
-      equipmentType,
+      
       model,
-      serialNumber,
       manufacturer,
+      serialNumber,
       department,
+      specification,
       description,
       dueDate,
       requestDate,
@@ -200,10 +213,11 @@ router.post('/installation', async (req, res) => {
     // Create a new installation instance using the Sequelize model
     const installation = await Requests.create({
       equipmentName:equipmentName,
-      equipmentType:equipmentType,
+      
       Model:model,
       serialNumber:serialNumber,
       manufacturer:manufacturer,
+      installationSpecification:specification,
       department:department,
       installationDescription:description,
       installationDueDate:dueDate,

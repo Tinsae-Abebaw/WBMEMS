@@ -1,106 +1,46 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import axios from "axios";
 import './Calibration.css';
 import DoctorSidebar from "../../DoctorSidebar";
 
 const CalibrationForm = () => {
   const [equipmentName, setEquipmentName] = useState('');
-  const [equipmentType, setEquipmentType] = useState('');
   const [equipmentModel, setEquipmentModel] = useState('');
   const [department, setDepartment] = useState('');
+  const[manufacturer,setManufacturer]= useState('');
+  const [serialNumber, setSerialNumber] = useState('');
   const [calibrationReason, setCalibrationReason] = useState('');
   const [calibrationType, setCalibrationType] = useState('');
-  const [dueDate, setDueDate] = useState('');
+  const [calibrationDueDate,setCalibrationDueDate ] = useState('');
   const [user, setUser] = useState(() => {
-    // Retrieve user data from local storage on component mount
     const storedUserData = localStorage.getItem('userData');
     return storedUserData ? JSON.parse(storedUserData) : null;
   });
+  const [inventory, setInventory] = useState([]);
 
-  const equipmentOptions = [
-    'X-ray Machine',
-    'Magnetic Resonance Imaging (MRI) Scanner',
-    'Computed Tomography (CT) Scanner',
-    'Ultrasound Machine',
-    'Electrocardiogram (ECG or EKG) Machine',
-    'Blood Pressure Monitor',
-    'Ventilator',
-    'Defibrillator',
-    'Infusion Pump',
-    'Anesthesia Machine',
-    'Patient Monitor',
-    'Pulse Oximeter',
-    'Electroencephalogram (EEG) Machine',
-    'Holter Monitor',
-    'Surgical Light',
-    'Operating Room Table',
-    'Surgical Microscope',
-    'Electrosurgical Unit',
-    'Centrifuge',
-    'Microscope',
-    'Autoclave',
-    'Blood Analyzer',
-    'Wheelchair',
-    'Crutches',
-    'Walker',
-    'Dental Chair',
-    'Dental X-ray Machine',
-    'Dental Drill',
-    'Linear Accelerator (used in Radiation Therapy)',
-    'Radiation Therapy Planning System',
-    'Blood Glucose Meter',
-    'Spirometer',
-    'Ambulance Stretcher',
-    'Patient Transfer Board',
-    'Hospital Bed',
-  ];
+  useEffect(() => {
+    
+    fetchInventory();
+  }, []); // Fetch inventory on component mount
 
-  const equipmentCategories = [
-    'Diagnostic Equipment',
-    'Life Support Equipment',
-    'Surgical Equipment',
-    'Laboratory Equipment',
-    'Rehabilitation Equipment',
-    'Dental Equipment',
-    'Diagnostic Testing Equipment',
-    'Patient Transport Equipment',
-  ];
-
-  const departments = [
-    'Emergency Department (ED)',
-    'Medical-Surgical Units',
-    'Intensive Care Unit (ICU)',
-    'Operating Room (OR)',
-    'Labor and Delivery (L&D)',
-    'Maternity Ward',
-    'Pediatrics ',
-    'Radiology Department',
-    'Laboratory',
-    'Pharmacy',
-    'Physical Therapy Department',
-    'Occupational Therapy Department',
-    'Respiratory Therapy Department',
-    'Cardiology Department',
-    'Neurology Department',
-    'Gastroenterology Department',
-    'Endocrinology Department',
-  ];
-
+  const fetchInventory = async () => {
+    try {
+      const response = await axios.get('http://localhost:7000/api/contract/inventory');
+      setInventory(response.data);
+    } catch (error) {
+      console.error('Error fetching inventory:', error);
+    }
+  };
 
   const handleEquipmentName = (e) => {
-    setEquipmentName(e.target.value);
-  };
-
-  const handleEquipmentType = (e) => {
-    setEquipmentType(e.target.value);
-  };
-
-  const handleEquipmentModel = (e) => {
-    setEquipmentModel(e.target.value);
-  };
-
-  const handleDepartment = (e) => {
-    setDepartment(e.target.value);
+    const selectedEquipment = inventory.find(item => item.equipmentName === e.target.value);
+    if (selectedEquipment) {
+      setEquipmentName(selectedEquipment.equipmentName);
+      setEquipmentModel(selectedEquipment.model);
+      setDepartment(selectedEquipment.equipmentDepartment);
+      setSerialNumber(selectedEquipment.serialNumber);
+      setManufacturer(selectedEquipment.manufacturer);
+    }
   };
 
   const handleReason = (e) => {
@@ -111,56 +51,53 @@ const CalibrationForm = () => {
     setCalibrationType(e.target.value);
   };
 
+  
+
   const handleDueDate = (e) => {
-    setDueDate(e.target.value);
+    setCalibrationDueDate (e.target.value);
   };
 
   const handleFormSubmit = async () => {
     try {
-      if (!equipmentName ||
-         !calibrationReason || 
-         !dueDate|| 
-         !equipmentModel||
-         !department
-         ) {
+      if (!equipmentName || !calibrationReason || !calibrationDueDate || !equipmentModel || !department || !serialNumber) {
         alert('Please fill all mandatory fields!');
       } else {
         const today = new Date();
-      const formattedDate = today.toLocaleString('en-US', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true,
-        
-      });
-
+        const formattedDate = today.toLocaleString('en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true,
+        });
 
         const formData = {
           equipmentName,
-          equipmentType,
           equipmentModel,
           department,
+          manufacturer,
+          serialNumber,
           calibrationReason,
           calibrationType,
-          dueDate,
+          calibrationDueDate,
           requestDate: formattedDate,
-          requestedBy:`${user.name} ${user.lastName}`,
-          
+          requestedBy: `${user.name} ${user.lastName}`,
         };
 
         await axios.post('http://localhost:7000/api/requestOptions/calibration', formData);
         alert('Calibration request submitted successfully');
 
+        // Reset form fields after submission
         setEquipmentName('');
-        setEquipmentType('');
+        
         setEquipmentModel('');
         setDepartment('');
+        setSerialNumber('');
         setCalibrationReason('');
         setCalibrationType('');
-        setDueDate('');
+        setCalibrationDueDate('');
       }
     } catch (error) {
       console.error('Error submitting calibration request:', error);
@@ -169,10 +106,13 @@ const CalibrationForm = () => {
 
   return (
     <div className="main-calibration">
-      <div className="calibration-title"><DoctorSidebar /><h2 className="Calibration-Page">Calibration Form</h2></div>
+      <div className="calibration-title">
+        <DoctorSidebar/>
+        <h2 className="Calibration-Page">Calibration Form</h2>
+      </div>
       <div className="calibration-form">
-        <div className="calibration-individual">
-          <label className="calibration-form-label">Equipment Name*</label>
+        <div className="individual">
+          <label>Equipment Name*</label>
           <select
             className="calibration-input"
             required
@@ -180,67 +120,56 @@ const CalibrationForm = () => {
             onChange={handleEquipmentName}
           >
             <option value="">Select Equipment</option>
-        {equipmentOptions.map((equipment, index) => (
-          <option key={index} value={equipment}>
-            {equipment}
-          </option>
-        ))}
+            {inventory.map((item, index) => (
+              <option key={index} value={item.equipmentName}>
+                {item.equipmentName}
+              </option>
+            ))}
           </select>
         </div>
-        <div className="calibration-individual">
-          <label className="calibration-form-label">Equipment Type*</label>
-          <select
-            className="calibration-input"
-            required
-            value={equipmentType}
-            onChange={handleEquipmentType}
-          >
-             <option value="">Select Equipment Type</option>
-            {equipmentCategories.map((category, index) => (
-          <option key={index} value={category}>
-            {category}
-          </option>
-        ))}
-          </select>
-        </div>
-        <div className="calibration-individual">
-          <label className="calibration-form-label">Equipment Model*</label>
+        
+        <div className="individual">
+          <label>Equipment Model*</label>
           <input
             className="calibration-input"
             type="text"
             value={equipmentModel}
-            onChange={handleEquipmentModel}
+            onChange={() => {}} // Equipment model is populated based on selected equipment
+            readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="calibration-individual">
-          <label className="calibration-form-label">Department*</label>
-          <select
+        <div className="individual">
+          <label>Department*</label>
+          <input
             className="calibration-input"
-            required
+            type="text"
             value={department}
-            onChange={handleDepartment}
-          >
-            <option value="">Select department</option>
-        {departments.map((department, index) => (
-          <option key={index} value={department}>
-            {department}
-          </option>
-        ))}
-          </select>
+            onChange={() => {}} // Department is populated based on selected equipment
+            readOnly // Assuming department is not editable
+          />
         </div>
-        <div className="calibration-individual">
-         <label className="calibration-form-label">Due Date</label>
+        <div className="individual">
+          <label>Serial Number*</label>
+          <input
+            className="calibration-input"
+            type="text"
+            value={serialNumber}
+            onChange={() => {}} // Serial number is populated based on selected equipment
+            readOnly // Assuming equipment model is not editable// Assuming serial number is not editable
+          />
+        </div>
+        <div className="individual">
+          <label>Due Date</label>
           <input
             className="calibration-input"
             type="date"
             required
-            value={dueDate}
+            value={calibrationDueDate }
             onChange={handleDueDate}
           />
         </div>
-        
-        <div className="calibration-individual">
-          <label className="calibration-form-label">Calibration Type</label>
+        <div className="individual">
+          <label>Calibration Type</label>
           <select
             className="calibration-input"
             value={calibrationType}
@@ -252,8 +181,8 @@ const CalibrationForm = () => {
             <option value="Type 3">Type 3</option>
           </select>
         </div>
-        <div className="calibration-individual">
-          <label className="calibration-form-label">Reason</label>
+        <div className="individual">
+          <label>Reason</label>
           <textarea
             className="calibration-description-input"
             required
@@ -263,12 +192,10 @@ const CalibrationForm = () => {
         </div>
       </div>
       <div>
-      <button className="submit-buttonCalibration" onClick={handleFormSubmit}>
-        Submit Request
-      </button>
+        <button className="submit-buttonCalibration" onClick={handleFormSubmit}>
+          Submit Request
+        </button>
       </div>
-
-      
     </div>
   );
 };

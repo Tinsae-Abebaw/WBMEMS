@@ -15,7 +15,8 @@
     height: 100px;
     border-radius: 5px;
     margin: 10px;
-    width: 170px;
+    min-width: fit-content;
+    max-width: 100%;
     font-size: medium;
     font-family: -apple-system;
 }
@@ -61,3 +62,41 @@
     background-color:rgba(32, 164, 168, 0.247) ;
     color: rgb(13, 162, 189);
 }
+
+@media (min-width: 500px) {
+    .main-analysis {
+        display: grid;
+      grid-template-columns: 1fr 1fr ;
+    }
+  }
+@media (min-width: 660px) {
+    .main-analysis {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+@media (min-width: 920px) {
+    .main-analysis {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+@media (min-width: 1157px) {
+    .main-analysis {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+@media (min-width: 1400px) {
+    .main-analysis {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+@media (min-width: 1336px) {
+    .main-analysis {
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+ 

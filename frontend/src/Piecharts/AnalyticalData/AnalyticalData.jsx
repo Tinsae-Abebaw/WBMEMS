@@ -4,7 +4,6 @@ import './AnalyticalData.css';
 import { MdDevices } from "react-icons/md";
 import { FaSackDollar } from "react-icons/fa6";
 import { BsFillChatSquareQuoteFill } from "react-icons/bs";
-import { FcAcceptDatabase } from "react-icons/fc";
 import { MdOutlinePendingActions } from "react-icons/md";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { BiSolidSave } from "react-icons/bi";
