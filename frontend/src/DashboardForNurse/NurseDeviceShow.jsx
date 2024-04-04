@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './DoctorDeviceShow.css';
-import Home from '../pages/Home/Home';
+import './NurseDeviceShow.css';
 import { RiErrorWarningLine } from "react-icons/ri";
-import DoctorSidebar from './DoctorSidebar';
+import NurseSidebar from './NurseSidebar';
 
 
-const DoctorDeviceOverview = () => {
+const NurseDeviceOverview = () => {
   const [deviceOverview, setDeviceOverview] = useState([]);
   const [warning, setWarning] = useState(false);
   const [idHolder, setIdHolder] = useState(null);
@@ -114,7 +113,7 @@ const DoctorDeviceOverview = () => {
        {(
         <div className='grand-device-doctor'>
           <div className='device-main-doctor'>
-            <div><DoctorSidebar/></div>
+            <div><NurseSidebar/></div>
             <h2>Device Information</h2>
           </div>
           <div className='device-table-doc'>
@@ -164,4 +163,4 @@ const DoctorDeviceOverview = () => {
     </div>
   );
   }
-export default DoctorDeviceOverview;
+export default NurseDeviceOverview;

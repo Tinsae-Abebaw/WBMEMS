@@ -1,0 +1,244 @@
+.training-container {
+  padding: 20px;
+}
+
+.training-home-and-sort-title {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: black;
+  color: white;
+  font-size: large;
+  font-family: -apple-system;
+}
+
+.training-home-and-sort-title h2 {
+  margin-left: 10px;
+}
+
+.training-search-and-export {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.training-export-buttons {
+  display: flex;
+}
+
+.export-btn-csv,
+.export-btn-pdf {
+  margin-right: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.export-btn-csv:hover,
+.export-btn-pdf:hover {
+  background-color: #0056b3;
+}
+
+.search-container {
+  position: relative;
+  width: 200px;
+}
+
+.search-icon1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.training-search-input {
+  padding: 8px 30px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+.training-form-input{
+  color: rgb(0, 0, 0);
+  padding-left: 5px;
+  border: 1px solid rgb(204, 200, 200);
+  height: 40px;
+  outline: none;
+  background-color: rgb(255, 252, 252);
+  border-radius: 3px;
+  
+
+
+}
+.add-training-btn {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-training-btn:hover {
+  background-color: #218838;
+}
+
+.training-form-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(255, 252, 252);
+}
+.training-form-group-main{
+  width: 100%;
+
+  border-radius: 8px;
+  font-family: -apple-system;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  gap: 15px;
+}
+.training-form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.training-form-title{
+
+  font-size: x-large;
+  font-family: -apple-system;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.training-training-form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.add-btn,
+.cancel-btn {
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover,
+.cancel-btn:hover {
+  background-color: #0056b3;
+}
+
+.training-table-container {
+  margin-top: 20px;
+}
+
+.main-training-management-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.training-management-thead {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: left;
+  font-family: -apple-system;
+  font-size: medium;
+}
+
+.training-management-table-fields {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  font-family: -apple-system;
+  font-size: medium;
+}
+
+.training-detail-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.training-detail-button:hover {
+  background-color: #0056b3;
+}
+
+.detailed-view-1-Training-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-description-detailed-Training-detail {
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.detail-description-detailed-Training-detail .Training-agreement-detail {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.device-description-detailed-Training-detail {
+  margin-top: 10px;
+}
+
+.sort-by-Training-detail {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.columnName-Training-detail {
+  font-weight: bold;
+  width: 150px;
+}
+
+.columnValue-Training-detail {
+  flex: 1;
+}
+
+.detail-close-button-Training-detail {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.detail-close-button-Training-detail:hover {
+  background-color: #c82333;
+}

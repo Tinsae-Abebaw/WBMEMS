@@ -1,0 +1,279 @@
+body{
+    overflow-y:auto;
+    overflow-x: auto;
+    background-color:rgb(219, 215, 215);
+ }
+ .analytical-data-and-buttons{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+ }
+ .dashboard-icons-bell-doc{
+    background-color: rgb(90, 4, 4);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+ }
+ .notification-count-display{
+     display: flex;
+     align-items: center;
+     position: relative;
+     justify-content: center;
+     height: 20px;
+     width: 20px;
+     left: -15px;
+     top: -4px;
+     border: 2px solid rgb(255, 255, 255);
+     font-size: small;
+     font-family: -apple-system;
+     background-color: rgb(133, 86, 86);
+     border-radius: 50%;
+     color: white;
+ }
+ .doctor-sub{
+    row-gap: 40px;
+    column-gap: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+ }
+ .admin-schedule-maintenance:hover,
+ .doctor-dashboard-device-overview:hover,
+ .pending-requests:hover,
+ .doctor-sort-by-dep:hover,
+ .doctor-alert-and-notification-show:hover,
+ .sorts:hover,
+ .reports:hover{
+     box-shadow: 5px 5px 7px rgba(0,0,0,0.1);
+     transition: all 0.3s ;
+     background-color: rgb(90, 4, 4);
+     cursor: pointer;
+     color: black;
+ }
+ .doctor-alert-and-notification-show{
+     display: flex;
+     background-color:white;
+     color: black;
+     padding-right: 10px;
+     align-items: center;
+     font-size: large;
+     height: 70px;
+     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     padding-left: 10px;
+     border-radius: 5px;
+     justify-content: center;
+     font-family:-apple-system;
+     color: rgb(87, 85, 85);
+     font-weight: bold;
+ }
+ .doctor-sort-by-dep{
+     display: flex;
+     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     color: rgb(87, 85, 85);
+     background-color: white;
+     font-weight: bold;
+     font-size: large;
+     padding-right: 10px;
+     align-items: center;
+     height: 70px;
+     padding-left: 10px;
+     border-radius: 5px;
+     justify-content: center;
+     font-family:-apple-system;
+ }
+ .doctor-dashboard-device-overview{
+     display: flex;
+     background-color: rgb(122, 66, 66);
+     color: rgb(87, 85, 85);
+     font-weight: bold;
+     font-size: large;
+     padding-right: 10px;
+     align-items: center;
+     height: 70px;
+     padding-left: 10px;
+     border-radius: 5px;
+     justify-content: center;
+     font-family:-apple-system;
+     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+ }
+ .schedule-maintenance{
+     display: flex;
+     background-color: black;
+     align-items: center;
+     color: white;
+     border-radius: 5px;
+     padding-left: 10px;
+     height: 70px;
+     font-size: x-large;
+     justify-content: center;
+ }
+ .pending-requests{
+     display: flex;
+     background-color: rgb(90, 4, 4);
+     align-items: center;color: white;
+     border-radius: 5px;
+     font-size: x-large;
+     padding-left: 10px;
+     justify-content: center;
+ }
+ .sorts{
+     display: flex;
+     background-color: rgb(15, 15, 0);
+     align-items: center;
+     color: white;
+     height: 70px;
+     padding-left: 10px;
+     border-radius: 5px;
+     font-size: x-large;
+     justify-content: center;
+ }
+ .reports{
+     display: flex;
+     background-color: rgb(18, 100, 55);
+     align-items: center;
+     color: white;
+     padding-left: 10px;
+     border-radius: 5px;
+     font-size: x-large;
+     justify-content: center;
+ }
+ .doctor-dashboard-icons{
+     margin-right: 20px;
+     font-size:large;
+     min-width: 20px;
+     min-height: 20px;
+     background-color: #6b4c47;
+     color: white;
+     padding: 7px;
+     border-radius: 50%;
+ }
+ .doctor-dashboard-icons-bell{
+     font-size: large;
+     background-color: #990f0a;
+     padding: 7px;
+     color: white;
+     border-radius: 50%;
+     min-width: 20px;
+     min-height: 20px;
+ }
+ .my-link{
+     text-decoration: none;
+     height: 70px;
+ 
+ }
+ 
+ .right-part{
+   display: flex;
+   flex-direction: column;
+   margin-left: 0px;
+   margin-right: 0px;
+   width: 100%;
+ }
+ 
+ .main-class-doctor{
+     display: flex;
+     flex-direction: column;
+     align-items: top;
+     justify-content: space-between;
+ }
+ .computer-icon{ 
+     margin-right: 20px;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .computer-and-title{
+     display: flex;
+     align-items: center;
+     margin-right: 30px;
+ }
+ .bottom-bar-icons{
+     display: flex;
+     position: relative;
+     flex-direction: column;
+ }
+ .adresses{
+     display: flex;
+     align-items: center;
+     margin-bottom: 10px;
+     border-bottom: 1px solid white;
+ }
+ .adresses:hover{
+     color: yellow;
+     cursor: pointer;
+ }
+ .the-title-navigation-main-class-doctor{
+     display: flex;
+     position: fixed;
+     top: 0;
+     right: 0;
+     left: 0;
+     align-items: center;
+     font-family:-apple-system;
+     background-color: rgb(90, 4, 4);
+     color: rgb(255, 255, 255);
+     height: 70px;
+     padding-left: 30px;
+     font-size: small;
+ }
+ .main-right-part-doc{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    column-gap: 7px;
+    margin-top: 80px;
+    padding: 10px;
+}
+ .piecharts{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-right: 50px;
+     padding-left:50px;
+ }
+ .bell-and-notification-count{
+     display: flex;
+ }
+ .notification-null-count{
+     opacity: 0;
+ }
+ .piechart-in-the-dashboard{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+     justify-content: center;
+     background-color: rgb(255, 255, 255);
+     padding-right: 100px;
+     padding-left: 100px;
+     column-gap: 0px;
+ }
+ .analytical-device-data-doctor{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 5px;
+    background: none;
+ }
+ .dashboard-bottom-bar{
+     display: flex;
+     flex-direction: column;
+     color: white;
+     align-items: center;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     justify-content: space-between;
+     width: 100%;
+     margin-top: 50px;
+     background-color: #000000;
+ }
+ .dashboard-computer-and-title{
+     display: flex;
+     align-items: center;
+     margin-left: 20px;
+     font-size:x-large;
+ }
+ .bottombar-description{
+     padding: 20px;
+ }
+ 
+ 

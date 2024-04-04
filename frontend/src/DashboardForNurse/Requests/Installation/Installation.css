@@ -1,0 +1,92 @@
+/* Installation.css */
+
+.installation-formm {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 20px;
+  background: rgb(255, 255, 255); /* Replace the URL with your desired rose-like pattern */
+  align-items: center;
+  padding-right: 50px;
+  padding-left:50px;
+  padding-top: 50px;
+  justify-content: space-between;
+  font-size: medium;
+  font-family: -apple-system;
+}
+
+.Installation-Page {
+  display: flex;
+  align-items: center;
+}
+
+.installation-title {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+  height: 100px;
+  background-color: black;
+  font-size: medium;
+  font-family: -apple-system;
+}
+
+.main-installation {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+  font-weight: 500;
+  height: 100%;
+  background-color: rgb(233, 233, 233);
+}
+
+.individualll{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  min-width: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.installation-inputt {
+  outline: none;
+  height: 30px;
+  max-width: 500px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  padding: 0px 10px;
+  background-color: rgb(243, 240, 240);
+}
+
+.installation-description-inputt {
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  font-family: "Arial", sans-serif;
+  padding: 10px;
+  max-width: 330px;
+  min-width: 330px;
+  max-height: 100px;
+  min-height: 100px;
+  background-color: rgb(238, 238, 238);
+}
+
+.submit-buttonInstallation {
+  height: 30px;
+  width: 150px;
+  color: white;
+  background-color: green;
+  /* Green color as an example, you can change it */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-left: 50px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+  border-radius: 5px;
+}
+
+.submit-buttonInstallation:hover {
+  background-color: red; 
+}

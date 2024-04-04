@@ -1,0 +1,60 @@
+.sort-by-department-main{
+    display: flex;
+    flex-direction: column;
+}
+.sort-by-department-input{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 200px;
+}
+.sort-by-department-output{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 190px )); /* Dynamic number of columns */
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 15px;
+}
+.device-by-department{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    background: linear-gradient(to top left, #0a284a, #262930); /* Example gradient colors */
+    height: 100%;
+}
+.home-and-sort-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    padding-left: 30px;
+    background: linear-gradient(to top left, #0a284a, #262930); /* Example gradient colors */
+    height: 200px;
+}
+.sort-by-department-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    background: linear-gradient(to top left, #0a284a, #262930); /* Example gradient colors */
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.sort-by-department{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sort-by-department-input{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.select-and-body{
+    background-color: rgb(211, 213, 214);
+    margin: 10px;
+    border-radius: 10px;
+}

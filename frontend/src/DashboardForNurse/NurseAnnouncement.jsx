@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './DoctorAnnouncement.css';
+import './NurseAnnouncement.css';
 import { DateTime } from 'luxon';
 import { useDispatch } from 'react-redux';
-import { BsCheckAll } from "react-icons/bs";
-
 import { decrementNotificationCount } from '../StateManagement/actions/notificationActions';
-import DoctorSidebar from './DoctorSidebar';
+import NurseSidebar from './NurseSidebar';
 
-const DoctorDisplayAnnouncement = () => {
+const NurseDisplayAnnouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
   const dispatch = useDispatch();
   const handleIncrement = () => {
@@ -49,19 +47,22 @@ const DoctorDisplayAnnouncement = () => {
     }
   };
   
+
   return (
     <div className='announcement-table'>
-      <div className='announcement-main-head'> <DoctorSidebar/> <h2 className='announcements-main-title'>Announcements</h2></div>
+      <div className='announcement-main'> <NurseSidebar/> <h2 className='announcements-main-title'>Announcements</h2></div>
       <div className='main-individual'>
       {announcements.map((announcement) => (
-        <div className='individual-announcement-display' key={announcement.id}>
-          <h3 className='announcement-heading'>{announcement.title} <p className='announcememnt-moment'>{announcement.announcement_time}</p><BsCheckAll className='tick-seen'/></h3>
-          <p className='announcement-description'>{announcement.description}</p>
-        </div>
+        
+          <div className='individual-announcement-display' key={announcement.id}>
+            <h3 className='announcement-heading'>{announcement.title} <p className='announcememnt-moment'>{announcement.announcement_time}</p></h3>
+            <p className='announcement-description'>{announcement.description}</p>
+          </div>
+       
       ))}
        </div>
     </div>
   );
 };
 
-export default DoctorDisplayAnnouncement;
+export default NurseDisplayAnnouncement;

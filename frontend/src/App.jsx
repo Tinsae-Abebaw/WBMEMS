@@ -69,6 +69,22 @@ import RadiologistTrainingForm from './Radiologist/Requests/Training/Training.js
 import RadiologistInstallationForm from './Radiologist/Requests/Installation/Installation.jsx';
 import RadiologistTrackChanges from './Radiologist/TrackChanges/TrackChanges.jsx';
 import RadiologistTrainingManagement from './Radiologist/Training/Training.jsx';
+import NurseDashboard from './DashboardForNurse/NurseDashboard.jsx';
+import NurseTrainingManagement from './DashboardForNurse/Training/Training.jsx';
+import NurseDeviceOverview from './DashboardForNurse/NurseDeviceShow.jsx';
+import NurseSortByDepartment from './DashboardForNurse/NurseSortByDep.jsx';
+import NurseDisplayAnnouncement from './DashboardForNurse/NurseAnnouncement.jsx';
+import Request_optionsNurse from './DashboardForNurse/Requests/Request_options.jsx';
+import NurseTrackChanges from './DashboardForNurse/TrackChanges/TrackChanges.jsx';
+import CalibrationFormNurse from './DashboardForNurse/Requests/Calibration/Calibration.jsx';
+import InstallationFormNurse from './DashboardForNurse/Requests/Installation/Installation.jsx';
+import MaintenanceFormNurse from './DashboardForNurse/Requests/Maintenance/Maintenance.jsx';
+import ProcurementFormNurse from './DashboardForNurse/Requests/Procurement/Procurement.jsx';
+import TrainingFormNurse from './DashboardForNurse/Requests/Training/Training.jsx';
+import SpecificationFormNurse from './DashboardForNurse/Requests/Specification/Specification.jsx';
+import DoctorDeviceOverview from './DashboardForDoctors/DoctorDeviceShow';
+import DoctorDisplayAnnouncement from './DashboardForDoctors/DoctorAnnouncement';
+import DoctorSortByDepartment from './DashboardForDoctors/DoctorSortByDep';
 
 
 
@@ -93,15 +109,15 @@ function App() {
           <Route path='/StaffInformation' element={<StaffInformation/>}/> 
           <Route path='/DeviceOverview' element={<DeviceOverview/>}/> 
           <Route path='/DoctorDashboard' element={<DoctorDashboard/>}/>  
-          <Route path='/DoctorDeviceShow' element={<DoctorDeviceShow/>}/> 
+          <Route path='/DoctorDeviceShow' element={<DoctorDeviceOverview/>}/> 
           <Route path='/DoctorMakeRequest' element={<DoctorMakeRequest/>}/> 
           <Route path='/Requested' element={<SortByRequestType/>}/> 
           <Route path='/DoctorRequestHistory' element={<DoctorTrackChanges/>}/> 
-          <Route path='/DoctorAnnouncement' element={<DoctorAnnouncement/>}/> 
+          <Route path='/DoctorAnnouncement' element={<DoctorDisplayAnnouncement/>}/> 
           <Route path='/DoctorTrainingManagement' element={<DoctorTrainingManagement/>}/> 
           <Route path='/DisposedDevices' element={<DisposedDevices/>}/> 
           <Route path='/SortByDepartment' element={<SortByDepartment/>}/> 
-          <Route path='/DoctorSortByDep' element={<DoctorSortByDep/>}/>
+          <Route path='/DoctorSortByDepartment' element={<DoctorSortByDepartment/>}/>
           <Route path='/Requests' element={<Request_options/>}/>
           <Route path='/RequestsByEngineer' element={<Request_optionsEngineer/>}/>
           <Route path='/EngineerDashBoard' element={<EngineerDashboard/>}/>
@@ -146,6 +162,23 @@ function App() {
           
           
           
+
+
+
+          <Route path='/NurseDashboard' element={<NurseDashboard/>}/>  
+          <Route path='/NurseDeviceShow' element={<NurseDeviceOverview/>}/> 
+          <Route path='/NurseAnnouncement' element={<NurseDisplayAnnouncement/>}/> 
+          <Route path='/NurseTrainingManagement' element={<NurseTrainingManagement/>}/>
+          <Route path='/NurseSortByDepartment' element={<NurseSortByDepartment/>}/>
+          <Route path='/NurseRequests' element={<Request_optionsNurse/>}/>
+          <Route path='/NurseRequestHistory' element={<NurseTrackChanges/>}/>
+          <Route path='/NurseRequests/Procurement' element={<ProcurementFormNurse/>}/>
+          <Route path='/NurseRequests/Calibration' element={<CalibrationFormNurse/>}/>
+          <Route path='/NurseRequests/Maintenance' element={<MaintenanceFormNurse/>}/>
+          <Route path='/NurseRequests/Specification' element={<SpecificationFormNurse/>}/>
+          <Route path='/NurseRequests/Training' element={<TrainingFormNurse/>}/>
+          <Route path='/NurseRequests/Installation' element={<InstallationFormNurse/>}/>
+
           
         </Routes>
       </div>
