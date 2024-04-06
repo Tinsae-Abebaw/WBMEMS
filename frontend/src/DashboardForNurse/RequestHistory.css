@@ -1,0 +1,49 @@
+.doctor-Request-title{
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(17, 151, 196, 0.5), rgba(193, 206, 243, 0.9)), url('/b2.PNG');
+    padding-left: 20px;
+    height: 200px;
+}
+.individual-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 20px;
+}
+.doctor-individual-request{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(88, 88, 172);
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.doctor-request-title{
+    color: white;
+    padding-bottom: 10px;
+}
+.doctor-request-description{
+   border-top: 1px solid ;
+   padding-top: 10px;
+}
+.accepted{
+    background-color: rgb(0, 128, 0);
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 500;
+    color: white;
+    margin-top: 10px;
+}
+.pending{
+    color: black;
+    font-weight: 500;
+    background-color: orange;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 3px;
+
+}

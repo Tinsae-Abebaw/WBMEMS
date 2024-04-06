@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from "react";
-import './DoctorDashboard.css';
+import './NurseDashboard.css';
 import { IoNotifications } from "react-icons/io5";
 import { GrOverview } from "react-icons/gr";
 import { FaSort } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import DoctorSidebar from "./DoctorSidebar";
+
 import Piechart from "../Piecharts/Status/Piechart";
 import PieDepartment from "../Piecharts/Department/pieDepartment";
 import EquipmentByCost from "../Piecharts/EquipmentByCost/EquipmentByCost";
-import WorkOrderStatus from "../Piecharts/workorderstatus/WorkOrderStatus";
-import Staff from "../Piecharts/Staff/Staff";
-import RequestType from "../Piecharts/RequestType/RequestType";
 import AnalyticalData from "../Piecharts/AnalyticalData/AnalyticalData";
+import NurseSidebar from "./NurseSidebar";
 
-const DoctorDashboard = () => {
+const NurseDashboard = () => {
   const [NotificationCount, setNotificationCount] = useState(null);
   const [NewDeviceNotificationCount, setNewDeviceNotificationCount] = useState(null);
   useEffect(() => {
@@ -48,7 +46,7 @@ const DoctorDashboard = () => {
   };
   return (    
     <div className="main-classs-doctor">
-      <div className="the-title-navigation-main-class-doctor"><DoctorSidebar/><h2 className="the-navigation-title">Doctors Dashboard</h2></div>
+      <div className="the-title-navigation-main-class-doctor"><NurseSidebar/><h2 className="the-navigation-title">Nurses Dashboard</h2></div>
       <div className="main-right-part-doc">
           <div className="analytical-data-and-buttons"> 
             <div className="analytical-device-data-doctor"><div className="doooooo"></div><AnalyticalData/></div> 
@@ -60,17 +58,17 @@ const DoctorDashboard = () => {
           </div>
           </div>
         <div className="doctor-sub">
-          <Link to='/DoctorDeviceShow' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell-doc"/>
+          <Link to='/NurseDeviceShow' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell-doc"/>
           <span className={NewDeviceNotificationCount !== 0 ? "main-notification-count-display" : 'notification-null-count'}>
             {NewDeviceNotificationCount !== null ? NewDeviceNotificationCount : ''}
             </span></div>Device Overview</div></Link>
 
-          <Link to='/DoctorAnnouncement' className='main-my-link'><div className="alert-and-notification-show">
+          <Link to='/NurseAnnouncement' className='main-my-link'><div className="alert-and-notification-show">
           <div className="bell-and-notification-count"> <IoNotifications className="dashboard-icons-bell-doc"/> 
           </div>Announcement Board<span className={NotificationCount !== 0 ? "main-notification-count-display" : 'notification-null-count'}>
           {NotificationCount !== null ? NotificationCount : ''}
           </span></div></Link>
-          <Link to ='/DoctorSortByDepartment' className='main-my-link'><div className="dashboard-schedule-maintenance"><FaSort className="dashboard-icons-bell-doc"/>Sort By Department</div></Link>
+          <Link to ='/NurseSortByDepartment' className='main-my-link'><div className="dashboard-schedule-maintenance"><FaSort className="dashboard-icons-bell-doc"/>Sort By Department</div></Link>
         </div>
       </div>
      
@@ -78,4 +76,4 @@ const DoctorDashboard = () => {
    );
 }
  
-export default DoctorDashboard;
+export default NurseDashboard;

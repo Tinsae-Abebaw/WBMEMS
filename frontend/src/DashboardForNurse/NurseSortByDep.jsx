@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import './DoctorSortByDep.css';
-import Home from "../pages/Home/Home";
-import DoctorSidebar from "./DoctorSidebar";
+import './NurseSortByDep.css';
+import NurseSidebar from "./NurseSidebar";
 
-const DoctorSortByDepartment = () => {
+const NurseSortByDepartment = () => {
     const [EquipmentDepartment, setEquipmentDepartment] = useState('');
     const [handleDevice, setHandleDevice] = useState([]);
 
@@ -82,7 +81,7 @@ const DoctorSortByDepartment = () => {
 
     return (
         <div className="sort-by-department-main">
-            <div className="main-home-and-sort-title"><DoctorSidebar/><h2>Sort By Department</h2></div>
+            <div className="main-home-and-sort-title"><NurseSidebar/><h2>Sort By Department</h2></div>
             <div className="main-select-and-body">
                 <select className="sort-by-department-input-main" required type='text' value={EquipmentDepartment} onChange={handleEquipmentDepartment}>
                     <option value="">All Equipments</option>
@@ -121,4 +120,4 @@ const DoctorSortByDepartment = () => {
     );
 }
 
-export default DoctorSortByDepartment;
+export default NurseSortByDepartment;

@@ -1,0 +1,38 @@
+.track-and-sort-title-trackChanges{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin: 0px;
+ padding-left: 30px;
+  font-size: medium;
+  font-family: -apple-system;
+}
+.track-request-table{
+  background:none;
+  margin-top: 20px;
+  font-size: medium;
+  font-family: -apple-system;
+}
+.track-table-headers{
+  background-color: rgb(48, 139, 219);
+  padding: 5px 10px;
+  border-radius: px;
+}
+.track-data{
+ padding: 5px 12px;
+}
+.track-dataa{
+  color: rgb(0, 0, 0);
+  padding: 5px 12px;
+}
+.track-detail-button{
+  width: 100%;
+  background-color: rgb(74, 162, 240);
+  color: black;
+}
+.track-table-holder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

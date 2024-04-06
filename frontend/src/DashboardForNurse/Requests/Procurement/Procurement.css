@@ -1,0 +1,90 @@
+.procurement-formmm {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background: rgb(255, 255, 255); /* Replace the URL with your desired pattern */
+  margin: 50px;
+  gap: 20px;
+  padding-right: 50px;
+  padding-right: 50px;
+   margin-top: 100px;
+}
+
+.Procurement-Page {
+  display: flex;
+  align-items: center;
+}
+
+.procurement-title {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+  font-size: small;
+  font-family: -apple-system;
+  height: 100px;
+  background-color: black;
+}
+
+.main-procurement-requestt {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-weight: 500;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.individuallll {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  min-width: 50px;
+  background: none;
+  padding-right: 2px;
+}
+
+.procurement-inputt,
+.procurement-description-inputt {
+  outline: none;
+  border: none;
+  background-color: rgb(238, 236, 236);
+  height: 25px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.procurement-description-input {
+  outline: none;
+  border-radius: 7px;
+
+  font-family: 'Arial', sans-serif;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+.submit-buttonProcurement {
+  height: 30px;
+  width: 150px;
+  color: white;
+  background-color: rgb(8, 104, 8); /* Green color as an example, you can change it */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+
+.submit-buttonProcurement:hover {
+  background-color: red;
+  transition: all 0.3s;
+}
+.procurement-form-labell{
+  background-color: rgb(255, 255, 255);
+  padding: 3px;
+}

@@ -1,0 +1,85 @@
+.calibration-formm {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 15px;
+  background: rgb(255, 255, 255); /* Replace the URL with your desired pattern */
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 80px;
+}
+.calibration-Page {
+  display: flex;
+  align-items: center;
+}
+.calibration-title {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: white;
+  height: 100px;
+  font-size: medium;
+  font-family: -apple-system;
+  background-color: black;
+}
+
+.mai.calibration-request {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+  font-weight: 500;
+  height: 100%;
+  background-color: rgb(209, 94, 94);
+}
+
+.calibration-individual {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  min-width: 50px;
+  background: rgb(240, 239, 239);
+  padding-right: 2px;
+}
+.calibration-inputt,.calibration-description-inputt {
+  outline: none;
+  border: none;
+  background-color: rgb(233, 238, 238);
+  height: 25px;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.calibration-description-inputt {
+  outline: none;
+  border-radius: 7px;
+
+  font-family: 'Arial', sans-serif;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+.submit-buttonCalibration{
+  height: 30px;
+  width: 150px;
+  color: white;
+  background-color: rgb(8, 104, 8); /* Green color as an example, you can change it */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+
+.submit-buttonCalibration:hover {
+  background-color: red;
+  transition: all 0.3s;
+}.calibration-form-label{
+  background-color: rgb(240, 240, 240);
+  padding: 3px;
+}
