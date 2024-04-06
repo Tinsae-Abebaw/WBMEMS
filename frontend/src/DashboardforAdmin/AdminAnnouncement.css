@@ -40,28 +40,28 @@
     font-size: medium;
     font-family: -apple-system;  
 }
-.individual-announcement-display{
+.individual-announcement-display-admin{
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    min-width: 205px;
-    max-width: 305px;
+    min-width: 220px;
+    max-width: 320px;
 }
 .announcememnt-moment{
     margin-left: 20px;
     font-size: small;
 }
-.main-individual{
+.main-individual-admin{
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
-        minmax(300px, 300px)
+        minmax(300px, 329px)
       );
-    column-gap: 30px;
-    row-gap: 10px;
-    padding: 20px;
-    justify-content: center;
+    column-gap: 10px;
+    row-gap: 7px;
+    padding: 10px;
+    justify-content: space-between;
     font-size: medium;
     margin-top: 80px;
     font-family: -apple-system;

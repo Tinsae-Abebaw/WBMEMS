@@ -1,14 +1,14 @@
-/* Training.css */
 
-.training-formm {
+.training-formm-rad{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     column-gap: 20px;
-    background: rgb(255, 255, 255); /* Replace the URL with your desired pattern */
+    background: none;
     padding: 50px;
     font-size: medium;
     font-family: -apple-system;
     border-radius: 5px;
+    margin-top: 20px;
   }
   .Training-Page {
     display: flex;
@@ -19,9 +19,9 @@
     align-items: center;
     padding-left: 30px;
     color: white;
-    height: 100px;
-    background-color: black;
-    font-size: medium;
+    height: 70px;
+    background-color: rgb(4, 30, 70);
+    font-size: small;
     font-family: -apple-system;
   }
   
@@ -32,7 +32,7 @@
     width: 100%;
     font-weight: 500;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background: none;
   }
   
   .individual {

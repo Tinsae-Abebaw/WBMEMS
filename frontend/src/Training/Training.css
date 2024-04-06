@@ -1,7 +1,12 @@
-.training-container {
-  padding: 20px;
-}
+.training-containerr {
 
+}
+.training-management-thead-admin{
+  background-color: rgb(2, 26, 70);
+  height: 30px;
+  font-size: medium;
+  font-family: -apple-system;
+}
 .training-home-and-sort-title-head {
  display: flex;
  position: fixed;
@@ -140,7 +145,7 @@
 .cancel-btn {
   padding: 8px 12px;
   margin-right: 10px;
-  background-color: #007bff;
+  background-color: #0c3764;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -180,7 +185,6 @@
   font-family: -apple-system;
   font-size: medium;
 }
-
 .training-detail-button {
   padding: 5px 10px;
   background-color: #046e3dde;
@@ -190,11 +194,9 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .training-detail-button:hover {
   background-color: #046e3c;
 }
-
 .detailed-view-1-Training-detail {
   position: fixed;
   top: 0;

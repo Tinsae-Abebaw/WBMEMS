@@ -152,11 +152,11 @@ const RadiologistProcurementForm = () => {
 
   return (
     
-      <div className="main-procurement-requestt">
+      <div className="main-procurement-requestt-rad">
         <div className="procurement-title"><RadiologistSidebar /><h2 className="Procurement-Page">Procurement Request Form</h2></div>
-        <div className="procurement-formmm">
+        <div className="procurement-form-rad">
         <div className="individuallll">
-          <label className="procurement-form-labell">Equipment Name*</label>
+          <label className="procurement-form-labell-rad">Equipment Name*</label>
           <select
             className="procurement-inputt"
             required
@@ -173,7 +173,7 @@ const RadiologistProcurementForm = () => {
         </div>
               
         <div className="individuallll">
-          <label className="procurement-form-labell">Equipment Type*</label>
+          <label className="procurement-form-labell-rad">Equipment Type*</label>
           <select
             className="procurement-inputt"
             required
@@ -190,7 +190,7 @@ const RadiologistProcurementForm = () => {
         </div>
           
           <div className="individuallll">
-          <label className="procurement-form-labell">Department*</label>
+          <label className="procurement-form-labell-rad">Department*</label>
           <select
             className="procurement-inputt"
             required
@@ -206,7 +206,7 @@ const RadiologistProcurementForm = () => {
           </select>
         </div>
         <div className="individuallll">
-            <label className="procurement-form-labell">Specification</label>
+            <label className="procurement-form-labell-rad">Specification</label>
             <textarea
               className="procurement-description-inputt"
               value={specification}
@@ -214,7 +214,7 @@ const RadiologistProcurementForm = () => {
             />
           </div>  
         <div className="individuallll">
-            <label className="procurement-form-labell">Procurement Reason*</label>
+            <label className="procurement-form-labell-rad">Procurement Reason*</label>
             <textarea
               className="procurement-description-inputt"
               required

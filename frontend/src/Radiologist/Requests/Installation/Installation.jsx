@@ -113,7 +113,7 @@ const RadiologistInstallationForm = () => {
         <h2 className="Installation-Page">Installation Request Form</h2>
       </div>
       <div className="installation-formm">
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Equipment Name*</label>
           <select
             className="installation-inputt"
@@ -129,7 +129,7 @@ const RadiologistInstallationForm = () => {
             ))}
           </select>
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Department*</label>
           <input
             className="installation-inputt"
@@ -138,7 +138,7 @@ const RadiologistInstallationForm = () => {
             readOnly // Assuming department is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Model*</label>
           <input
             className="installation-inputt"
@@ -147,7 +147,7 @@ const RadiologistInstallationForm = () => {
             readOnly // Assuming model is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Serial Number*</label>
           <input
             className="installation-inputt"
@@ -157,7 +157,7 @@ const RadiologistInstallationForm = () => {
           />
         </div>
         
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Due Date*</label>
           <input
             className="installation-inputt"
@@ -167,7 +167,7 @@ const RadiologistInstallationForm = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Specification</label>
           <input
             className="installation-inputt"
@@ -177,7 +177,7 @@ const RadiologistInstallationForm = () => {
             onChange={(e) => setSpecification(e.target.value)}
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Description*</label>
           <textarea
             className="installation-description-inputt"

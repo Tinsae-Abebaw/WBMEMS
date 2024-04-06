@@ -108,12 +108,12 @@ const RadiologistMaintenanceForm = () => {
 
   return (
     <div className="main-maintenance-requestt">
-      <div className="maintenance-title">
+      <div className="maintenance-title-rad">
         <RadiologistSidebar />
         <h2 className="Maintenance-Page">Maintenance Request Form</h2>
       </div>
       <div className="maintenance-form-requestt">
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Equipment Name*</label>
           <select
             className="maintenance-inputt"
@@ -129,7 +129,7 @@ const RadiologistMaintenanceForm = () => {
             ))}
           </select>
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Serial Number</label>
           <input
             className="maintenance-inputt"
@@ -140,7 +140,7 @@ const RadiologistMaintenanceForm = () => {
           />
         </div>
       
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Department*</label>
           <input
             className="maintenance-inputt"
@@ -150,7 +150,7 @@ const RadiologistMaintenanceForm = () => {
             readOnly
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Equipment Model*</label>
           <input
             className="maintenance-inputt"
@@ -160,7 +160,7 @@ const RadiologistMaintenanceForm = () => {
             readOnly
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Priority*</label>
           <select
             className="maintenance-inputt"
@@ -173,7 +173,7 @@ const RadiologistMaintenanceForm = () => {
             <option value="High">High</option>
           </select>
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Due Date*</label>
           <input
             className="maintenance-inputt"
@@ -183,7 +183,7 @@ const RadiologistMaintenanceForm = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Issue*</label>
           <textarea
             className="maintenance-description-inputt"

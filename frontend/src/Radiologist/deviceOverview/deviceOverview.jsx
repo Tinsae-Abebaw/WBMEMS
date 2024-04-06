@@ -112,11 +112,11 @@ const RadiologistDeviceOverview = () => {
 }
        {(
         <div className='grand-device-doctor'>
-          <div className='device-main-doctor'>
+          <div className='device-main-radiologist'>
             <div><RadiologistSidebar/></div>
             <h2>Device Information</h2>
           </div>
-          <div className='device-table-doc'>
+          <div className='device-table-rad'>
             {deviceOverview.map((device) => (
               <div>
                 <div className='individual-device-doctor' key={device.id} onClick={() => getById(device.id)}>
@@ -126,7 +126,7 @@ const RadiologistDeviceOverview = () => {
                   <div className='device-description'>
                     <div>
                       <p className='device-name'>{device.equipmentName} <div className='spot-light'>.</div></p>
-                      <p className='device-model'>{device.model}</p>
+                      <p className='device-model-rad'>{device.model}</p>
                       <p className='device-manuf'>{device.manufacturer}</p>
                     </div>
                     

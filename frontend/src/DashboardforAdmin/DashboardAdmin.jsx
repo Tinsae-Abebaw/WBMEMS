@@ -18,7 +18,7 @@ import Staff from "../Piecharts/Staff/Staff";
 import Piechart from "../Piecharts/Status/Piechart";
 import WorkOrderStatus from "../Piecharts/workorderstatus/WorkOrderStatus";
 import Clock from "../Clock/Clock";
-
+import './DashboardAdmin.css';
 
 const DashboardAdmin = () => {
   const [NotificationCount, setNotificationCount] = useState(null);
@@ -52,31 +52,32 @@ const DashboardAdmin = () => {
     }
   };
   return (    
-    <div className="main-classs">
-      <div className="the-title-navigation-main-class"><AdminstratorHome/><div className="title-and-date"><h2 className="the-navigation-title">Adminstrator Dashboard</h2><Clock/></div></div>
-      <div className="main-right-part">
-          <div className="analytical-data-and-buttons"> 
-            <div className="analytical-device-data"><div className="doooooo"></div><AnalyticalData/></div> 
-            <div className="the-two-doughnuts">
+    <div className="main-classs-admin">
+      <div className="the-title-navigation-main-class-admin"><AdminstratorHome/><div className="title-and-date"><h2 className="the-navigation-title">Adminstrator Dashboard</h2></div></div>
+      <div className="three-sections-admin">
+          <div className="analytical-data-and-charts"> 
+            <div className="analytical-device-data"><AnalyticalData/></div> 
+            <div className="first-section-doughnuts-admin">
               <div className="admin-piechart-holder-status"><Piechart/></div>
               <div className="admin-piechart-holder-department-cost"><EquipmentByCost/></div>
               <div className="admin-piechart-holder-department"><PieDepartment/></div> 
           </div>
           </div>
-        <div className="biomed-admin-sub-class">
+        <div className="short-cuts">
+        <Clock/>
           <div className="navigation-section1">
-            <Link to='/DeviceOverview' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell"/>
+            <Link to='/AdminDeviceOverview' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell"/>
             <span className={NewDeviceNotificationCount !== 0 ? "main-notification-count-display" : 'notification-null-count'}>
               {NewDeviceNotificationCount !== null ? NewDeviceNotificationCount : ''}
               </span></div>Device Overview</div></Link>
 
-            <Link to='/AnnouncementDisplay' className='main-my-link'><div className="alert-and-notification-show">
+            <Link to='/AdminDisplayAnnouncement' className='main-my-link'><div className="alert-and-notification-show">
             <div className="bell-and-notification-count"> <IoNotifications className="dashboard-icons-bell"/> 
             </div>Announcement Board<span className={NotificationCount !== 0 ? "main-notification-count-display" : ''}>
             {NotificationCount !== 0 ? NotificationCount : <BsCheckAll className="tick"/>}
             </span></div></Link>
 
-            <Link className="main-my-link" to='/Calendar'> <div className="dashboard-schedule-maintenance"> <FaRegCalendarAlt className="main-dashboard-icons"/>Calendar</div></Link>
+            <Link className="main-my-link" to='/adminInventoryCalendar'> <div className="dashboard-schedule-maintenance"> <FaRegCalendarAlt className="main-dashboard-icons"/>Calendar</div></Link>
           </div>
           <div className="navigation-section2">
             <div className="dashboard-schedule-maintenance"><MdOutlinePendingActions className="main-dashboard-icons"/>Pending Requests</div>

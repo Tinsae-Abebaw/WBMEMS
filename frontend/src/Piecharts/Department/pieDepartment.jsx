@@ -32,7 +32,7 @@ const PieDepartment = () => {
   
     const ctx = document.getElementById('myPieChart').getContext('2d');
     new Chart(ctx, {
-      type: 'doughnut',
+      type: 'bar',
       data: {
         labels: labels,
         datasets: [{

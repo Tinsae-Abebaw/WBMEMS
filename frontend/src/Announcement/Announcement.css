@@ -13,7 +13,7 @@
 .under-title{
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background:none;
     padding: 20px;
     border-radius: 5px;
     margin-top: 50px;

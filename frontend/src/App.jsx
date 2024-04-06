@@ -59,7 +59,6 @@ import EngineerTrainingManagement from './DashBoardForEngineers/Training/Trainin
 import TrainingManagement from './Training/Training.jsx';
 import RadiologistDashboard from './Radiologist/Dashboard/dashboard.jsx';
 import RadiologistDeviceOverview from './Radiologist/deviceOverview/deviceOverview.jsx';
-import RadiologistAnnouncement from './Radiologist/announcement/announcement.jsx';
 import Request_options_Radiologist from './Radiologist/Requests/Request_options.jsx';
 import RadiologistProcurementForm from './Radiologist/Requests/Procurement/Procurement.jsx';
 import RadiologistCalibrationForm from './Radiologist/Requests/Calibration/Calibration.jsx';
@@ -69,6 +68,9 @@ import RadiologistTrainingForm from './Radiologist/Requests/Training/Training.js
 import RadiologistInstallationForm from './Radiologist/Requests/Installation/Installation.jsx';
 import RadiologistTrackChanges from './Radiologist/TrackChanges/TrackChanges.jsx';
 import RadiologistTrainingManagement from './Radiologist/Training/Training.jsx';
+import AdminDisplayAnnouncement from './DashboardforAdmin/AdminAnnouncement.jsx';
+import AdminInventoryCalendar from './DashboardforAdmin/Calandar/Calandar.jsx';
+import RadiologistDisplayAnnouncement from './Radiologist/announcement/AdminAnnouncement.jsx';
 
 
 
@@ -127,13 +129,15 @@ function App() {
           <Route path='/Report' element={<SortByReportType/>}/>
           <Route path='/AdminContract' element={<Contract/>}/>
           <Route path='/AdminstratorDashboard' element={<AdminstratorDashboard/>}/>
+          <Route path='/AdminDisplayAnnouncement' element={<AdminDisplayAnnouncement/>}/>
+          <Route path='/AdminInventoryCalendar' element={<AdminInventoryCalendar/>}/>
           <Route path='/AdminDeviceOverview' element={<AdminDeviceOverview/>}/>
           <Route path='/RequestedAdmin' element={<RequestedAdmin/>}/>
           <Route path='/ViewAllRequestAdmin' element={<ViewAllRequest/>}/>
           <Route path='/AdminTrainingManagement' element={<AdminTrainingManagement/>}/>
           <Route path='/RadiologistDashboard' element={<RadiologistDashboard/>}/>
           <Route path='/RadiologistDeviceOverview' element={<RadiologistDeviceOverview/>}/>
-          <Route path='/RadiologistAnnouncement' element={<RadiologistAnnouncement/>}/>
+          <Route path='/RadiologistDisplayAnnouncement' element={<RadiologistDisplayAnnouncement/>}/>
           <Route path='/Request_options_Radiologist' element={<Request_options_Radiologist/>}/>
           <Route path='/Request_options_Radiologist/Procurement' element={<RadiologistProcurementForm/>}/>
           <Route path='/Request_options_Radiologist/Calibration' element={<RadiologistCalibrationForm/>}/>

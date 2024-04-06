@@ -161,16 +161,16 @@ const defaultTrainingList = async () => {
       <table className="main-training-management-table">
                 <thead>
                     <tr>
-                        <th className="training-management-thead">Training </th>
-                        <th className="training-management-thead">Equipment </th>
-                        <th className="training-management-thead">Location</th>
-                        <th className="training-management-thead">Department</th>
-                        <th className="training-management-thead">Length</th>
-                        <th className="training-management-thead">Start Date</th>
-                        <th className="training-management-thead">End Date</th>
-                        <th className="training-management-thead">Training Type</th>
-                        <th className="training-management-thead">Training Level</th>
-                        <th className="training-management-thead">Details</th>
+                        <th className="training-management-thead-admin">Training </th>
+                        <th className="training-management-thead-admin">Equipment </th>
+                        <th className="training-management-thead-admin">Location</th>
+                        <th className="training-management-thead-admin">Department</th>
+                        <th className="training-management-thead-admin">Length</th>
+                        <th className="training-management-thead-admin">Start Date</th>
+                        <th className="training-management-thead-admin">End Date</th>
+                        <th className="training-management-thead-admin">Training Type</th>
+                        <th className="training-management-thead-admin">Training Level</th>
+                        <th className="training-management-thead-admin">Details</th>
 
                     </tr>
                 </thead>

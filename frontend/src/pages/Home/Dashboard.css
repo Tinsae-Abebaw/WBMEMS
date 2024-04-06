@@ -14,7 +14,7 @@ body{
     border: 2px solid white;
     font-size: small;
     color: white;
-    background-color: rgb(16, 109, 44);
+    background: none;
     margin-left: 10px;
     border-radius: 5px;
 }

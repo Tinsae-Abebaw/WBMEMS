@@ -53,7 +53,7 @@ const toggleSidebar = () => {
           <Link className='link' to='/Request_options_Radiologist'><div className='doctor-lists'><MdOutlineBorderColor className='icons' /><div>Requests</div></div></Link>
           <Link className='link' to='/RadiologistTrackChanges'><div className='doctor-lists'><MdHistoryToggleOff className='icons' /><div>Request History</div></div></Link>
           <Link className='link' to='/RadiologistTrainingManagement'><div className='doctor-lists'><FaPeopleGroup className='icons' /><div>Training Event</div></div></Link>
-          <Link className='link' to='/RadiologistAnnouncement'><div className='doctor-lists'><CiMedicalClipboard className='icons' /><div>Announcement Board</div></div></Link>
+          <Link className='link' to='/RadiologistDisplayAnnouncement'><div className='doctor-lists'><CiMedicalClipboard className='icons' /><div>Announcement Board</div></div></Link>
         </nav>
         <div><LogOut/></div>
       </div>

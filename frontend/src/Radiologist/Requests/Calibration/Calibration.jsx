@@ -111,7 +111,7 @@ const RadiologistCalibrationForm = () => {
         <h2 className="Calibration-Page">Calibration Request Form</h2>
       </div>
       <div className="calibration-formm">
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Equipment Name*</label>
           <select
             className="calibration-inputt"
@@ -128,7 +128,7 @@ const RadiologistCalibrationForm = () => {
           </select>
         </div>
         
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Equipment Model*</label>
           <input
             className="calibration-inputt"
@@ -138,7 +138,7 @@ const RadiologistCalibrationForm = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Department*</label>
           <input
             className="calibration-inputt"
@@ -148,7 +148,7 @@ const RadiologistCalibrationForm = () => {
             readOnly // Assuming department is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Serial Number*</label>
           <input
             className="calibration-inputt"
@@ -158,7 +158,7 @@ const RadiologistCalibrationForm = () => {
             readOnly // Assuming equipment model is not editable// Assuming serial number is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Due Date</label>
           <input
             className="calibration-inputt"
@@ -168,7 +168,7 @@ const RadiologistCalibrationForm = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Calibration Type</label>
           <select
             className="calibration-inputt"
@@ -181,7 +181,7 @@ const RadiologistCalibrationForm = () => {
             <option value="Type 3">Type 3</option>
           </select>
         </div>
-        <div className="individualll">
+        <div className="individual-calibration">
           <label>Reason</label>
           <textarea
             className="calibration-description-inputt"
