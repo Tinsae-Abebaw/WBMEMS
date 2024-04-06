@@ -30,7 +30,7 @@ const RequestType = () => {
     
     const ctx = document.getElementById('myPieChart4').getContext('2d');
     new Chart(ctx, {
-      type: 'doughnut',
+      type: 'bar',
       data: {
         labels: labels,
         datasets: [{

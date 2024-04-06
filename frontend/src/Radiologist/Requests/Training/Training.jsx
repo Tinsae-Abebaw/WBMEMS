@@ -135,8 +135,8 @@ const RadiologistTrainingForm = () => {
         <RadiologistSidebar />
         <h2 className="Training-Page">Training Request Form</h2>
       </div>
-      <div className="training-formm">
-        <div className="individualll">
+      <div className="training-formm-rad">
+        <div className="individualll-radio">
           <label>Equipment Name*</label>
           <select
             className="training-inputt"
@@ -153,7 +153,7 @@ const RadiologistTrainingForm = () => {
           </select>
         </div>
         
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Department*</label>
           <input
             className="training-inputt"
@@ -162,7 +162,7 @@ const RadiologistTrainingForm = () => {
             readOnly // Assuming department is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Model*</label>
           <input
             className="training-inputt"
@@ -172,7 +172,7 @@ const RadiologistTrainingForm = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Serial Number*</label>
           <input
             className="training-inputt"
@@ -181,7 +181,7 @@ const RadiologistTrainingForm = () => {
             readOnly // Assuming serial number is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Trainee Type*</label>
           <select
             className="training-inputt"
@@ -193,7 +193,7 @@ const RadiologistTrainingForm = () => {
             <option value="Technical">Technical Personnel Training</option>
           </select>
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Level*</label>
           <select
             className="training-inputt"
@@ -207,7 +207,7 @@ const RadiologistTrainingForm = () => {
           </select>
         </div>
         
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Duration*</label>
           <input
             className="training-inputt"
@@ -216,7 +216,7 @@ const RadiologistTrainingForm = () => {
             onChange={handleDuration}
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Description*</label>
           <textarea
             className="training-description-inputt"

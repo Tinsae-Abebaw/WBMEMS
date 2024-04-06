@@ -2,12 +2,13 @@
 
 .specification-form-requestt {
     display: grid;
+    align-items: start;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     column-gap: 20px;
-    background: rgb(255, 255, 255); /* Replace the URL with your desired pattern */
-    align-items: center;
+    background:none; 
     justify-content:space-between;
     padding: 50px;
+    margin-top: 50px;
   }
   .Specification-Page-request {
     display: flex;
@@ -18,8 +19,9 @@
     align-items: center;
     padding-left: 30px;
     color: white;
-  background-color: black;  height: 100%;
-  font-size: medium;
+    background-color: rgb(4, 30, 70);
+  height: 70px;
+  font-size: small;
   font-family: -apple-system;
     
   }
@@ -35,7 +37,7 @@
     
   }
   
-  .individual {
+  .individualll-radio {
     display: flex;
     flex-direction: column;
     flex-direction: column;

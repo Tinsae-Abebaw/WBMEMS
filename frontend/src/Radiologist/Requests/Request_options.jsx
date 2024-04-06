@@ -12,44 +12,44 @@ import RadiologistSidebar from "../sidebar/Sidebar";
 const Request_options_Radiologist = () => {
   return (
     <div className="main-class-request-options">
-      <div className="right-part">
-        <div className="the-navigation-main-class-requestss">
+      <div className="right-part-rad">
+        <div className="the-navigation-main-class-requestss-rad">
           <RadiologistSidebar/>
-          <h2 className="the-request-title">Rad Make Requests</h2>
+          <h1 className="the-request-title">Make Requests</h1>
         </div>
-        <div className="sub-class-requestss">
+        <div className="sub-class-requestss-rad">
           <Link to="Procurement" className="my-link">
-            <div className="procurementt">
+            <div className="procurementt-rad">
               <FaShoppingCart className="Request_options-icons" />
               Procurement
             </div>
           </Link>
           <Link to="Calibration" className="my-link">
-            <div className="calibrationn">
+            <div className="calibrationn-rad">
               <IoNotificationsOutline className="Request_options-icons" />
               Calibration
             </div>
           </Link>
           <Link to="Maintenance" className="my-link">
-            <div className="maintenancee">
+            <div className="maintenancee-rad">
               <GrSchedule className="Request_options-icons" />
               Maintenance
             </div>
           </Link>
           <Link to="Specification" className="my-link">
-            <div className="specificationn">
+            <div className="specificationn-rad">
               <MdAssignment className="Request_options-icons" />
               Specification
             </div>
           </Link>
           <Link to="Training" className="my-link">
-            <div className="trainingg">
+            <div className="trainingg-rad">
               <FaChalkboardTeacher className="Request_options-icons" />
               Training
             </div>
           </Link>
           <Link to="Installation" className="my-link">
-            <div className="installationn">
+            <div className="installationn-rad">
               <FaDownload  className="Request_options-icons" />
               Installation
             </div>

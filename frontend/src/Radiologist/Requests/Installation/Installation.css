@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   column-gap: 20px;
-  background: rgb(255, 255, 255); /* Replace the URL with your desired rose-like pattern */
+  background: none; /* Replace the URL with your desired rose-like pattern */
   align-items: center;
   padding-right: 50px;
   padding-left:50px;
@@ -24,9 +24,9 @@
   align-items: center;
   padding-left: 30px;
   color: white;
-  height: 100px;
-  background-color: black;
-  font-size: medium;
+  height: 70px;
+  background-color: rgb(4, 30, 70);
+  font-size: small;
   font-family: -apple-system;
 }
 
@@ -37,15 +37,15 @@
   width: 100%;
   font-weight: 500;
   height: 100%;
-  background-color: rgb(233, 233, 233);
+  background:none;
 }
 
-.individualll{
+.individualll-radio{
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
   min-width: 50px;
-  background-color: rgb(255, 255, 255);
+  background: none;
 }
 
 .installation-inputt {
@@ -56,7 +56,7 @@
   border: none;
   margin-top: 5px;
   padding: 0px 10px;
-  background-color: rgb(243, 240, 240);
+  background-color: rgb(250, 249, 249);
 }
 
 .installation-description-inputt {
@@ -69,7 +69,7 @@
   min-width: 330px;
   max-height: 100px;
   min-height: 100px;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(250, 249, 249);
 }
 
 .submit-buttonInstallation {

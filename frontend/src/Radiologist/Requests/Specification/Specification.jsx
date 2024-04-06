@@ -129,7 +129,7 @@ const RadiologistSpecificationForm = () => {
         <h2 className="Specification-Page-request1">Specification Request Form</h2>
       </div>
       <div className="specification-form-requestt">
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Equipment Name*</label>
           <select
             className="specification-inputt"
@@ -145,7 +145,7 @@ const RadiologistSpecificationForm = () => {
             ))}
           </select>
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Model*</label>
           <input
             className="specification-inputt"
@@ -155,7 +155,7 @@ const RadiologistSpecificationForm = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Serial Number*</label>
           <input
             className="specification-inputt"
@@ -165,7 +165,7 @@ const RadiologistSpecificationForm = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Department*</label>
           <input
             className="specification-inputt"
@@ -175,7 +175,7 @@ const RadiologistSpecificationForm = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Due Date*</label>
           <input
             className="specification-inputt"
@@ -185,7 +185,7 @@ const RadiologistSpecificationForm = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individualll">
+        <div className="individualll-radio">
           <label>Description*</label>
           <textarea
             className="specification-description-inputt"

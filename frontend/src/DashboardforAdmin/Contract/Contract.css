@@ -1,10 +1,11 @@
 .contract-home-and-sort-title{
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 30px;
   background-color: rgb(2, 26, 70);
   color: white;
-  font-size: medium;
+  height: 70px;
+  font-size: small;
   font-family: -apple-system;
 }
 .export-btn-pdf-admin,

@@ -6,7 +6,7 @@
   justify-content: space-between;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   column-gap: 20px;
-  background: rgb(255, 255, 255); /* Replace the URL with your desired pattern */
+   background: none;
   font-size: medium;
   font-family: -apple-system;
   padding: 50px ;
@@ -15,17 +15,17 @@
 .Maintenance-Page {
   display: flex;
   align-items: center;
-  font-size: x-large;
+  font-size: large;
   font-family: -apple-system;
 }
-.maintenance-title {
+.maintenance-title-rad {
   display: flex;
   align-items: center;
   padding-left: 30px;
   color: white;
-  height: 100px;
- background-color: black;
- font-size: medium;
+  height: 70px;
+  background-color: rgb(4, 30, 70);
+ font-size: small;
  font-family: -apple-system;
 }
 
@@ -39,11 +39,12 @@
   background-color: rgb(255, 255, 255);
 }
 
-.individual {
+.individualll-radio {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
   min-width: 50px;
+  background: none;
 }
 
 .maintenance-inputt {

@@ -2,11 +2,8 @@ body{
     overflow-y:auto;
     overflow-x: auto;
  }
- .notification-null-count{
-    display: none;
-    background-color: none;
- }
- .main-notification-count-display-eng{
+ 
+ .main-notification-count-display{
      display: flex;
      align-items: center;
      justify-content: center;
@@ -17,24 +14,20 @@ body{
      border: 2px solid white;
      font-size: small;
      color: white;
-     background: none;
+     background-color: rgb(16, 109, 44);
      margin-left: 10px;
      border-radius: 5px;
  }
- .biomed-admin-sub-class{
+ .short-cuts{
      display: flex;
      flex-direction: column;
      background: none;
-     padding: 20px;
-     row-gap: 20px;
-     margin-right: 40px;
-     width: 290px;
+     row-gap: 7px;
+     height: 420px;
  }
  .navigation-section1,
  .navigation-section2{
-     background-color: white;
      border-radius: 5px;
-     padding: 10px;
  }
  
  .admin-schedule-maintenance:hover,
@@ -96,21 +89,22 @@ body{
  .main-my-link{
      text-decoration: none;
  }
- .main-right-part-engineer{
+ .three-sections-admin{
    display: flex;
-   align-items: start;
-   justify-content: left;
+
    flex-direction: row;
-   margin-top: 150px;
-   margin-left: 20px;
+   margin-top: 90px;
+   column-gap: 7px;
+   width: fit-content;
+   margin-right: 10px;
+   margin-left: 10px;
  }
- .main-classs-engineer{
+ .main-classs-admin{
      display: flex;
      flex-direction: column;
-     background-color: #e6e2e2;
-     width: 100%;
+     background-color: #c9c7c7;
  }
- .the-title-navigation-main-class-engineer{
+ .the-title-navigation-main-class-admin{
      display: flex;
      position: fixed;
      flex-direction: row;
@@ -118,7 +112,7 @@ body{
      font-family:-apple-system;
      background-color: rgb(2, 26, 70);
      color: white;
-     height: 100px;
+     height: 70px;
      width: 100%;
      padding-left: 30px;
      margin-bottom: 30px;
@@ -146,11 +140,10 @@ body{
      auto-fit,
      minmax(250px, 400px)
    );
-     margin-right: 50px;
      align-items: center;
      justify-content: center;
-     margin-left: 50px;
      background:none;
+     padding: 20px;
     
  }
  .dashboard-computer-and-title{
@@ -162,28 +155,22 @@ body{
  .bottombar-description{
      padding: 20px;
  }
- .analytical-device-data-engineer{
+ .analytical-device-data{
      display: flex;
-     justify-content: center;
-     justify-content: right;
-      margin-bottom: 10px;
      border-radius: 5px;
-     position: relative;
-     width: 100%;
-     background-color: #ffffff;
  }
- .analytical-data-and-buttons-engineer{
+ .analytical-data-and-charts{
      display: flex;
      flex-direction: column;
      align-items: center;
-     justify-content: left;
-     border-radius: 10px;
+     row-gap: 5px;
+     justify-content: center;  
  }
- .the-two-doughnuts-engineer{
+ .first-section-doughnuts-admin{
      display: flex;
-     border-radius: 10px;
+     border-radius: 5px;
      width: 100%;
-     background: none;
+     column-gap: 7px;
  }
  @media (min-width: 500px) {
      .the-two-doughnuts {
@@ -230,14 +217,15 @@ body{
    .content{
      position: relative;
    }
-  .admin-piechart-in-the-dashboardd{
+  .head-piechart-in-the-dashboardd{
      display: flex;
      align-items: top;
-     justify-content: top;
      background:none;
-     margin: 10px 20px;
+     margin-right: 10px;
+     margin-left: 10px;
+     margin-top: 5px;
      border-radius: 10px;
-     margin-bottom: 50px;
+     column-gap: 7px;
   }
   .head-dashboard-bottom-bar{
      height: 200px;
@@ -248,12 +236,12 @@ body{
      font-size: x-large;
      margin-left: 30px;
   }
-  .admin-piechart-holder-status-engineer,
-  .admin-piechart-holder-department-engineer,
-  .admin-piechart-holder-department-cost-engineer{
+  .admin-piechart-holder-status,
+  .admin-piechart-holder-department,
+  .admin-piechart-holder-department-cost{
      background-color: rgb(255, 255, 255);
-     margin: 5px;
      border-radius: 5px;
+     width: 100%;
   }
   .title-and-date{
      display: flex;

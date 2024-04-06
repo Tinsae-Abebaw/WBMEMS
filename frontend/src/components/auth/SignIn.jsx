@@ -97,7 +97,7 @@ const SignIn = () => {
           <div className="icon-and-input">
           <FaUser className="side-icons"/>
           <input
-            className="input"
+            className="input-login"
             type="userName"
             required
             placeholder="Enter your User Name"
@@ -108,7 +108,7 @@ const SignIn = () => {
           <div className="icon-and-input">
           <MdLocalPostOffice  className="side-icons-mail"/>
           <input
-            className="input"
+            className="input-login"
             type="email"
             required
             placeholder="Enter your Email"
@@ -120,7 +120,7 @@ const SignIn = () => {
           <FaLock className="side-icons"/>
           <div className="password-and-eye">
             <input
-            className="input"
+            className="input-login"
             type={showPassword ? "text" : "password"}
               placeholder="Enter your Password"
               value={password}
@@ -133,7 +133,7 @@ const SignIn = () => {
           </div>
           </div>
             <button className="sign-in-button" onClick={handleLogin}>Log In</button>
-            <Link to='/SignUp'>sign up</Link>
+            
         </div>
       </div>
     </div>

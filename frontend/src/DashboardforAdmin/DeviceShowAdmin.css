@@ -6,7 +6,8 @@
     left: 0;
     align-items: center;
     padding-left: 20px;
-    font-size: medium;
+    font-size: small;
+    height: 70px;
     font-family: -apple-system;
     color: white;
     background-color: rgb(2, 26, 70);

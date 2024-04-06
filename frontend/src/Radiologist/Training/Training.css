@@ -4,11 +4,16 @@
 
 .training-home-and-sort-title {
   display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
   align-items: center;
-  padding-left: 20px;
-  background-color: black;
+  padding-left: 30px;
+  background-color: rgb(4, 30, 70);
   color: white;
-  font-size: large;
+  font-size: small;
   font-family: -apple-system;
 }
 
@@ -31,7 +36,7 @@
 .export-btn-pdf {
   margin-right: 10px;
   padding: 8px 12px;
-  background-color: #007bff;
+  background-color: rgb(4, 30, 70);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -41,7 +46,7 @@
 
 .export-btn-csv:hover,
 .export-btn-pdf:hover {
-  background-color: #0056b3;
+  background-color: #08305a;
 }
 
 .search-container {
@@ -132,7 +137,7 @@
 .cancel-btn {
   padding: 8px 12px;
   margin-right: 10px;
-  background-color: #007bff;
+  background-color: rgb(4, 30, 70);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -156,7 +161,7 @@
 
 .training-management-thead {
   padding: 10px;
-  background-color: #007bff;
+  background-color: rgb(4, 30, 70);
   color: #fff;
   text-align: left;
   font-family: -apple-system;

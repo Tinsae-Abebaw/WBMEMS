@@ -44,7 +44,7 @@ const RadiologistDashboard = () => {
   };
   return (    
     <div className="main-classs-doctor">
-      <div className="the-title-navigation-main-class-doctor"><RadiologistSidebar/><h2 className="the-navigation-title">Radiologist Dashboard</h2></div>
+      <div className="the-title-navigation-main-class-rad"><RadiologistSidebar/><h2 className="the-navigation-title">Radiologist Dashboard</h2></div>
       <div className="main-right-part-doc">
           <div className="analytical-data-and-buttons"> 
             <div className="analytical-device-data-doctor"><div className="doooooo"></div><AnalyticalData/></div> 
@@ -56,12 +56,12 @@ const RadiologistDashboard = () => {
           </div>
           </div>
         <div className="doctor-sub">
-          <Link to='/DeviceOverview' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell-doc"/>
+          <Link to='/RadiologistDeviceOverview' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell-doc"/>
           <span className={NewDeviceNotificationCount !== 0 ? "main-notification-count-display" : 'notification-null-count'}>
             {NewDeviceNotificationCount !== null ? NewDeviceNotificationCount : ''}
             </span></div>Device Overview</div></Link>
 
-          <Link to='/AnnouncementDisplay' className='main-my-link'><div className="alert-and-notification-show">
+          <Link to='/RadiologistAnnouncement' className='main-my-link'><div className="alert-and-notification-show">
           <div className="bell-and-notification-count"> <IoNotifications className="dashboard-icons-bell-doc"/> 
           </div>Announcement Board<span className={NotificationCount !== 0 ? "main-notification-count-display" : 'notification-null-count'}>
           {NotificationCount !== null ? NotificationCount : ''}

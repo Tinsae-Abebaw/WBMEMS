@@ -15,6 +15,7 @@ import LogOut from '../components/auth/LogOut';
 import UserInfo from '../StateManagement/UserInfo';
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdOutlinePreview } from "react-icons/md";
+import './SidebarAdmin.css';
 
 
 const AdminstratorHome = () => {
@@ -27,7 +28,7 @@ const AdminstratorHome = () => {
   return ( 
     <div className='dodo'>
       <FaBars onClick={toggleSidebar}  className='hum-button'/>
-      <div className={`main-manu ${sidebarOpen ? 'open' : ''}`}>
+      <div className={`main-manu-admin ${sidebarOpen ? 'open' : ''}`}>
         <div className='section-one'>
           <div onClick={toggleSidebar}><CiLogout className='close-button'/></div>
           <div className='profile-picture'>
