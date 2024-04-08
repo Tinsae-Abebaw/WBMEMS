@@ -51,7 +51,7 @@ const toggleSidebar = () => {
           <Link className='link' to='/DoctorDashboard'><div className='doctor-lists'><AiOutlineHome className='icons'/><div>Dashboard</div></div></Link>
           <Link className='link' to='/DoctorDeviceShow'><div className='doctor-lists'><MdOutlineWorkOutline className='icons'/><div className='name-and-notification-count'>Devices Overview <span className={NewDeviceNotificationCount !==0 ?'sidebar-notification': 'null-display'}>{NewDeviceNotificationCount}</span></div></div></Link> 
           <Link className='link' to='/Requests'><div className='doctor-lists'><MdOutlineBorderColor className='icons' /><div>Requests</div></div></Link>
-          <Link className='link' to='/DoctorRequestHistory'><div className='doctor-lists'><MdHistoryToggleOff className='icons' /><div>Request History</div></div></Link>
+          <Link className='link' to='/DoctorRequestHistory'><div className='doctor-lists'><MdHistoryToggleOff className='icons' /><div>Own Request</div></div></Link>
           <Link className='link' to='/DoctorTrainingManagement'><div className='doctor-lists'><FaPeopleGroup className='icons' /><div>Training Event</div></div></Link>
           <Link className='link' to='/DoctorAnnouncement'><div className='doctor-lists'><CiMedicalClipboard className='icons' /><div>Announcement Board</div></div></Link>
         </nav>

@@ -98,7 +98,7 @@ const RequestType = () => {
   
   return (
     <div className='charter'>
-      <canvas className='pieDepartment' id="myPieChart4" width="250" height="250"></canvas>
+      <canvas className='pieDepartment' id="myPieChart4" width="200" height="200"></canvas>
     </div>
   );
 };

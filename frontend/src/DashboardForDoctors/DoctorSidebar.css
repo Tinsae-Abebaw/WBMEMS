@@ -46,6 +46,7 @@
 }
 .doctor-lists:hover{
     background-color: rgb(47, 48, 48);
+    color: white;
 }
 .sidebar-notification{
     display: flex;

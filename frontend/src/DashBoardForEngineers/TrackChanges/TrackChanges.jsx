@@ -59,27 +59,27 @@ const EngineerTrackChanges = () => {
             <table className="request-table">
                 <thead>
                     <tr>
-                        <th>Request Type</th>
-                        <th>Request Date</th>
-                        <th>Equipment Name</th>
-                        <th>Department</th>
-                        <th>Status</th>
-                        <th>Assigned</th>
-                        <th>Requested By</th>
-                        <th>Details</th>
+                        <th className="request-table-heading">Request Type</th>
+                        <th className="request-table-heading">Request Date</th>
+                        <th className="request-table-heading">Equipment Name</th>
+                        <th className="request-table-heading">Department</th>
+                        <th className="request-table-heading">Status</th>
+                        <th className="request-table-heading">Assigned</th>
+                        <th className="request-table-heading">Requested By</th>
+                        <th className="request-table-heading">Details</th>
                     </tr>
                 </thead>
                 <tbody>
                     {handleRequest.map((RequestByType) => (
                         <tr key={RequestByType.id}>
-                            <td>{RequestByType.requestType}</td>
-                            <td>{RequestByType.requestDate}</td>
-                            <td>{RequestByType.equipmentName}</td>
-                            <td>{RequestByType.department}</td>
-                            <td style={{ backgroundColor: getStatusColor(RequestByType.status) }}>{RequestByType.status}</td>
-                            <td>{RequestByType.action}</td>
-                            <td>{RequestByType.requestedBy}</td>
-                            <td>
+                            <td className="request-table-data">{RequestByType.requestType}</td>
+                            <td  className="request-table-data">{RequestByType.requestDate}</td>
+                            <td  className="request-table-data">{RequestByType.equipmentName}</td>
+                            <td  className="request-table-data">{RequestByType.department}</td>
+                            <td className="request-table-dataa" style={{ backgroundColor: getStatusColor(RequestByType.status) }}>{RequestByType.status}</td>
+                            <td  className="request-table-data">{RequestByType.action}</td>
+                            <td  className="request-table-data">{RequestByType.requestedBy}</td>
+                            <td className="request-table-data">
                                 <button onClick={() => getById(RequestByType.id)}>Detail</button>
                             </td>
                         </tr>

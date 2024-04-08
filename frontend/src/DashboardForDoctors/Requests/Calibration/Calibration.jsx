@@ -105,14 +105,14 @@ const CalibrationForm = () => {
   };
 
   return (
-    <div className="main-calibration">
-      <div className="calibration-title">
+    <div className="main-calibration-doc">
+      <div className="calibration-title-doc">
         <DoctorSidebar/>
         <h2 className="Calibration-Page">Calibration Request Form</h2>
       </div>
-      <div className="calibration-formm">
-        <div className="individualll">
-          <label>Equipment Name*</label>
+      <div className="calibration-formm-doc">
+        <div className="individualll-doc">
+          <label className="calibration-form-labell-doc">Equipment Name*</label>
           <select
             className="calibration-inputt"
             required
@@ -128,8 +128,8 @@ const CalibrationForm = () => {
           </select>
         </div>
         
-        <div className="individualll">
-          <label>Equipment Model*</label>
+        <div className="individualll-doc">
+          <label className="procurement-form-labell-doc">Equipment Model*</label>
           <input
             className="calibration-inputt"
             type="text"
@@ -138,8 +138,8 @@ const CalibrationForm = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individualll">
-          <label>Department*</label>
+        <div className="individualll-doc">
+          <label className="procurement-form-labell-doc">Department*</label>
           <input
             className="calibration-inputt"
             type="text"
@@ -148,8 +148,8 @@ const CalibrationForm = () => {
             readOnly // Assuming department is not editable
           />
         </div>
-        <div className="individualll">
-          <label>Serial Number*</label>
+        <div className="individualll-doc">
+          <label className="procurement-form-labell-doc">Serial Number*</label>
           <input
             className="calibration-inputt"
             type="text"
@@ -158,8 +158,8 @@ const CalibrationForm = () => {
             readOnly // Assuming equipment model is not editable// Assuming serial number is not editable
           />
         </div>
-        <div className="individualll">
-          <label>Due Date</label>
+        <div className="individualll-doc">
+          <label className="procurement-form-labell-doc">Due Date</label>
           <input
             className="calibration-inputt"
             type="date"
@@ -168,8 +168,8 @@ const CalibrationForm = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individualll">
-          <label>Calibration Type</label>
+        <div className="individualll-doc">
+          <label className="procurement-form-labell-doc">Calibration Type</label>
           <select
             className="calibration-inputt"
             value={calibrationType}
@@ -181,8 +181,8 @@ const CalibrationForm = () => {
             <option value="Type 3">Type 3</option>
           </select>
         </div>
-        <div className="individualll">
-          <label>Reason</label>
+        <div className="individualll-doc">
+          <label className="procurement-form-labell-doc">Reason</label>
           <textarea
             className="calibration-description-inputt"
             required

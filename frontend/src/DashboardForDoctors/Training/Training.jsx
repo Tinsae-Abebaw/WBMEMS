@@ -139,14 +139,14 @@ const defaultTrainingList = async () => {
 
   return (
     <div className="training-container">
-      <div className="training-home-and-sort-title">
+      <div className="training-home-and-sort-title-doc">
         <DoctorSidebar />
         <h2>Training Management</h2>
       </div>
-      <div className="training-search-and-export">
+      <div className="training-search-and-export-doc">
         <div className="training-export-buttons">
-          <button className="export-btn-csv" onClick={handleExportCSV}>Export to CSV</button>
-          <button className="export-btn-pdf" onClick={handleExportPDF}>Export to PDF</button>
+          <button className="export-btn-csv-doc" onClick={handleExportCSV}>Export to CSV</button>
+          <button className="export-btn-pdf-doc" onClick={handleExportPDF}>Export to PDF</button>
         </div>
         <div className="search-container">
           <IoSearchSharp className="search-icon1" />
@@ -160,20 +160,20 @@ const defaultTrainingList = async () => {
           />
         </div>
       </div>
-      <div className="training-table-container">
+      <div className="training-table-container-doc">
       <table className="main-training-management-table">
                 <thead>
                     <tr>
-                        <th className="training-management-thead">Training </th>
-                        <th className="training-management-thead">Equipment </th>
-                        <th className="training-management-thead">Location</th>
-                        <th className="training-management-thead">Department</th>
-                        <th className="training-management-thead">Length</th>
-                        <th className="training-management-thead">Start Date</th>
-                        <th className="training-management-thead">End Date</th>
-                        <th className="training-management-thead">Training Type</th>
-                        <th className="training-management-thead">Training Level</th>
-                        <th className="training-management-thead">Details</th>
+                        <th className="training-management-thead-doc">Training </th>
+                        <th className="training-management-thead-doc">Equipment </th>
+                        <th className="training-management-thead-doc">Location</th>
+                        <th className="training-management-thead-doc">Department</th>
+                        <th className="training-management-thead-doc">Length</th>
+                        <th className="training-management-thead-doc">Start Date</th>
+                        <th className="training-management-thead-doc">End Date</th>
+                        <th className="training-management-thead-doc">Training Type</th>
+                        <th className="training-management-thead-doc">Training Level</th>
+                        <th className="training-management-thead-doc">Details</th>
 
                     </tr>
                 </thead>

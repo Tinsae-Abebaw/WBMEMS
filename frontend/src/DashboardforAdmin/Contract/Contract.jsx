@@ -341,10 +341,10 @@ return (
   )}
             {showContractForm && (
                 <div className='detailed-view-contract-form'>
-                    <div className='detail-description-detailed-contract-formm'>
+                    <div className='detail-description-detailed-contract-formm-admin'>
                     <div className='medical-contract-form-title' >Contract Agreement Form</div>
                         
-                        <div  className="medical-contract-form">
+                        <div  className="medical-contract-form-admin">
                           
                       <label className="contract-contract-form-label">
                       <div className='contractlabel'>Healthcare Facility/Organization</div> 

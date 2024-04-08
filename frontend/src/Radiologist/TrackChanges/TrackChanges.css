@@ -1,11 +1,12 @@
 .track-and-sort-title-trackChanges{
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: rgb(3, 47, 97);
   color: white;
   margin: 0px;
  padding-left: 30px;
-  font-size: medium;
+ height: 70px;
+  font-size: small;
   font-family: -apple-system;
 }
 .track-request-table{

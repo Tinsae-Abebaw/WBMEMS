@@ -57,6 +57,10 @@ const SignIn = () => {
         navigate('/Dashboard');
       }else if(decoded.occupation === 'Doctor'){
         navigate('/DoctorDashboard')
+      }else if(decoded.occupation === 'Nurse'){
+        navigate('/NurseDashboard')
+      }else if(decoded.occupation === 'Laboratory Technician'){
+        navigate('/LabDashboard')
       }else if(decoded.occupation === 'Radiologist'){
         navigate('/RadiologistDashboard')
       }else if(decoded.occupation=== 'Engineer'){

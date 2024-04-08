@@ -15,17 +15,19 @@
   padding-left: 30px;
   background-color: rgb(2, 26, 70);
   color: white;
-  font-size: medium;
+  font-size: small;
+  height: 70px;
   font-family: -apple-system;
 }
 .admin-request-table{
   background: none;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .bubu{
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .Admin-request-table-data{
     padding-left: 10px;

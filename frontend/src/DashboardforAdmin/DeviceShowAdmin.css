@@ -16,10 +16,10 @@
 .individual-device {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    width: 100%;
     justify-content: space-between;
-    border-radius: 7px;
-    background-color: aliceblue;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
   }
   .individual-device:hover {
     transition: all 0.3s;
@@ -32,16 +32,17 @@
   }
   .device-table-admin {
     display: grid;
-    column-gap: 20px;
-    margin-top: 70px;
+    column-gap: 10px;
+    margin-top: 15px;
+    height: 100%;
     align-items: center;
-    justify-content: center;
+    padding: 10px;
+    justify-content: space-between;
     grid-template-columns: repeat(
       auto-fit,
       minmax(200px, 240px)
     ); /* Dynamic number of columns */
     border-radius: 10px;
-    background-color: rgb(250, 250, 250);
    }
   @media (min-width: 600px) {
     .device-table {
@@ -158,7 +159,7 @@
     justify-content: center;
   }
   .device-model {
-    background-color: rgb(224, 220, 220);
+    background-color: rgb(255, 255, 255);
     color: black;
     padding: 5px;
   }

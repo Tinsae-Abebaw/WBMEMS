@@ -113,11 +113,11 @@ const DoctorDeviceOverview = () => {
 }
        {(
         <div className='grand-device-doctor'>
-          <div className='device-main-doctor'>
+          <div className='device-main-doctors'>
             <div><DoctorSidebar/></div>
             <h2>Device Information</h2>
           </div>
-          <div className='device-table-doc'>
+          <div className='device-table-doctor'>
             {deviceOverview.map((device) => (
               <div>
                 <div className='individual-device-doctor' key={device.id} onClick={() => getById(device.id)}>

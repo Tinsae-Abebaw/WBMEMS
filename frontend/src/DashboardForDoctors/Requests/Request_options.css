@@ -20,61 +20,70 @@ body {
     width: 100%;
 }
 
-.the-navigation-main-class-requestss {
+.the-navigation-main-class-requests-doc {
     display: flex;
     align-items: center;
     padding-left: 30px;
-    height: 100px;
-    color: black;
+    height: 70px;
+    color: rgb(255, 255, 255);
     background-color: rgb(8, 79, 112);
 }
 
-.the-request-title {
+.the-request-title-doc {
     display: flex;
     align-items: center;
-    color: black;
+    font-family: -apple-system;
+    font-size: larger;
+    color: rgb(255, 255, 255);
 
 }
-.sub-class-requestss {
+.sub-class-requests-doc {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
+    column-gap: 50px;
+    row-gap: 80px;
     padding-left :20px;
     border-radius: 10px;
     margin: 10px;
+    margin-top: 20px;
     padding: 50px;  
 }
-.calibrationn,
-.maintenancee,
-.specificationn,
-.trainingg,
-.installationn,
-.procurementt{
+.calibrationn-doc,
+.maintenancee-doc,
+.specificationn-doc,
+.trainingg-doc,
+.installationn-doc,
+.procurementt-doc{
     display: flex;
     align-items: center;
     border-radius: 5px;
+    font-size: larger;
+    font-weight: bold;
+    height: 100px;
     padding: 10px;
-    color:black;
-    background-color:rgb(245, 243, 243);
-  
+    color:rgb(107, 105, 105);
+    background-color:rgba(106, 183, 245, 0.137);
     font-family: -apple-system;
 }
-.calibrationn:hover,
-.maintenancee:hover,
-.specificationn:hover,
-.trainingg:hover,
-.installationn:hover,
-.procurementt:hover{
-  background-color:rgba(94, 108, 236, 0.08);
+.calibrationn-doc:hover,
+.maintenancee-doc:hover,
+.specificationn-doc:hover,
+.trainingg-doc:hover,
+.installationn-doc:hover,
+.procurementt-doc:hover{
+  background-color:rgba(106, 183, 245, 0.233);
   transition: all 0.3s;
 }
-.Request_options-icons {
+.Request_options-icons-doc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 20px;
-    font-size: large;
-    background-color: rgb(90, 15, 124);
+    font-size: x-large;
+    background-color:rgba(5, 54, 95, 0.678);
     padding: 5px;
     border-radius: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 

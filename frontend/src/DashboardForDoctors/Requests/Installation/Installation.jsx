@@ -110,8 +110,8 @@ const InstallationForm = () => {
   };
 
   return (
-    <div className="main-installation">
-      <div className="installation-title">
+    <div className="main-installation-doc">
+      <div className="installation-title-doc">
         <DoctorSidebar />
         <h2 className="Installation-Page">Installation Request Form</h2>
       </div>

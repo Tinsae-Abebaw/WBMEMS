@@ -560,10 +560,6 @@ const RequestForEngineer = () => {
     const handleCloseReport = () => {
       setReportDetail(null);
     };
-    
-
-    
-
     return (
         <div className='show-request-body-maintenance'>
             <div className="sort-by-requestType-main-maintenance">

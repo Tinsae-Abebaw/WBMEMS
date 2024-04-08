@@ -1,0 +1,108 @@
+ 
+.doctor-main-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(0, 0, 0);
+    color: white;
+    width: fit-content;
+    height:100vh;
+    z-index: 100;
+    top: 0;
+    left:0;
+    bottom: 0;
+    top: 0;
+    left: -300px; /* Start off screen */
+    transition: left 0.3s ease; 
+    width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+}
+.doctor-nav-barr{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    line-height: 10px;
+    
+}
+.doctor-lists{
+    display: flex;
+    align-items: center;
+    line-height: 38px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: medium;
+    font-family:-apple-system;
+    color: rgb(150, 149, 149);
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 5px;
+    width: 170px;
+}
+.null-display{
+  display: none;
+}
+.doctor-lists:hover{
+    background-color: rgb(47, 48, 48);
+}
+.sidebar-notification{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(112, 112, 112);
+    height: 17px;
+    width: 17px;
+    border-radius: 20%;
+    font-size: smaller;
+    font-family: -apple-system;
+}
+.name-and-notification-count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.lists:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgba(28, 28, 29, 0.918);
+    border-radius: 5px;
+}
+.icons{
+    margin-right: 10px;  
+}
+.close-button{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    right: 0;
+    margin-right: 10px ;
+    margin-top: 10px;
+    color: white;
+    cursor:pointer; 
+    font-weight: bold;
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+}
+.doctor-hum-button{
+    background: none;
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    margin-right: 20px;
+    height: 100px;
+    font-family: -apple-system;
+}
+  .doctor-open {
+    left: 0; 
+  }
+  
+  

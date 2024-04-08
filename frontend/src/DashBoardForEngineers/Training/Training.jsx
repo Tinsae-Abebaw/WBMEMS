@@ -124,14 +124,14 @@ const defaultTrainingList = async () => {
 
   return (
     <div className="training-container">
-      <div className="training-home-and-sort-title">
+      <div className="training-home-and-sort-title-eng">
         <EngineerSidebar />
         <h2>Training Management</h2>
       </div>
       <div className="training-search-and-export">
         <div className="training-export-buttons">
-          <button className="export-btn-csv" onClick={handleExportCSV}>Export to CSV</button>
-          <button className="export-btn-pdf" onClick={handleExportPDF}>Export to PDF</button>
+          <button className="export-btn-csv-eng" onClick={handleExportCSV}>Export to CSV</button>
+          <button className="export-btn-pdf-eng" onClick={handleExportPDF}>Export to PDF</button>
         </div>
         <div className="search-container">
           <IoSearchSharp className="search-icon1" />
@@ -145,32 +145,32 @@ const defaultTrainingList = async () => {
           />
         </div>
       </div>
-      <div className="training-table-container">
-      <table className="main-training-management-table">
-                <thead>
-                    <tr>
-                        <th className="training-management-thead">Training </th>
-                        <th className="training-management-thead">Equipment </th>
-                        <th className="training-management-thead">Location</th>
-                        <th className="training-management-thead">Department</th>
-                        <th className="training-management-thead">Length</th>
-                        <th className="training-management-thead">Start Date</th>
-                        <th className="training-management-thead">End Date</th>
-                        <th className="training-management-thead">Training Type</th>
-                        <th className="training-management-thead">Training Level</th>
-                        <th className="training-management-thead">Details</th>
+      <div className="training-table-container-engineerr">
+      <table className="main-training-management-table-engineerr">
+                <thead className="the-thead">
+                    <tr className="zanati">
+                        <th className="training-management-thead-engineer">Training </th>
+                        <th className="training-management-thead-engineer">Equipment </th>
+                        <th className="training-management-thead-engineer">Location</th>
+                        <th className="training-management-thead-engineer">Department</th>
+                        <th className="training-management-thead-engineer">Length</th>
+                        <th className="training-management-thead-engineer">Start Date</th>
+                        <th className="training-management-thead-engineer">End Date</th>
+                        <th className="training-management-thead-engineer">Training Type</th>
+                        <th className="training-management-thead-engineer">Training Level</th>
+                        <th className="training-management-thead-engineer">Details</th>
 
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     {filteredTraining.map((training) => (
                         <tr key={training.id}>
-                            <td className="training-management-table-fields">{training.trainingName}</td>
-                            <td className="training-management-table-fields">{training.equipmentName}</td>
-                            <td className="training-management-table-fields">{training.location}</td>
-                            <td className="training-management-table-fields">{training.department}</td>
-                            <td className="training-management-table-fields">{training.length}</td>
-                            <td className="training-management-table-fields">{new Date(training.startDate).toLocaleString('en-US', {
+                            <td className="training-management-table-fields-eng">{training.trainingName}</td>
+                            <td className="training-management-table-fields-eng">{training.equipmentName}</td>
+                            <td className="training-management-table-fields-eng">{training.location}</td>
+                            <td className="training-management-table-fields-eng">{training.department}</td>
+                            <td className="training-management-table-fields-eng">{training.length}</td>
+                            <td className="training-management-table-fields-eng">{new Date(training.startDate).toLocaleString('en-US', {
                                                   year: 'numeric',
                                                   month: '2-digit',
                                                   day: '2-digit',
@@ -181,7 +181,7 @@ const defaultTrainingList = async () => {
                             })}
                             
                             </td>
-                            <td className="training-management-table-fields">{new Date(training.endDate).toLocaleString('en-US', {
+                            <td className="training-management-table-fields-eng">{new Date(training.endDate).toLocaleString('en-US', {
                                                   year: 'numeric',
                                                   month: '2-digit',
                                                   day: '2-digit',
@@ -194,9 +194,9 @@ const defaultTrainingList = async () => {
                             
                             
                             </td>
-                            <td className="training-management-table-fields">{training.trainingType}</td>
-                            <td className="training-management-table-fields">{training.trainingLevel}</td>
-                            <td className="training-management-table-fields"><button className="training-detail-button" onClick={() => handleDetailClick(training)}>Detail</button></td>
+                            <td className="training-management-table-fields-eng">{training.trainingType}</td>
+                            <td className="training-management-table-fields-eng">{training.trainingLevel}</td>
+                            <td className="training-management-table-fields-eng"><button className="training-detail-button" onClick={() => handleDetailClick(training)}>Detail</button></td>
                         </tr>
                     ))}
                 </tbody>

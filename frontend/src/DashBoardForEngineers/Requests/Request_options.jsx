@@ -14,9 +14,9 @@ const Request_optionsEngineer = () => {
   return (
     <div className="main-class-request-options">
       <div className="right-part">
-        <div className="the-navigation-main-class-requestss">
+        <div className="the-navigation-main-class-requestss-eng">
           <EngineerSidebar />
-          <h2 className="the-request-title">Make Requests</h2>
+          <h2 className="the-request-title-eng">Make Requests</h2>
         </div>
         <div className="sub-class-requestss">
           <Link to="Procurement" className="my-link">

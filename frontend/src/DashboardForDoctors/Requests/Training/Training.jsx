@@ -131,8 +131,8 @@ const TrainingForm = () => {
   };
 
   return (
-    <div className="main-training">
-      <div className="training-title">
+    <div className="main-training-doc">
+      <div className="training-title-for-doc">
         <DoctorSidebar />
         <h2 className="Training-Page">Training Request Form</h2>
       </div>

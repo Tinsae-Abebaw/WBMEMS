@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    background-image: linear-gradient(rgba(108, 122, 233, 0.3), rgba(12, 51, 168, 0.9)), url('/b1.PNG');
+    background-image: linear-gradient(rgba(20, 38, 170, 0.3), rgba(6, 40, 102, 0.9));
 
   }
   .input-login{
@@ -86,7 +86,7 @@ body{
     border-radius: 20px;
     width: 400px;
     height: 500px;
-    background-image: linear-gradient(rgba(151, 159, 226, 0.99), rgba(128, 153, 236, 0.7)), url('/b2.PNG');
+    background-image: linear-gradient(rgba(181, 186, 233, 0.99), rgba(128, 153, 236, 0.7)), url('/b2.PNG');
   }
   .account-icon{
     width: 100px;

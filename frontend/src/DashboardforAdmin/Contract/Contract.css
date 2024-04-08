@@ -38,7 +38,7 @@
   padding: 10px;
 }
 .main-contract-table{
-  background-color: rgb(255, 255, 255);
+  background: none;
   width: 100%;
   border-radius: none;
 }
@@ -212,19 +212,19 @@
   background-color: rgb(220, 223, 226);
   color: rgb(0, 0, 0);
   padding: 20px;
-  width: 90%;
   max-width: 1000px;
   border-radius: 10px;
   max-height: 90vh; /* Adjust the maximum height as needed */
   overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
 }
-.detail-description-detailed-contract-formm{
+.detail-description-detailed-contract-formm-admin{
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 10px;
-  max-height: 90vh; /* Adjust the maximum height as needed */
+  width: 1200px;
+  max-height: 90vh;
   overflow-y: auto;
-  padding: 20px;
+
 }
 .contract-contract-form-label{
   display: flex;
@@ -232,16 +232,19 @@
   justify-content: space-between;
 }
 
-.medical-contract-form {
+.medical-contract-form-admin{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
   overflow-y: auto;
+  overflow-x: auto;
+  margin: 20px;
 }
 .medical-contract-form-title{
   font-size: x-large;
   font-family: -apple-system;
-  margin-left: 20px;
+  margin:20px;
   font-weight: bold;
  
 }
@@ -265,19 +268,18 @@
   display: flex;
   align-items: center;
   color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  padding: 4px;
-  height: 100%;
-  border-radius: 5px;
+  background: none;
+  padding-left: 4px;
   font-weight: bold;
 }
 .contract-form-input {
   color: rgb(0, 0, 0);
   padding-left: 5px;
   border: none;
-  height: 40px;
+  height: 25px;
+  margin-top: 5px;
   outline: none;
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(247, 246, 246);
   border-radius: 3px;
   border: none;
 }

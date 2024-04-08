@@ -107,10 +107,10 @@ const MaintenanceForm = () => {
   };
 
   return (
-    <div className="main-maintenance-requestt">
-      <div className="maintenance-title">
+    <div className="main-maintenance-requestt-doc">
+      <div className="maintenance-title-doc">
         <DoctorSidebar />
-        <h2 className="Maintenance-Page">Maintenance Request Form</h2>
+        <h2 className="Maintenance-Page-doc">Maintenance Request Form</h2>
       </div>
       <div className="maintenance-form-requestt">
         <div className="individualll">

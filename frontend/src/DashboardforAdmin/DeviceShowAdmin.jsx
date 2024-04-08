@@ -94,26 +94,14 @@ const AdminDeviceOverview = () => {
 
   return (
     <div className='cc'>
-      {warning && (
-        <div className='alert-main'>
-          <div className='dispose-warning-alert'>
-          <RiErrorWarningLine className='warning-icon'/>
-            <div>Are you sure you want to dispose the device! ?</div>
-            <div className='dispose-alert-buttons'>
-              <button className='dispose-alert-button-yes' onClick={() => updateStatus(idHolder, 'Disposed')}>Yes</button>
-              <button className='dispose-alert-button-cancel' onClick={() => setWarning(false)}>Cancel</button>
-            </div>
-          </div>
-        </div>
-      )
-}
+      
        {(
         <div className='grand-device'>
           <div className='Admin-device-main'>
             <div><AdminstratorHome/></div>
             <h2>Device Information</h2>
           </div>
-          <div className='device-table'>
+          <div className='device-table-admin'>
             {deviceOverview.map((device) => (
               <div>
                 <div className='individual-device' key={device.id} onClick={() => getById(device.id)}>

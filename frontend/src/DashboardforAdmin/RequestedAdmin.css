@@ -1,11 +1,15 @@
 .home-and-sort-title-requestt{
     display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
     align-items: center;
     padding-left: 20px;
     color: white;
-    width: 100%;
     background-color: rgb(2, 26, 70);
-    font-size: medium;
+    font-size: small;
     font-family: -apple-system;
 }
 .sort-by-requestType-output{
@@ -29,8 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+    margin-top: 40px;
   }
   .home-and-sort-title-request {
     display: flex;
@@ -47,30 +50,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 290px;
-    background-color: rgb(248, 246, 246);
+    width: 255px;
+    border-radius: 5px;
+    background-color: rgb(246, 246, 247);
   }
   .show-request-body{
     background-color: #d8d7d7;
-  }
-  .sortt-by-request-admin{
-    font-size: medium;
-    padding: 5px;
-    border-radius: 3px;
-    border: none;
-    outline: none;
-    width: 150px;
-    margin-left: 30px;
-    margin-top: 20px;
-    font-family: -apple-system;
-    background-color: #ebebeb;
-  }
-  
+  }  
   .sort-by-requestType-output-admin {
     display: grid;
-    width: fit-content;
-    gap: 50px;
-    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 20px;
+    padding: 20px;
+    align-items: top;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
   }
   
   .request-by-type {
@@ -79,7 +73,7 @@
     justify-content: space-between;
     border-radius: 5px;
     cursor: pointer;
-    background-color: aliceblue;
+    background-color: rgb(85, 111, 134);
   }
   .sort-by-requestType-desc {
     margin-bottom: 10px;

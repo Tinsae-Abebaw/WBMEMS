@@ -87,6 +87,18 @@ import DoctorSortByDepartment from './DashboardForDoctors/DoctorSortByDep';
 import AdminDisplayAnnouncement from './DashboardforAdmin/AdminAnnouncement.jsx';
 import AdminInventoryCalendar from './DashboardforAdmin/Calandar/Calandar.jsx';
 import RadiologistDisplayAnnouncement from './Radiologist/announcement/AdminAnnouncement.jsx';
+import LabDashboard from './ClinicalLaboratory/Dashboard/Dashboard.jsx';
+import LabDisplayAnnouncement from './ClinicalLaboratory/announcement/AdminAnnouncement.jsx';
+import LabDeviceOverview from './ClinicalLaboratory/deviceOverview/deviceOverview.jsx';
+import LabProcurementForm from './ClinicalLaboratory/Requests/Procurement/Procurement.jsx';
+import LabTrainingForm from './ClinicalLaboratory/Requests/Training/Training.jsx';
+import LabCalibrationForm from './ClinicalLaboratory/Requests/Calibration/Calibration.jsx';
+import LabInstallationForm from './ClinicalLaboratory/Requests/Installation/Installation.jsx';
+import LabMaintenanceForm from './ClinicalLaboratory/Requests/Maintenance/Maintenance.jsx';
+import LabSpecificationForm from './ClinicalLaboratory/Requests/Specification/Specification.jsx';
+import Request_options_Lab from './ClinicalLaboratory/Requests/Request_options.jsx';
+import LabTrackChanges from './ClinicalLaboratory/TrackChanges/TrackChanges.jsx';
+import LabTrainingManagement from './ClinicalLaboratory/Training/Training.jsx';
 
 
 
@@ -164,11 +176,6 @@ function App() {
           <Route path='/RadiologistTrackChanges' element={<RadiologistTrackChanges/>}/>
           <Route path='/RadiologistTrainingManagement' element={<RadiologistTrainingManagement/>}/>
           
-          
-          
-
-
-
           <Route path='/NurseDashboard' element={<NurseDashboard/>}/>  
           <Route path='/NurseDeviceShow' element={<NurseDeviceOverview/>}/> 
           <Route path='/NurseAnnouncement' element={<NurseDisplayAnnouncement/>}/> 
@@ -182,6 +189,23 @@ function App() {
           <Route path='/NurseRequests/Specification' element={<SpecificationFormNurse/>}/>
           <Route path='/NurseRequests/Training' element={<TrainingFormNurse/>}/>
           <Route path='/NurseRequests/Installation' element={<InstallationFormNurse/>}/>
+
+          
+          <Route path='/LabDashboard' element={<LabDashboard/>}/>
+          <Route path='/LabDisplayAnnouncement' element={<LabDisplayAnnouncement/>}/>
+          <Route path='/LabDeviceOverview' element={<LabDeviceOverview/>}/>
+          <Route path='/Request_options_Lab' element={<Request_options_Lab/>}/>
+          <Route path='/Request_options_Lab/Procurement' element={<LabProcurementForm/>}/>
+          <Route path='/Request_options_Lab/Calibration' element={<LabCalibrationForm/>}/>
+          <Route path='/Request_options_Lab/Maintenance' element={<LabMaintenanceForm/>}/>
+          <Route path='/Request_options_Lab/Specification' element={<LabSpecificationForm/>}/>
+          <Route path='/Request_options_Lab/Training' element={<LabTrainingForm/>}/>
+          <Route path='/Request_options_Lab/Installation' element={<LabInstallationForm/>}/>
+          <Route path='/LabTrackChanges' element={<LabTrackChanges/>}/>
+          <Route path='/LabTrainingManagement' element={<LabTrainingManagement/>}/>
+          
+          
+        
 
           
         </Routes>

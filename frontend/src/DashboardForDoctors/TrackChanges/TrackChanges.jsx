@@ -43,8 +43,12 @@ const DoctorTrackChanges = () => {
         switch (status) {
             case 'Pending':
                 return 'red';
-            case 'Accepted':
+            case 'Accepted' || 'Purchased' || 'Arranged':
                 return 'yellow';
+            case 'Purchased' || 'Arranged':
+                return 'Green';
+            case  'Arranged':
+                return 'Green';
             case 'Completed':
                 return 'green';
             default:
@@ -54,19 +58,19 @@ const DoctorTrackChanges = () => {
 
     return (
         <div className=''>
-            <div className="track-and-sort-title-trackChanges"><DoctorSidebar/><h2>Track Requests</h2></div>
+            <div className="track-and-sort-title-trackChanges-doc"><DoctorSidebar/><h2>Own Requests</h2></div>
             <div className="track-table-holder">
-            <table className="track-request-table">
+            <table className="track-request-table-doc">
                 <thead>
                     <tr className="track-main-row">
-                        <th className="track-table-headers">Request Type</th>
-                        <th  className="track-table-headers">Request Date</th>
-                        <th  className="track-table-headers">Equipment Name</th>
-                        <th  className="track-table-headers">Department</th>
-                        <th  className="track-table-headers">Status</th>
-                        <th  className="track-table-headers">Assigned</th>
-                        <th  className="track-table-headers">Requested By</th>
-                        <th  className="track-table-headers">Details</th>
+                        <th className="track-table-headers-doc">Request Type</th>
+                        <th  className="track-table-headers-doc">Request Date</th>
+                        <th  className="track-table-headers-doc">Equipment Name</th>
+                        <th  className="track-table-headers-doc">Department</th>
+                        <th  className="track-table-headers-doc">Status</th>
+                        <th  className="track-table-headers-doc">Assigned</th>
+                        <th  className="track-table-headers-doc">Requested By</th>
+                        <th  className="track-table-headers-doc">Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,11 +80,11 @@ const DoctorTrackChanges = () => {
                             <td className="track-data">{RequestByType.requestDate}</td>
                             <td className="track-data">{RequestByType.equipmentName}</td>
                             <td className="track-data">{RequestByType.department}</td>
-                            <td className="track-dataa" style={{ backgroundColor: getStatusColor(RequestByType.status) }}>{RequestByType.status}</td>
+                            <td className="track-data-doc" style={{ backgroundColor: getStatusColor(RequestByType.status) }}>{RequestByType.status}</td>
                             <td className="track-data">{RequestByType.action}</td>
                             <td className="track-data">{RequestByType.requestedBy}</td>
                             <td>
-                                <button className="track-detail-button" onClick={() => getById(RequestByType.id)}>Detail</button>
+                                <button className="track-detail-button-doc" onClick={() => getById(RequestByType.id)}>Detail</button>
                             </td>
                         </tr>
                     ))}

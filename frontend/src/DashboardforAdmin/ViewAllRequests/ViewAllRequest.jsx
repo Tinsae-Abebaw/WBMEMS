@@ -58,9 +58,13 @@ const ViewAllRequest = () => {
             case 'Pending':
                 return '#d80a0a';
             case 'Accepted':
-                return '#0db83';
+                return '#000080';
             case 'Completed':
                 return '#0b7e3b';
+            case 'Purchased':
+                return '#800020';
+            case 'Arranged':
+                return '#FFA500';
             default:
                 return '';
         }

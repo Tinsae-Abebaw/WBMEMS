@@ -1,35 +1,37 @@
-.track-and-sort-title-trackChanges{
+.track-and-sort-title-trackChanges-doc{
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: rgb(5, 49, 87);
   color: white;
   margin: 0px;
+  height: 70px;
  padding-left: 30px;
-  font-size: medium;
+  font-size: small;
   font-family: -apple-system;
 }
-.track-request-table{
+.track-request-table-doc{
+  width: 100%;
   background:none;
   margin-top: 20px;
   font-size: medium;
   font-family: -apple-system;
 }
-.track-table-headers{
-  background-color: rgb(48, 139, 219);
+.track-table-headers-doc{
+  background-color: rgb(5, 49, 87);
   padding: 5px 10px;
   border-radius: px;
 }
 .track-data{
  padding: 5px 12px;
 }
-.track-dataa{
-  color: rgb(0, 0, 0);
+.track-data-doc{
+  color: rgb(241, 239, 239);
   padding: 5px 12px;
 }
-.track-detail-button{
+.track-detail-button-doc{
   width: 100%;
   background-color: rgb(74, 162, 240);
-  color: black;
+  color: rgb(253, 253, 253);
 }
 .track-table-holder{
   display: flex;

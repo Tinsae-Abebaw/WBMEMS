@@ -1,27 +1,37 @@
-.calibration-formm {
+.calibration-formm-doc {
   display: grid;
   align-items: center;
   justify-content: space-between;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 15px;
-  background: rgb(255, 255, 255); /* Replace the URL with your desired pattern */
+  background: none; /* Replace the URL with your desired pattern */
   padding-right: 50px;
   padding-left: 50px;
   padding-top: 80px;
+  background: none;
+}
+.individualll-doc{
+  display: flex;
+  flex-direction: column;
+  background: none;
+
+}
+.calibration-form-labell-doc{
+  background: none;
 }
 .calibration-Page {
   display: flex;
   align-items: center;
 }
-.calibration-title {
+.calibration-title-doc {
   display: flex;
   align-items: center;
   padding-left: 30px;
   color: white;
-  height: 100px;
-  font-size: medium;
+  height: 70px;
+  font-size: small;
   font-family: -apple-system;
-  background-color: black;
+  background-color: rgb(5, 51, 92);
 }
 
 .mai.calibration-request {
@@ -33,13 +43,15 @@
   height: 100%;
   background-color: rgb(209, 94, 94);
 }
-
+.main-calibration-doc{
+  background: none;
+}
 .calibration-individual {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
   min-width: 50px;
-  background: rgb(240, 239, 239);
+  background: rgb(255, 255, 255);
   padding-right: 2px;
 }
 .calibration-inputt,.calibration-description-inputt {

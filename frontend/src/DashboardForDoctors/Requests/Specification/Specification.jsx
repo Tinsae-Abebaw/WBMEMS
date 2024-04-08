@@ -123,8 +123,8 @@ const SpecificationForm = () => {
   };
 
   return (
-    <div className="main-specification-request">
-      <div className="specification-title-request">
+    <div className="main-specification-requestt-doc">
+      <div className="specification-title-request-doc">
         <DoctorSidebar />
         <h2 className="Specification-Page-request1">Specification Request Form</h2>
       </div>

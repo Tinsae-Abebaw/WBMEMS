@@ -3,24 +3,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.request-table-dataa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+  .request-table-data{
+    align-items: center;
+    justify-content: center;
+    color: rgb(87, 85, 85);
+    font-family: -apple-system;
+    width: fit-content;
   }
-  
-  
-  
+  .request-table-heading{
+    background-color: rgb(2, 26, 70); 
+    padding: 5px;
+    text-align: center;
+    font-family: -apple-system;
+  }
+  .request-table{
+    margin-top: 100px;
+    width: 100%;
+  }
   .home-and-sort-title-trackChanges {
     display: flex;
     align-items: center;
-    background: linear-gradient(to top left, #0a284a, #262930);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(2, 26, 70);   
     color: rgb(251, 251, 251);
     width: 100%;
     padding-left: 50px;
-    height: 100px;
+    height: 70px;
     font-size: 15px;
+    font-size: small;
+    padding-left: 30px;
+    font-family: -apple-system;
   }
-  
- 
-  
-  
 .sort-by-request-trackChanges{
   display: flex;
   height: fit-content;

@@ -20,20 +20,20 @@ body {
     width: 100%;
 }
 
-.the-navigation-main-class-requests {
+.the-navigation-main-class-requestss-eng{
     display: flex;
     align-items: center;
     padding-left: 30px;
     color: white;
-    height: 100px;
-    background-color: black;
+    height: 70px;
+    background-color: rgb(4, 23, 77);
 }
 
-.the-request-title {
+.the-request-title-eng{
     display: flex;
     align-items: center;
     color: white;
-    font-size: x-large;
+    font-size: larger;
     font-family: -apple-system;
 }
 .sub-class-requests {
