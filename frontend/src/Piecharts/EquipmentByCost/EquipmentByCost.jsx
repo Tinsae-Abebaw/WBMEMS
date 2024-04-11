@@ -10,7 +10,6 @@ const EquipmentByCost = () => {
       try {
         const response = await axios.get('http://localhost:7000/api/reportOptions/EquipmentWithCost');
         setPieChartData(response.data);
-        console.log('the couple data', response.data);
       } catch (error) {
         console.error('Error fetching pie chart data:', error);
       }

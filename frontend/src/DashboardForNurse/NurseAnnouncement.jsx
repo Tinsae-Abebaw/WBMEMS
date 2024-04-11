@@ -2,36 +2,34 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './NurseAnnouncement.css';
 import { DateTime } from 'luxon';
-import { useDispatch } from 'react-redux';
-import { decrementNotificationCount } from '../StateManagement/actions/notificationActions';
 import NurseSidebar from './NurseSidebar';
 
 const NurseDisplayAnnouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
-  const dispatch = useDispatch();
-  const handleIncrement = () => {
-    dispatch(decrementNotificationCount());
-    localStorage.removeItem('notificationCount');
-
-  };
+  const [user, setUser] = useState(() => {
+    const storedUserData = localStorage.getItem('userData');
+    return storedUserData ? JSON.parse(storedUserData) : null;
+});
   useEffect(() => {
     fetchAnnouncements();
     EraseNotifications();
   }, []);
 
- const EraseNotifications = async()=>{
-  try{
-    await axios.delete(`http://localhost:7000/api/alertAndNotification/notification?notificationType=${'Announcement'}`);
-  }catch(error){
-    console.error(error)
-  }
+  const EraseNotifications = async () => {
+    try {
+      await axios.put('http://localhost:7000/api/alertAndNotification/notification', {
+        userId: user.id,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
- }
 
 
   const fetchAnnouncements = async () => {
     try {
-      handleIncrement()
+
       const response = await axios.get('http://localhost:7000/api/announcements');
       if (response.status === 200) {
         const announcementsWithLocalTime = response.data.map(announcement => ({
@@ -50,18 +48,19 @@ const NurseDisplayAnnouncement = () => {
 
   return (
     <div className='announcement-table'>
-      <div className='announcement-main'> <NurseSidebar/> <h2 className='announcements-main-title'>Announcements</h2></div>
-      <div className='main-individual'>
+      <div className='announcement-main-nurse'> <NurseSidebar/> <h2 className='announcements-main-title-nurse'>Announcements</h2></div>
+      <div className='main-individual-nurse'>
       {announcements.map((announcement) => (
         
-          <div className='individual-announcement-display' key={announcement.id}>
-            <h3 className='announcement-heading'>{announcement.title} <p className='announcememnt-moment'>{announcement.announcement_time}</p></h3>
-            <p className='announcement-description'>{announcement.description}</p>
+          <div className='individual-announcement-display-nurse' key={announcement.id}>
+            <h3 className='announcement-heading-nurse'>{announcement.title} <p className='announcememnt-moment'>{announcement.announcement_time}</p></h3>
+            <p className='announcement-description-nurse'>{announcement.description}</p>
           </div>
        
       ))}
        </div>
     </div>
+    
   );
 };
 

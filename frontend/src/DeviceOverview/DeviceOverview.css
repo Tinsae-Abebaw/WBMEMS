@@ -106,7 +106,7 @@
   color: white;
   padding-left: 20px;
   height: 70px;
-  font-size: small;
+  font-size: x-small;
   font-family: -apple-system;
   background-color: rgb(2, 26, 70);
   z-index: 100;
@@ -127,8 +127,8 @@
   font-family: -apple-system;
   font-size: medium;
 }
-.spot-light {
-  background-color: green;
+.spot-light-admin {
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10px;
   width: 10px;
@@ -334,4 +334,9 @@
 }
 .device-model{
   background-color: #d9d9da;
+}
+.main-spot-light{
+  background-color: rgb(67, 243, 120);
+  padding: 2px;
+  border-radius: 50%;
 }

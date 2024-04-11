@@ -140,7 +140,7 @@ const desiredColumns = ['equipmentName', 'Model', 'department', 'reportType', 'd
                   </div>
                   <div className='device-description'>
                     <div>
-                      <p className='device-name'>{device.equipmentName} <div className='spot-light'>.</div></p>
+                      <p className='device-name'>{device.equipmentName} <div className='main-spot-light'><div className='spot-light-admin'>.</div></div></p>
                       <p className='device-model'>{device.model}</p>
                       <p className='device-manuf'>{device.manufacturer}</p>
                     </div>

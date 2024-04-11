@@ -5,12 +5,26 @@ import { DateTime } from 'luxon';
 import Home from '../pages/Home/Home'
 import { useDispatch } from 'react-redux';
 import { BsCheckAll } from "react-icons/bs";
+import { useSelector } from 'react-redux';
 
 import { decrementNotificationCount } from '../StateManagement/actions/notificationActions';
 
 const DisplayAnnouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
   const dispatch = useDispatch();
+  const { user } = useSelector(state => state.user);
+  const [userId, setUserId] = useState(() => {
+    const storedUserId = localStorage.getItem('userId');
+    return storedUserId ? storedUserId : null;
+  });
+
+  useEffect(() => {
+    if (user && user.id) {
+      localStorage.setItem('userId', user.id);
+      setUserId(user.id);
+    }
+  }, [user]);
+
   const handleIncrement = () => {
     dispatch(decrementNotificationCount());
     localStorage.removeItem('notificationCount');
@@ -21,14 +35,16 @@ const DisplayAnnouncement = () => {
     EraseNotifications();
   }, []);
 
- const EraseNotifications = async()=>{
-  try{
-    await axios.delete(`http://localhost:7000/api/alertAndNotification/notification?notificationType=${'Announcement'}`);
-  }catch(error){
-    console.error(error)
-  }
-
- }
+  const EraseNotifications = async () => {
+    try {
+      await axios.put('http://localhost:7000/api/alertAndNotification/notification', {
+        userId: userId, // Assuming Id is a variable containing the user's ID
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
 
 
   const fetchAnnouncements = async () => {

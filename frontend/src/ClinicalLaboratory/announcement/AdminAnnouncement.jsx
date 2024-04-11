@@ -2,26 +2,30 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AdminAnnouncement.css';
 import { DateTime } from 'luxon';
-import { useDispatch } from 'react-redux';
 import { BsCheckAll } from "react-icons/bs";
 import LabSidebar from '../sidebar/Sidebar';
 
 const LabDisplayAnnouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
+  const [user, setUser] = useState(() => {
+    const storedUserData = localStorage.getItem('userData');
+    return storedUserData ? JSON.parse(storedUserData) : null;
+});
  
   useEffect(() => {
     fetchAnnouncements();
     EraseNotifications();
   }, []);
 
- const EraseNotifications = async()=>{
-  try{
-    await axios.delete(`http://localhost:7000/api/alertAndNotification/notification?notificationType=${'Announcement'}`);
-  }catch(error){
-    console.error(error)
-  }
-
- }
+  const EraseNotifications = async () => {
+    try {
+      await axios.put('http://localhost:7000/api/alertAndNotification/notification', {
+        userId: user.id,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 
   const fetchAnnouncements = async () => {

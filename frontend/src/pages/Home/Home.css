@@ -63,13 +63,12 @@
     text-decoration: none;
     color: white;
 }
-.hum-button{
+.hum-button-head{
     background: none;
     display: flex;
     color: white;
-    font-size: small;
+    font-size: x-small;
     margin-right: 20px;
-    height: 100px;
     font-family: -apple-system;
 }
   .open {

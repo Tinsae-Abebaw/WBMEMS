@@ -7,7 +7,6 @@ import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { MdOutlinePendingActions } from "react-icons/md";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { BiSolidSave } from "react-icons/bi";
-import { BiDollar } from "react-icons/bi";
 
 const AnalyticalData = () => {
     const [devicecounter, setDeviceCounter] = useState(null);
@@ -29,7 +28,6 @@ const AnalyticalData = () => {
    const FetchTotalNumberOfEquipments= async()=>{
     try{
         const response = await axios.get('http://localhost:7000/api/deviceRegistration');
-        console.log('the analytical data', response.data.length);
         setDeviceCounter(response.data.length);
     }catch(error){
         console.error('the error message', error);
@@ -56,9 +54,7 @@ const AnalyticalData = () => {
    const FetchTotalNumberOfRequests= async()=>{
     try{
         const response = await axios.get('http://localhost:7000/api/requestOptions');
-        console.log('the analytical data', response.data.length);
         setRequestcounter(response.data.length);
-        console.log('main', response.data)
 
         let acceptedCount = 0;
         let pendingCount = 0;

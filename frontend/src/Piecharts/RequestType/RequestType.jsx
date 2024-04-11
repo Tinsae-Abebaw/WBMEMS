@@ -9,7 +9,6 @@ const RequestType = () => {
       try {
         const response = await axios.get('http://localhost:7000/api/requestOptions/RequestType');
         setPieChartData(response.data);
-        console.log('the request chart',response.data);
       } catch (error) {
         console.error('Error fetching pie chart data:', error);
       }

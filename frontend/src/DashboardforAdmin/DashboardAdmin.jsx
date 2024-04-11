@@ -22,33 +22,30 @@ import './DashboardAdmin.css';
 
 const DashboardAdmin = () => {
   const [NotificationCount, setNotificationCount] = useState(null);
-  const [NewDeviceNotificationCount, setNewDeviceNotificationCount] = useState(null);
-  useEffect(() => {
-    NotificationNumber();
-    NotificationNumberNewDevice();
-  }, [NotificationCount,NewDeviceNotificationCount]);
+  const [user, setUser] = useState(() => {
+    // Retrieve user data from local storage on component mount
+    const storedUserData = localStorage.getItem('userData');
+    return storedUserData ? JSON.parse(storedUserData) : null;
+});
+
+
 
   useEffect(() => {
-   
+    NotificationNumber();
   }, []);
-  const NotificationNumber = async()=>{
-    try{
-      const response = await axios.get(`http://localhost:7000/api/alertAndNotification/getByType?notificationType=${'Announcement'}`);
-      console.log('The response data:', response.data);
+
+  const NotificationNumber = async () => {
+    try {
+      const response = await axios.get('http://localhost:7000/api/alertAndNotification/getById', {
+        params: {
+          notificationType: 'Announcement',
+          userIdentification: user.id,
+        }
+      });
       const counter = response.data.length;
       setNotificationCount(counter);
-    }catch(error){
-      console.error('error fetching the notifications', error);
-    }
-  };
-  const NotificationNumberNewDevice = async()=>{
-    try{
-      const response = await axios.get(`http://localhost:7000/api/alertAndNotification/getByType?notificationType=${'NewDevice'}`);
-      console.log('The response data:', response.data);
-      const counter1 = response.data.length;
-      setNewDeviceNotificationCount(counter1);
-    }catch(error){
-      console.error('error fetching the notifications', error);
+    } catch (error) {
+      console.error('Error fetching the notifications', error);
     }
   };
   return (    
@@ -67,9 +64,7 @@ const DashboardAdmin = () => {
         <Clock/>
           <div className="navigation-section1">
             <Link to='/AdminDeviceOverview' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell"/>
-            <span className={NewDeviceNotificationCount !== 0 ? "main-notification-count-display" : 'notification-null-count'}>
-              {NewDeviceNotificationCount !== null ? NewDeviceNotificationCount : ''}
-              </span></div>Device Overview</div></Link>
+            </div>Device Overview</div></Link>
 
             <Link to='/AdminDisplayAnnouncement' className='main-my-link'><div className="alert-and-notification-show">
             <div className="bell-and-notification-count"> <IoNotifications className="dashboard-icons-bell"/> 

@@ -3,7 +3,7 @@ body{
    overflow-x: auto;
 }
 
-.main-notification-count-display{
+.main-notification-count-display-admin{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,9 @@ body{
     color: white;
     background: none;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius:5px;
+    font-family: -apple-system;
+    background-color: #0c0a9c;
 }
 .short-cuts{
     display: flex;

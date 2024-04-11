@@ -29,7 +29,7 @@ const Home = () => {
 
   return ( 
     <div className='dodo'>
-      <FaBars onClick={toggleSidebar}  className='hum-button'/>
+      <FaBars onClick={toggleSidebar}  className='hum-button-head'/>
       <div className={`main-manu-head ${sidebarOpen ? 'open' : ''}`}>
         <div className='section-one'>
           <div onClick={toggleSidebar}><CiLogout className='close-button'/></div>

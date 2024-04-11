@@ -9,7 +9,6 @@ const WorkOrderStatus = () => {
       try {
         const response = await axios.get('http://localhost:7000/api/requestOptions/byStatus');
         setPieChartData(response.data);
-        console.log('the request chart',response.data);
       } catch (error) {
         console.error('Error fetching pie chart data:', error);
       }

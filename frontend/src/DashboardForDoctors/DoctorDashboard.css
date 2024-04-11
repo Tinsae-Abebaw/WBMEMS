@@ -27,7 +27,7 @@ body{
      border: 2px solid rgb(255, 255, 255);
      font-size: small;
      font-family: -apple-system;
-     background-color: rgb(133, 86, 86);
+     background-color: rgb(2, 26, 70);
      border-radius: 50%;
      color: white;
  }
@@ -203,7 +203,7 @@ body{
      color: yellow;
      cursor: pointer;
  }
- .the-title-navigation-main-class-doctor{
+ .the-title-navigation-doctor{
      display: flex;
      position: fixed;
      top: 0;
@@ -211,7 +211,7 @@ body{
      left: 0;
      align-items: center;
      font-family:-apple-system;
-     background-color: rgb(90, 4, 4);
+     background-color: rgb(2, 26, 70);
      color: rgb(255, 255, 255);
      height: 70px;
      padding-left: 30px;

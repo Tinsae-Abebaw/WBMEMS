@@ -11,10 +11,12 @@ const UserInfo = () => {
     return storedUserData ? JSON.parse(storedUserData) : null;
   });
 
+  
   useEffect(() => {
     if (user && JSON.stringify(user) !== JSON.stringify(userData)) {
       // Update userData state when user changes
       setUserData(user);
+   
       // Update local storage with new user data
       localStorage.setItem('userData', JSON.stringify(user));
     }
@@ -24,6 +26,7 @@ const UserInfo = () => {
     // Fetch user data from server when userData is null (component mounts)
     if (!userData && user && user.id) {
       getUserById(user.id);
+      
     }
   }, [userData, user]);
 

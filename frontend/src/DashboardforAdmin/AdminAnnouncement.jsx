@@ -11,30 +11,31 @@ import AdminstratorHome from './SidebarAdmin';
 
 const AdminDisplayAnnouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
-  const dispatch = useDispatch();
-  const handleIncrement = () => {
-    dispatch(decrementNotificationCount());
-    localStorage.removeItem('notificationCount');
+  const [user, setUser] = useState(() => {
+    // Retrieve user data from local storage on component mount
+    const storedUserData = localStorage.getItem('userData');
+    return storedUserData ? JSON.parse(storedUserData) : null;
+});
 
-  };
   useEffect(() => {
     fetchAnnouncements();
     EraseNotifications();
   }, []);
 
- const EraseNotifications = async()=>{
-  try{
-    await axios.delete(`http://localhost:7000/api/alertAndNotification/notification?notificationType=${'Announcement'}`);
-  }catch(error){
-    console.error(error)
-  }
-
- }
+  const EraseNotifications = async () => {
+    try {
+      await axios.put('http://localhost:7000/api/alertAndNotification/notification', {
+        userId: user.id, // Assuming Id is a variable containing the user's ID
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
 
 
   const fetchAnnouncements = async () => {
     try {
-      handleIncrement()
       const response = await axios.get('http://localhost:7000/api/announcements');
       if (response.status === 200) {
         const announcementsWithLocalTime = response.data.map(announcement => ({

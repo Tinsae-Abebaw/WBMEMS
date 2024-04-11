@@ -16,7 +16,6 @@ const contract= require('./routes/Contract');
 app.use(express.json()); // Body parser middleware
 app.use(cors());
 
-// Define routes
 app.use('/api/announcements', announcementRoutes);
 app.use('/api/registration', registrationRoutes);
 app.use('/api/deviceRegistration', deviceRegistrationRoutes);

@@ -28,11 +28,10 @@ const PieDepartment = () => {
   const drawPieChart = () => {
     const labels = pieChartData.map((data) => data.equipmentDepartment);
     const counts = pieChartData.map((data) => data.count);
-    console.log('Pie chart data:', pieChartData);
   
     const ctx = document.getElementById('myPieChart').getContext('2d');
     new Chart(ctx, {
-      type: 'bar',
+      type: 'doughnut',
       data: {
         labels: labels,
         datasets: [{

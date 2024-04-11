@@ -17,38 +17,38 @@ import Clock from "../Clock/Clock";
 import WorkOrderStatus from "../Piecharts/workorderstatus/WorkOrderStatus";
 import Staff from "../Piecharts/Staff/Staff";
 import RequestType from "../Piecharts/RequestType/RequestType";
+import axios from "axios";
 
-const Dashboard = () => {
+const EngineerDashboard = () => {
   const [NotificationCount, setNotificationCount] = useState(null);
-  const [NewDeviceNotificationCount, setNewDeviceNotificationCount] = useState(null);
+  const [user, setUser] = useState(() => {
+    // Retrieve user data from local storage on component mount
+    const storedUserData = localStorage.getItem('userData');
+    return storedUserData ? JSON.parse(storedUserData) : null;
+});
   useEffect(() => {
     NotificationNumber();
-    NotificationNumberNewDevice();
-  }, [NotificationCount,NewDeviceNotificationCount]);
+  }, []);
 
   useEffect(() => {
-   
+    console.log('the Engineer UGLO BANGADA',NotificationCount);
+    console.log('the Engineer PABLO ESCOBAR',user.id);
   }, []);
-  const NotificationNumber = async()=>{
-    try{
-      const response = await axios.get(`http://localhost:7000/api/alertAndNotification/getByType?notificationType=${'Announcement'}`);
-      console.log('The response data:', response.data);
+  const NotificationNumber = async () => {
+    try {
+      const response = await axios.get('http://localhost:7000/api/alertAndNotification/getById', {
+        params: {
+          notificationType: 'Announcement',
+          userIdentification: user.id,
+        }
+      });
       const counter = response.data.length;
       setNotificationCount(counter);
-    }catch(error){
-      console.error('error fetching the notifications', error);
+    } catch (error) {
+      console.error('Error fetching the notifications', error);
     }
   };
-  const NotificationNumberNewDevice = async()=>{
-    try{
-      const response = await axios.get(`http://localhost:7000/api/alertAndNotification/getByType?notificationType=${'NewDevice'}`);
-      console.log('The response data:', response.data);
-      const counter1 = response.data.length;
-      setNewDeviceNotificationCount(counter1);
-    }catch(error){
-      console.error('error fetching the notifications', error);
-    }
-  };
+
   return (    
     <div className="main-classs">
       <div className="the-title-navigation-main-class"><EngineerSidebar/><div className="title-and-date"><h2 className="the-navigation-title">Engineer Dashboard</h2></div></div>
@@ -92,4 +92,4 @@ const Dashboard = () => {
    );
 }
  
-export default Dashboard;
+export default EngineerDashboard;

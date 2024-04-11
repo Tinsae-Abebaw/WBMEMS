@@ -53,7 +53,6 @@ const AnnouncementForm = ({ setNotificationCount }) => {
       console.error('error posting Announcement Type', error.message)
     }
   };
-
   const handleClear = () => {
     // Clear form fields
     setTitle('');

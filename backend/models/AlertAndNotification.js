@@ -7,6 +7,14 @@ const AlertAndNotification = sequelize.define('AlertAndNotification', {
     type: DataTypes.STRING,
     allowNull: true
   },
+  readStatus: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  },
+  UserId: {
+    type: DataTypes.INTEGER,
+    allowNull:false
+  }
 });
 
 module.exports = AlertAndNotification;

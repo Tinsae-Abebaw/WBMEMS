@@ -94,7 +94,6 @@ router.get('/', async (req, res) => {
 router.get('/staff', async (req, res) => {
   try {
     const staff = await User.findAll();
-    console.log('the staff info', staff)
     const countsByCategory = {};
     staff.forEach(item => {
       countsByCategory[item.occupation] = countsByCategory[item.occupation] ? countsByCategory[item.occupation] + 1 : 1;

@@ -2,37 +2,32 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './EngineerAnnouncement.css';
 import { DateTime } from 'luxon';
-import Home from '../pages/Home/Home'
-import { useDispatch } from 'react-redux';
-import { decrementNotificationCount } from '../StateManagement/actions/notificationActions';
 import EngineerSidebar from './EngineerSidebar';
 
 const EngineerAnnouncement = () => {
   const [announcements, setAnnouncements] = useState([]);
-  const dispatch = useDispatch();
-  const handleIncrement = () => {
-    dispatch(decrementNotificationCount());
-    localStorage.removeItem('notificationCount');
-
-  };
+  const [user, setUser] = useState(() => {
+    const storedUserData = localStorage.getItem('userData');
+    return storedUserData ? JSON.parse(storedUserData) : null;
+});
   useEffect(() => {
     fetchAnnouncements();
     EraseNotifications();
   }, []);
 
- const EraseNotifications = async()=>{
-  try{
-    await axios.delete(`http://localhost:7000/api/alertAndNotification/notification?notificationType=${'Announcement'}`);
-  }catch(error){
-    console.error(error)
-  }
-
- }
-
+  const EraseNotifications = async () => {
+    try {
+      await axios.put('http://localhost:7000/api/alertAndNotification/notification', {
+        userId: user.id,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
 
   const fetchAnnouncements = async () => {
     try {
-      handleIncrement()
       const response = await axios.get('http://localhost:7000/api/announcements');
       if (response.status === 200) {
         const announcementsWithLocalTime = response.data.map(announcement => ({
