@@ -23,7 +23,6 @@ import './DashboardAdmin.css';
 const DashboardAdmin = () => {
   const [NotificationCount, setNotificationCount] = useState(null);
   const [user, setUser] = useState(() => {
-    // Retrieve user data from local storage on component mount
     const storedUserData = localStorage.getItem('userData');
     return storedUserData ? JSON.parse(storedUserData) : null;
 });
@@ -50,7 +49,9 @@ const DashboardAdmin = () => {
   };
   return (    
     <div className="main-classs-admin">
-      <div className="the-title-navigation-main-class-admin"><AdminstratorHome/><div className="title-and-date"><h2 className="the-navigation-title">Adminstrator Dashboard</h2></div></div>
+      <div className="the-title-navigation-class-admin"><AdminstratorHome/>
+      <div className="title-and-date-admin"><h2 className="the-navigation-title">
+        Adminstrator Dashboard</h2></div></div>
       <div className="three-sections-admin">
           <div className="analytical-data-and-charts"> 
             <div className="analytical-device-data"><AnalyticalData/></div> 

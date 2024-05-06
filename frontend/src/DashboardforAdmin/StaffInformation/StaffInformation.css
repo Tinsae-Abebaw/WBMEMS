@@ -1,0 +1,76 @@
+.individual-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(4, 31, 107, 0.068);
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: large;
+    font-family: -apple-system;
+    margin: 1px;
+    border-radius: 3px;
+}
+.occ{
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    font-family: -apple-system;
+    color: rgba(4, 31, 107, 0.842);
+    font-weight: bold;
+    width: 300px;
+    
+}
+.user-table{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 90px;
+}
+.image{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.staff-name{
+    color: rgba(49, 44, 44, 0.753);
+    font-weight: bold;
+    padding: 5px;
+}
+.staff-email{
+    color: rgba(4, 31, 107, 0.842);
+    font-weight: bold;
+   
+}
+.staff-occupation{
+    color: black;
+    font-weight: 500;
+}
+.user-main{
+    background-color: rgb(2, 26, 70);    height: 100px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 30px;
+    height: 70px;
+    font-size: small;
+    font-family: -apple-system;
+}
+.staff-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    width: 100%;
+    padding-bottom: 5px;
+    
+}

@@ -31,7 +31,7 @@ const PieDepartment = () => {
   
     const ctx = document.getElementById('myPieChart').getContext('2d');
     new Chart(ctx, {
-      type: 'doughnut',
+      type: 'bar',
       data: {
         labels: labels,
         datasets: [{
@@ -59,11 +59,9 @@ const PieDepartment = () => {
         }]
       },
       options: {
-        cutout: '60%',
+        barThickness: 15,
         plugins: {
-          customCanvasBackgroundColor: {
-            color: 'white',
-          },
+          
           tooltip: {
             callbacks: {
               label: function(context) {
@@ -73,30 +71,16 @@ const PieDepartment = () => {
               }
             }
           },
-          legend: {
-            display:true,
-            align: 'left',
-            position: 'bottom', 
-            labels: {
-              color:'black',
-              font:{
-                size: 20,
-                color: 'black',
-                weight: 'bold',
-                family: '-apple-system'
-              }
-            },
-            
-          },
+          
           title: {
             display:true,
             text: 'Quantity of devices in each Department',
             position:'bottom',
             color: 'black',
             font:{
-              weight: 'bold',
-              size: 22,
-              family: '-apple-system'
+              color: 'rgba(255, 255, 255)',
+              size: 25, // Adjust the font size as desired
+              weight: 'bold' // Adjust the font weight as desired
             }   
           }
         },   
@@ -107,7 +91,7 @@ const PieDepartment = () => {
   
   return (
     <div className='charter'>
-      <canvas className='pieDepartment' id="myPieChart" width="200" height="200"></canvas>
+      <canvas className='pieDepartment' id="myPieChart" width="260" height="260"></canvas>
     </div>
   );
 };

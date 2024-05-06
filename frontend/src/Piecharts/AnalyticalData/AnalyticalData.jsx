@@ -3,10 +3,14 @@ import React, { useEffect, useState } from "react";
 import './AnalyticalData.css';
 import { MdDevices } from "react-icons/md";
 import { FaSackDollar } from "react-icons/fa6";
-import { BsFillChatSquareQuoteFill } from "react-icons/bs";
 import { MdOutlinePendingActions } from "react-icons/md";
 import { FaRegCalendarCheck } from "react-icons/fa";
-import { BiSolidSave } from "react-icons/bi";
+import { GoComment } from "react-icons/go";
+import { BsClipboard2Check } from "react-icons/bs";
+import { AiOutlineFund } from "react-icons/ai";
+
+
+
 
 const AnalyticalData = () => {
     const [devicecounter, setDeviceCounter] = useState(null);
@@ -94,9 +98,9 @@ const AnalyticalData = () => {
     return ( 
         <div className="main-analysis">
             <div  className="analytical-icons1"><div className="icon-and-title"><MdDevices className="di1"/><h4>Total Equipments </h4></div><div className="real-number-data">{devicecounter}</div></div>
-            <div  className="analytical-icons2"><div className="icon-and-title"><FaSackDollar className="di1"/><h4>Spent Cost </h4></div><div className="dollar"><div  className="real-number-data">ETB {Costcounter}</div></div></div>
-            <div  className="analytical-icons3"><div className="icon-and-title"><BsFillChatSquareQuoteFill className="di1"/><h4>Total Requests </h4></div><div  className="real-number-data">{Requestcounter}</div></div>
-            <div  className="analytical-icons4"><div className="icon-and-title"><BiSolidSave className="di1"/><h4>Accepted Requests </h4></div><div  className="real-number-data">{RequestAcceptedcounter}</div></div>
+            <div  className="analytical-icons2"><div className="icon-and-title"><AiOutlineFund className="di1"/><h4>Spent Cost </h4></div><div className="dollar"><div className="etb">ETB</div> <div  className="real-number-data">{Costcounter}</div></div></div>
+            <div  className="analytical-icons3"><div className="icon-and-title"><GoComment className="di1"/><h4>Total Requests </h4></div><div  className="real-number-data">{Requestcounter}</div></div>
+            <div  className="analytical-icons4"><div className="icon-and-title"><BsClipboard2Check className="di1"/><h4>Accepted Requests </h4></div><div  className="real-number-data">{RequestAcceptedcounter}</div></div>
             <div  className="analytical-icons5"><div className="icon-and-title"><MdOutlinePendingActions className="di1"/><h4>Pending Requests </h4></div><div  className="real-number-data">{RequestPendingcounter}</div></div>
             <div  className="analytical-icons6"><div className="icon-and-title"><FaRegCalendarCheck className="di1"/><h4>Completed Requests </h4></div><div  className="real-number-data">{RequestCompletedcounter}</div></div>
         </div>

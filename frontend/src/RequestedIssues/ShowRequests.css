@@ -13,7 +13,7 @@
 }
 .sort-and-main-head{
   margin-top: 100px;
-  background: none;
+  width: 100%;
 }
 .body-item-head{
   background-color: rgba(0, 0, 0, 0.048);
@@ -45,7 +45,7 @@
   margin-left: 30px;
   font-size: medium;
   padding: 5px;
-  margin-left: 48px;
+  margin-left: 20px;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -55,11 +55,11 @@
   background-color: #ebebeb;
 }
 
-.sort-by-requestType-output {
+.sort-by-requestType-output-head {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
-  padding: 50px;
+  padding: 20px;
   padding-top: 0px;
   background: none;
   border-radius: 5px;

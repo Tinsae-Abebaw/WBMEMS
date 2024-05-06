@@ -249,7 +249,11 @@ router.post('/installation', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const requests = await Requests.findAll({
-      
+      where: {
+        requestType: {
+          [Op.or]: ['Installation', 'Calibration', 'Maintenance', 'Specification']
+        }
+      }
     });
     res.json(requests);
   } catch (err) {

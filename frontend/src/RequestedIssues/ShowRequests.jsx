@@ -48,8 +48,6 @@ const SortByRequestType = () => {
         try {
             const response = await axios.get('http://localhost:7000/api/requestOptions');
             setHandlerequest(response.data.reverse());
-            console.log('received:', response);
-            console.log(user.occupation);
         } catch (error) {
             console.error('error fetching the request', error);
         }
@@ -145,14 +143,12 @@ return (
     <div className="sort-and-main-head">
         <select className="sortt-by-request" required type='text' value={RequestType} onChange={handleRequestType}>
             <option value=""> All Requests</option>
-            <option value="procurement">Procurement</option>
             <option value="calibration">Calibration</option>
             <option value="maintenance">Maintenance</option>
             <option value="specification">Specification</option>
-            <option value="training">Training</option>
             <option value="installation">Installation</option>
         </select>
-        <div className="sort-by-requestType-output">
+        <div className="sort-by-requestType-output-head">
             {handleRequest.map((RequestByType) => (
                 <div className="request-whole-view-head" key={RequestByType.id}>
                         <div  onClick={() => getById(RequestByType.id)}>

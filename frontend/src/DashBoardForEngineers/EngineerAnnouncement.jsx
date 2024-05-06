@@ -46,8 +46,8 @@ const EngineerAnnouncement = () => {
 
   return (
     <div className='announcement-table'>
-      <div className='announcement-main'> <EngineerSidebar/> <h2 className='announcements-main-title'>Announcements</h2></div>
-      <div className='main-individual'>
+      <div className='announcement-main-engineer'> <EngineerSidebar/> <h2 className='announcements-main-title'>Announcements</h2></div>
+      <div className='main-individual-engineer'>
       {announcements.map((announcement) => (
         
           <div className='individual-announcement-display' key={announcement.id}>

@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   border-radius: 5px;
   column-gap: 7px;
 }
@@ -25,15 +24,13 @@ h4{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: medium;
+  font-size: small;
   font-family: -apple-system;
   border-radius: 5px;
   font-weight:200;
-  height: 70px;
   color: rgb(255, 255, 255);
   padding: 0px 5px 5px;
 }
-
 .analytical-icons1:hover,
 .analytical-icons2:hover,
 .analytical-icons3:hover,
@@ -44,6 +41,7 @@ h4{
 }
 .analytical-icons1{
   background-color: rgb(122, 63, 170);
+  background-image: url(back);
 }
 .analytical-icons2{
   background-color: rgb(68, 100, 189);
@@ -98,9 +96,14 @@ h4{
     }
   }
  .real-number-data{
-  font-size: large;
-  color: white;
-  font-family:'Franklin Gothic Medium';
+  font-size: xx-large;
+  color: rgb(214, 252, 0);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+ }
+ .etb{
+  font-size: small;
+  margin-right: 5px;
  }
  .di1{
   font-size: x-large;

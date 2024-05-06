@@ -29,7 +29,7 @@ const Staff = () => {
     const costs = pieChartData.map((data) => data.count);
     const ctx = document.getElementById('myPieChart6').getContext('2d');
     new Chart(ctx, {
-      type: 'doughnut',
+      type: 'bar',
       data: {
         labels: labels,
         datasets: [{
@@ -57,6 +57,7 @@ const Staff = () => {
       },
       options: {
         cutout: '60%',
+        barThickness: 20,
         plugins: {
             customCanvasBackgroundColor: {
               color: 'black',

@@ -55,6 +55,7 @@ const RequestType = () => {
       },
       options: {
         cutout: '60%',
+        barThickness: 15,
         plugins: {
           customCanvasBackgroundColor: {
             color: 'white',

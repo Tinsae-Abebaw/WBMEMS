@@ -1,0 +1,23 @@
+.announcement-main-engineer{
+    background-color: rgb(5, 28, 80);
+    display: flex;
+    align-items: center;
+    font-size: small;
+    font-family: -apple-system;
+    padding-left: 30px;
+    height: 70px;
+}
+.main-individual-engineer{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 330px)
+      );
+    row-gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: medium;
+    margin-top: 20px;
+    font-family: -apple-system;
+}

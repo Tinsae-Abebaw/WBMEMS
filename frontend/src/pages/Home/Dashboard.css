@@ -18,25 +18,24 @@ body{
     margin-left: 10px;
     border-radius:5px;
     font-family: -apple-system;
-    background-color: #0c0a9c;
 }
-.short-cuts{
+.short-cuts-head{
     display: flex;
     flex-direction: column;
     background: none;
     row-gap: 7px;
-    height: 420px;
 }
-.navigation-section1,
-.navigation-section2{
-    background-color: rgb(3, 22, 73);
+.navigation-section111,
+.navigation-section222{
     border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: white;
 }
 
 .admin-schedule-maintenance:hover,
 .admin-dashboard-device-overview:hover,
 .pending-requests:hover,
-.dashboard-schedule-maintenance:hover,
+.dashboard-schedule-madintenance:hover,
 .alert-and-notification-show:hover,
 .sorts:hover,
 .reports:hover{
@@ -51,37 +50,33 @@ body{
 .admin-dashboard-device-overview{
     display: flex;
     align-items: center;
-    color: rgb(83, 82, 82);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: medium;
-    width: 260px;
     border-radius: 10px;
     font-family:-apple-system;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    padding-left: 10px;
 }
 .sorts{
     display: flex;
-    background-color: rgb(15, 15, 0);
     align-items: center;
     color: white;
     font-size: x-large;
     justify-content: center;
+    background-color: red;
 }
-.main-dashboard-icons{
+.the-main-dashboard-icons{
     margin-right: 10px;
     font-size: medium;
     min-width: 12px;
     min-height:12px;
-    background-color: rgba(4, 31, 107, 0.842);
+    background-color: rgba(2, 83, 45, 0.842);
     color: white;
-    padding: 7px;
-    border-radius: 50%;
+    padding: 5px;
+    border-radius: 5px;
 }
 .dashboard-icons-bell{
     font-size: medium;
-    background-color: rgba(4, 31, 107, 0.842);
+    background-color: rgb(5, 34, 112);
     padding: 7px;
     color: white;
     border-radius: 50%;
@@ -89,23 +84,25 @@ body{
     min-width: 15px;
     min-height: 15px;
 }
-.main-my-link{
+.head-my-link{
     text-decoration: none;
+    color: white;
 }
 .three-sections{
   display: flex;
   align-items: start;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 90px;
+  height: 100%;
+  margin-top: 80px;
   column-gap: 7px;
   margin-right: 10px;
   margin-left: 10px;
 }
-.main-classs{
+.main-classs-head{
     display: flex;
     flex-direction: column;
-    background-color: #c9c7c7;
+    background-color: #d8d5d5;
 }
 .the-title-navigation-main-class{
     display: flex;
@@ -113,14 +110,13 @@ body{
     flex-direction: row;
     align-items: center;
     font-family:-apple-system;
-    background-color: rgb(2, 26, 70);
+    background-color: rgb(0, 0, 0);
     color: white;
     height: 70px;
     width: 100%;
     padding-left: 30px;
     margin-bottom: 30px;
-    box-shadow: 2px 1px 10px rgba(106, 4, 189, 0.342);
-    font-size: small;
+    font-size: x-small;
     z-index: 100;
 }
 
@@ -171,7 +167,6 @@ body{
     row-gap: 5px;
     justify-content: center;
     width: 100%;
-    
 }
 .first-section-doughnuts{
     display: flex;
@@ -236,24 +231,54 @@ body{
  }
  .head-dashboard-bottom-bar{
     height: 200px;
-    background-color: rgba(120, 122, 122, 0.445);
+    background-color: rgba(182, 184, 184, 0.445);
  }
- .tick{
+ .tick-tick{
     display: flex;
     font-size: x-large;
-    margin-left: 30px;
+    margin-left: 10px;
  }
- .admin-piechart-holder-status,
- .admin-piechart-holder-department,
- .admin-piechart-holder-department-cost{
+ .admin-piechart-holder-status111,
+ .admin-piechart-holder-department111,
+ .admin-piechart-holder-department-cost111{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.781);
     width: 100%;
  }
- .title-and-date{
+ .title-and-date-head{
     display: flex;
     align-items: center;
     width: 100%;
-    margin-right: 100px;
+    padding-right: 60px;
     justify-content: space-between;
+ }
+ .dashboard-input-and-picture{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 300px;
+ }
+ .dashboard-input{
+    border: none;
+    outline: none;
+    width: 500px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(223, 221, 221)
+ }
+ .input-and-search-icon{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-family: -apple-system;
+    padding-left: 10px;
+    color: black;
+    background-color: rgb(223, 221, 221);
+    border-radius: 15px;
+ }
+ .search-icon-dashboard{
+    cursor: pointer;
+    font-size: large;
+    margin-right: 10px;
  }

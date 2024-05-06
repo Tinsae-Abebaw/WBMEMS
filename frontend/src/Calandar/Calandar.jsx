@@ -131,7 +131,7 @@ const InventoryCalendar = () => {
               <p><strong>Model:</strong> {selectedEvent.model}</p>
               <p><strong>Department:</strong> {selectedEvent.department}</p>
             </div>
-            <span className="close" onClick={handleCloseModal}>&times;</span>
+            <span className="detail-close" onClick={handleCloseModal}>&times;</span>
 
           </div>
         </div>

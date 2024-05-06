@@ -57,7 +57,8 @@ import AdminTrainingManagement from './DashboardforAdmin/Training/Training.jsx';
 import DoctorTrainingManagement from './DashboardForDoctors/Training/Training.jsx';
 import EngineerTrainingManagement from './DashBoardForEngineers/Training/Training.jsx';
 import TrainingManagement from './Training/Training.jsx';
-import RadiologistDashboard from './Radiologist/Dashboard/dashboard.jsx';
+// import RadiologistDashboard from './Radiologist/Dashboard/dashboard.jsx';
+
 import RadiologistDeviceOverview from './Radiologist/deviceOverview/deviceOverview.jsx';
 import Request_options_Radiologist from './Radiologist/Requests/Request_options.jsx';
 import RadiologistProcurementForm from './Radiologist/Requests/Procurement/Procurement.jsx';
@@ -99,6 +100,10 @@ import LabSpecificationForm from './ClinicalLaboratory/Requests/Specification/Sp
 import Request_options_Lab from './ClinicalLaboratory/Requests/Request_options.jsx';
 import LabTrackChanges from './ClinicalLaboratory/TrackChanges/TrackChanges.jsx';
 import LabTrainingManagement from './ClinicalLaboratory/Training/Training.jsx';
+import AdminDisposedDevices from './DashboardforAdmin/disposedEquipments/DisposedDevices.jsx';
+import AdminStaffInformation from './DashboardforAdmin/StaffInformation/StaffInformation.jsx';
+import AdminCreateAccount from './DashboardforAdmin/CreateAccount/CreateAccount.jsx';
+import RadiologistDashboard from './Radiologist/Dashboard/Dashboard.jsx';
 
 
 
@@ -157,10 +162,13 @@ function App() {
           <Route path='/Report' element={<SortByReportType/>}/>
           <Route path='/AdminContract' element={<Contract/>}/>
           <Route path='/AdminstratorDashboard' element={<AdminstratorDashboard/>}/>
+          <Route path='/AdminDisposedDevices' element={<AdminDisposedDevices/>}/> 
           <Route path='/AdminDisplayAnnouncement' element={<AdminDisplayAnnouncement/>}/>
           <Route path='/AdminInventoryCalendar' element={<AdminInventoryCalendar/>}/>
           <Route path='/AdminDeviceOverview' element={<AdminDeviceOverview/>}/>
           <Route path='/RequestedAdmin' element={<RequestedAdmin/>}/>
+          <Route path='/AdminCreateAccount' element={<AdminCreateAccount/>}/>
+          <Route path='/AdminStaffInformation' element={<AdminStaffInformation/>}/>
           <Route path='/ViewAllRequestAdmin' element={<ViewAllRequest/>}/>
           <Route path='/AdminTrainingManagement' element={<AdminTrainingManagement/>}/>
           <Route path='/RadiologistDashboard' element={<RadiologistDashboard/>}/>

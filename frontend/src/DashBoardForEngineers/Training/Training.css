@@ -1,11 +1,10 @@
-.training-container {
-  padding: 20px;
+
+.main-training-management-table-for-engineerr{
+  width: 100%;
 }
-.training-table-container-engineerr{
+.training-table-container-for-engineer{
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #0056b3;
   width: 100%;
 }
 .training-table-container-engineerr{

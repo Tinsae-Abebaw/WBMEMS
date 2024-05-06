@@ -123,7 +123,7 @@ const defaultTrainingList = async () => {
 
 
   return (
-    <div className="training-container">
+    <div className="training-container-engineer">
       <div className="training-home-and-sort-title-eng">
         <EngineerSidebar />
         <h2>Training Management</h2>
@@ -145,8 +145,8 @@ const defaultTrainingList = async () => {
           />
         </div>
       </div>
-      <div className="training-table-container-engineerr">
-      <table className="main-training-management-table-engineerr">
+      <div className="training-table-container-for-engineer">
+      <table className="main-training-management-table-for-engineerr">
                 <thead className="the-thead">
                     <tr className="zanati">
                         <th className="training-management-thead-engineer">Training </th>

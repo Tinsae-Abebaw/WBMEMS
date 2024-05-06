@@ -50,13 +50,13 @@ const Piechart = () => {
         }]
       },
       options: {
-        cutout: '60%',
+        cutoutPercentage: 70,
         plugins: {
           tooltip: {
             callbacks: {
               label: function(context) {
                 let label = labels[context.dataIndex] + ': ';
-                label += counts[context.dataIndex] + ' Devices'; // Append number of items
+                label += counts[context.dataIndex] + ' Devices';  
                 return label;
               }
             }
@@ -97,7 +97,7 @@ const Piechart = () => {
   
   return (
     <div>
-      <canvas id="myPieChart2" width="190" height="190"></canvas>
+      <canvas id="myPieChart2" width="150" height="150"></canvas>
     </div>
   );
 };

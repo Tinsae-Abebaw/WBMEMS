@@ -29,7 +29,7 @@ const EquipmentByCost = () => {
     const costs = pieChartData.map((data) => data.cost);
     const ctx = document.getElementById('myPieChart5').getContext('2d');
     new Chart(ctx, {
-      type: 'doughnut',
+      type: 'pie',
       data: {
         labels: labels,
         datasets: [{
@@ -54,7 +54,7 @@ const EquipmentByCost = () => {
         }]
       },
       options: {
-        cutout: '60%',
+
         plugins: {
             customCanvasBackgroundColor: {
               color: 'black',
@@ -95,7 +95,7 @@ const EquipmentByCost = () => {
 
   return (
     <div className='charter'>
-      <canvas className='pieDepartment' id="myPieChart5" width="200" height="200"></canvas>
+      <canvas className='pieDepartment' id="myPieChart5" width="230" height="230"></canvas>
     </div>
   );
 };
