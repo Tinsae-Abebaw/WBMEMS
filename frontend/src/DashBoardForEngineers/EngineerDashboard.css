@@ -114,12 +114,14 @@ body{
  .the-title-navigation-main-class-engineer{
      display: flex;
      position: fixed;
+     top: 0;
+
      flex-direction: row;
      align-items: center;
      font-family:-apple-system;
      background-color: rgb(2, 26, 70);
      color: white;
-     height: 100px;
+     height: 70px;
      width: 100%;
      padding-left: 30px;
      margin-bottom: 30px;

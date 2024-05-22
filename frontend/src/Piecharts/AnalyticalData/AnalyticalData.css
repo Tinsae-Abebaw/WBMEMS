@@ -1,10 +1,25 @@
-.main-analysis{
+.main-analysis-s{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 5px;
   column-gap: 7px;
+  width: 100%;
+  height: 170px;
+ 
 }
+.div1{
+  display: flex;
+   width: 100%;
+   column-gap: 20px;
+}
+.div2{
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+}
+
 h4{
   font-size: medium;
   text-wrap: nowrap;
@@ -30,6 +45,7 @@ h4{
   font-weight:200;
   color: rgb(255, 255, 255);
   padding: 0px 5px 5px;
+  width: 100%;
 }
 .analytical-icons1:hover,
 .analytical-icons2:hover,
@@ -40,23 +56,28 @@ h4{
    cursor: pointer;
 }
 .analytical-icons1{
-  background-color: rgb(122, 63, 170);
-  background-image: url(back);
+ background-color: rgb(245, 245, 245);
+  color: black;
 }
 .analytical-icons2{
-  background-color: rgb(68, 100, 189);
+  background-color: rgb(245, 245, 245);
+  color: black;
 }
 .analytical-icons3{
-  background-color: rgb(201, 58, 58);
+  background-color: rgb(245, 245, 245);
+  color: black;
 }
 .analytical-icons4{
-  background-color: rgb(212, 60, 162);
+  background-color: rgb(245, 245, 245);
+  color: black;
 }
 .analytical-icons5{
-  background-color: rgb(32, 182, 95);
+  background-color: rgb(245, 245, 245);
+  color: black;
 }
 .analytical-icons6{
-  background-color: rgb(206, 51, 90);
+  background-color: rgb(245, 245, 245);
+  color: black;
 }
 
 @media (min-width: 500px) {
@@ -97,7 +118,7 @@ h4{
   }
  .real-number-data{
   font-size: xx-large;
-  color: rgb(214, 252, 0);
+  color: rgb(77, 82, 50);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
  }

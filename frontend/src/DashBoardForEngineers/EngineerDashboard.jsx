@@ -51,7 +51,7 @@ const EngineerDashboard = () => {
 
   return (    
     <div className="main-classs">
-      <div className="the-title-navigation-main-class"><EngineerSidebar/><div className="title-and-date"><h2 className="the-navigation-title">Engineer Dashboard</h2></div></div>
+      <div className="the-title-navigation-main-class-engineer"><EngineerSidebar/><div className="title-and-date"><h2 className="the-navigation-title">Engineer Dashboard</h2></div></div>
       <div className="three-sections">
           <div className="analytical-data-and-charts"> 
             <div className="analytical-device-data"><div className="doooooo"></div><AnalyticalData/></div> 
