@@ -423,10 +423,10 @@ router.get('/performanceData', async (req, res) => {
               const replacementCostInETB = report.replacementCostInETB || 1; // Prevent division by zero
               const complianceWithGuidelines = report.complianceWithGuidelines ? 1 : 0;
 
-              const weight1 = 1;
-              const weight2 = 1;
-              const weight3 = 1;
-              const weight4 = 1;
+              const weight1 = 0.25;
+              const weight2 = 0.25;
+              const weight3 = 0.25;
+              const weight4 = 0.25;
 
               const maxPerformance = weight1 + weight2 + weight3;
               let performance = ((weight1 / durationInHours) + 
@@ -434,7 +434,7 @@ router.get('/performanceData', async (req, res) => {
                                  (weight3 * complianceWithGuidelines) - 
                                  (weight4 * downtime)) / maxPerformance * 100;
 
-              // Clamp performance to be between 0 and 100
+              // Ensure performance is between 0 and 100
               performance = Math.max(0, Math.min(100, performance));
 
               const monthYear = `${reportDate.getFullYear()}-${reportDate.getMonth() + 1}`; // Create unique key for each month and year
@@ -464,6 +464,7 @@ router.get('/performanceData', async (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 
 module.exports = router;
