@@ -21,9 +21,10 @@ const PerformanceGraph = () => {
     const renderTooltipContent = (props) => {
         const { payload } = props;
         if (payload && payload.length) {
+            const date = new Date(payload[0].payload.time.split('-')[0], payload[0].payload.time.split('-')[1] - 1);
             return (
                 <div className="custom-tooltip">
-                    <p className="label">{`Time : ${payload[0].payload.time}`}</p>
+                    <p className="label">{`Time : ${date.toLocaleDateString('default', { month: 'long', year: 'numeric' })}`}</p>
                     <p className="label">{`Performance : ${payload[0].value.toFixed(2)}%`}</p>
                 </div>
             );
@@ -49,7 +50,7 @@ const PerformanceGraph = () => {
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="time" tickFormatter={formatXAxis} />
-                    <YAxis />
+                    <YAxis domain={[0, 100]} />
                     <Tooltip content={renderTooltipContent} />
                     <Legend />
                     <Line type="monotone" dataKey="performance" stroke="#8884d8" />
