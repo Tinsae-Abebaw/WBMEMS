@@ -6,6 +6,7 @@ import { FaRegCalendarCheck } from "react-icons/fa";
 import { GoComment } from "react-icons/go";
 import { BsClipboard2Check } from "react-icons/bs";
 import { AiOutlineFund } from "react-icons/ai";
+import PerformanceGraph from "../Performance/Performance";
 
 const AnalyticalData = () => {
     const [deviceCounter, setDeviceCounter] = useState(null);
@@ -157,6 +158,8 @@ const AnalyticalData = () => {
             console.error('Error fetching regulatory compliance:', error);
         }
     };
+
+    
 
     return (
         <div className="main-analysis-s">

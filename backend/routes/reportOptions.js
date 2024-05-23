@@ -405,6 +405,65 @@ router.get('/getById', async(req,res)=>{
   }
   
 })
+
+router.get('/performanceData', async (req, res) => {
+  try {
+      const reports = await AllReports.findAll();
+      const requests = await Requests.findAll();
+
+      // Group reports by month and year
+      const groupedPerformanceData = reports.reduce((acc, report) => {
+          const request = requests.find(req => req.id === report.id);
+          if (request) {
+              const requestDate = new Date(request.requestDate);
+              const reportDate = new Date(report.reportDate);
+              const downtime = (reportDate - requestDate) / (1000 * 60 * 60); // Convert milliseconds to hours
+
+              const durationInHours = report.durationInHours || 1; // Prevent division by zero
+              const replacementCostInETB = report.replacementCostInETB || 1; // Prevent division by zero
+              const complianceWithGuidelines = report.complianceWithGuidelines ? 1 : 0;
+
+              const weight1 = 1;
+              const weight2 = 1;
+              const weight3 = 1;
+              const weight4 = 1;
+
+              const maxPerformance = weight1 + weight2 + weight3;
+              const performance = ((weight1 / durationInHours) + 
+                                  (weight2 / replacementCostInETB) + 
+                                  (weight3 * complianceWithGuidelines) - 
+                                  (weight4 * downtime)) / maxPerformance * 100;
+
+              const monthYear = `${reportDate.getFullYear()}-${reportDate.getMonth() + 1}`; // Create unique key for each month and year
+
+              if (!acc[monthYear]) {
+                  acc[monthYear] = {
+                      performanceSum: 0,
+                      reportCount: 0,
+                  };
+              }
+
+              acc[monthYear].performanceSum += performance;
+              acc[monthYear].reportCount += 1;
+          }
+          return acc;
+      }, {});
+
+      // Calculate average performance for each month
+      const performanceData = Object.keys(groupedPerformanceData).map(monthYear => ({
+          time: monthYear,
+          performance: groupedPerformanceData[monthYear].performanceSum / groupedPerformanceData[monthYear].reportCount,
+      }));
+
+      res.json(performanceData);
+  } catch (error) {
+      console.error('Error fetching performance data:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+module.exports = router;
+
   
 
 

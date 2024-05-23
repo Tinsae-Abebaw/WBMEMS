@@ -23,6 +23,7 @@ import { useSelector } from 'react-redux';
 import { BsDisplayFill } from "react-icons/bs";
 
 import { IoIosSearch } from "react-icons/io";
+import PerformanceGraph from "../../Piecharts/Performance/Performance";
 
 
 const Dashboard = () => {
@@ -75,7 +76,8 @@ const Dashboard = () => {
         </div>
       <div className="three-sections">
           <div className="analytical-data-and-charts"> 
-            <div className="analytical-device-data"><div className="doooooo"></div><AnalyticalData/></div> 
+            <div className="analytical-device-data"><div className="doooooo"></div><AnalyticalData/></div>
+
             <div className="first-section-doughnuts">
               <div className="admin-piechart-holder-status111"><Piechart/></div>
               <div className="admin-piechart-holder-department-cost111"><EquipmentByCost/></div>
@@ -107,9 +109,10 @@ const Dashboard = () => {
       <div className="head-piechart-in-the-dashboardd">
           <div className="admin-piechart-holder-department111"><PieDepartment/></div> 
           <div className="admin-piechart-holder-department"><Staff/></div>           
-          <div className="admin-piechart-holder-department"><RequestType/></div> 
-        </div>
+          <div className="admin-piechart-holder-department"><RequestType/></div>
 
+        </div>
+        <div className="admin-piechart-holder-department"><PerformanceGraph/></div> 
         <div className="head-dashboard-bottom-bar">
 
         </div>
