@@ -160,6 +160,7 @@ const Inventory = () => {
                   <option value="Dietary/Nutrition">Dietary/Nutrition</option>
                   <option value="Administration/Management">Administration/Management</option>
                   <option value="Physical Therapy">Physical Therapy</option>
+                  <option value="Operation Theatre">Operation Theatre</option>
                   <option value="Psychiatry">Psychiatry</option>
               </select>
           </div>

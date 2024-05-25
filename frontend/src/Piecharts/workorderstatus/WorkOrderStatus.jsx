@@ -38,21 +38,23 @@ const WorkOrderStatus = () => {
           data: counts,
           backgroundColor: [
             'rgba(173, 1, 1)',
-            'rgba(173, 1, 1,0.9)',
-            'rgba(173, 1, 1,0.85)',
-            'rgba(173, 1, 1,0.6)',
+            'rgb(16, 112, 201)',
+            'rgb(10, 158, 77)',
+            'rgba(3, 59, 38,0.6)',
+            'rgb(167, 199, 24)'
           ],
           borderColor: [
             'rgba(255, 255, 255)',
-            'rgba(255, 255, 255)',
-            'rgba(255, 255, 255)',
-            'rgba(255, 255, 255)',
+            'rgb(16, 112, 201)',
+            'rgb(10, 158, 77)',
+            'rgba(3, 59, 38,0.6)',
+            'rgb(167, 199, 24)'
           ],
           borderWidth: 0.5
         }]
       },
       options: {
-        cutout: '60%',
+        cutout: '70%',
         plugins: {
           customCanvasBackgroundColor: {
             color: 'white',

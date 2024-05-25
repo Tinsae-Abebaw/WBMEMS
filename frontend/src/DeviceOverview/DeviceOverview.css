@@ -101,11 +101,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  align-items: center;
+  align-items: end;
   background-color: black;
   color: white;
   padding-left: 20px;
   height: 70px;
+  padding-bottom: 10px;
   font-size: x-small;
   font-family: -apple-system;
   background-color: rgb(2, 26, 70);

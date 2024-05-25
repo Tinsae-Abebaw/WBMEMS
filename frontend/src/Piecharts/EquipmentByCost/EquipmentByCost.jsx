@@ -29,23 +29,23 @@ const EquipmentByCost = () => {
     const costs = pieChartData.map((data) => data.cost);
     const ctx = document.getElementById('myPieChart5').getContext('2d');
     new Chart(ctx, {
-      type: 'pie',
+      type: 'doughnut',
       data: {
         labels: labels,
         datasets: [{
           data: costs,
           backgroundColor: [
             'rgb(3, 59, 38)',
-            'rgba(3, 59, 38,0.9)',
-            'rgba(3, 59, 38,0.8)',
-            'rgba(3, 59, 38,0.7)',
+            'rgb(167, 199, 24)',
+            'rgb(240, 14, 14)',
+            'rgb(214, 14, 240)',
             'rgba(3, 59, 38,0.6)',
           ],
           borderColor: [
             'rgb(255, 255, 255)',
-            'rgb(255, 255, 255)',
-            'rgb(255, 255, 255)',
-            'rgb(255, 255, 255)',
+            'rgb(167, 199, 24)',
+            'rgb(240, 14, 14)',
+            'rgb(214, 14, 240)',
             'rgb(255, 255, 255)',
             'rgb(255, 255, 255)',
             'rgb(255, 255, 255)'
@@ -54,7 +54,7 @@ const EquipmentByCost = () => {
         }]
       },
       options: {
-
+       cutout: '70%',
         plugins: {
             customCanvasBackgroundColor: {
               color: 'black',

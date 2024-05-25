@@ -38,19 +38,19 @@ const Piechart = () => {
         datasets: [{
           data: counts,
           backgroundColor: [
-            'rgb(4, 45, 92)',
-            'rgba(4, 45, 92, 0.8)',
+            'rgb(9, 56, 117)',
+            'rgb(9, 134, 65)',
           ],
           borderColor: [
-            'rgb(255, 255, 255)',
-            'rgb(255, 255, 255)',
+            'rgb(9, 56, 117)',
+            'rgb(9, 134, 65)',
           
           ],
           borderWidth: 0.5
         }]
       },
       options: {
-        cutoutPercentage: 70,
+        cutout: '70%',
         plugins: {
           tooltip: {
             callbacks: {

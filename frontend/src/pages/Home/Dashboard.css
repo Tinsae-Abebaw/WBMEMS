@@ -2,7 +2,20 @@ body{
    overflow-y:auto;
    overflow-x: auto;
 }
-
+.etb{
+    background-color: rgba(32, 185, 101, 0.986);
+    color: white;
+    padding-right: 7px;
+    padding-left: 7px;
+    border-radius: 5px;
+}
+.real-number-data{
+    font-size: medium;
+    color: rgb(77, 82, 50);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+   }
 .main-notification-count-display-admin{
     display: flex;
     align-items: center;
@@ -13,48 +26,73 @@ body{
     top: -3px;
     border: 2px solid white;
     font-size: small;
-    color: white;
+    color: rgb(245, 245, 245);
     background: none;
     margin-left: 10px;
     border-radius:5px;
     font-family: -apple-system;
+    background-color: rgb(13, 151, 94);
 }
 .short-cuts-head{
     display: flex;
     flex-direction: column;
     background: none;
     row-gap: 7px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 100%;
 }
-.navigation-section111,
-.navigation-section222{
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    color: white;
-}
+.dash-schedule-maintenance,
+.alert-and-notif-show,
+.dashboard-schedule-maint,
+.admin-shortcut-device-overview{
 
+    width:100%;
+ 
+}
+.nav-section1,
+.nav-section2{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-radius: 5px;
+    color: white;
+    width: max-content;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:rgb(240, 242, 243);
+}
 .admin-schedule-maintenance:hover,
-.admin-dashboard-device-overview:hover,
+.admin-shortcut-device-overview:hover,
 .pending-requests:hover,
-.dashboard-schedule-madintenance:hover,
-.alert-and-notification-show:hover,
+.dashboard-schedule-maint:hover,
+.alert-and-notif-show:hover,
 .sorts:hover,
 .reports:hover{
     transition: all 0.3s ; 
     cursor: pointer;
+    padding-right: 10px;
     background-color: #07612913;
+}
+.dashboard-schedule-maint{
+  padding-right: 20px;
 }
 .schedule-maintenance,
 .pending-requests,
-.alert-and-notification-show,
-.dashboard-schedule-maintenance,
-.admin-dashboard-device-overview{
+.alert-and-notif-show,
+.dash-schedule-maintenance,
+.dashboard-schedule-maint,
+.admin-shortcut-device-overview{
     display: flex;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: rgb(36, 33, 33);
     font-weight: bold;
     font-size: medium;
+    width: fit-content;
     border-radius: 10px;
     font-family:-apple-system;
+    margin-left: 20px;
 }
 .sorts{
     display: flex;
@@ -69,8 +107,8 @@ body{
     font-size: medium;
     min-width: 12px;
     min-height:12px;
-    background-color: rgba(2, 83, 45, 0.842);
-    color: white;
+    background-color: rgb(16, 158, 87);
+    color: rgb(235, 235, 235);
     padding: 5px;
     border-radius: 5px;
 }
@@ -91,32 +129,47 @@ body{
 .three-sections{
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content:space-between;
   flex-direction: row;
   height: 100%;
   margin-top: 80px;
   column-gap: 7px;
-  margin-right: 10px;
-  margin-left: 10px;
+  padding: 10px;
+}
+.paired{
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+}
+.nav-section3{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    row-gap: 10px;
+    margin-top: 5px;
 }
 .main-classs-head{
     display: flex;
     flex-direction: column;
     background-color: #d8d5d5;
 }
-.the-title-navigation-main-class{
+.holder{
+    display: flex;
+    align-items: center;
+}
+.the-title-nav-main-class{
     display: flex;
     position: fixed;
     flex-direction: row;
-    align-items: center;
+    align-items: end;
+    padding-bottom: 7px;
     font-family:-apple-system;
-    background-color: rgb(5, 15, 73);
+    background-color: rgb(15, 139, 52);
     color: white;
     height: 70px;
     width: 100%;
     padding-left: 30px;
     margin-bottom: 30px;
-    font-size: x-small;
     z-index: 100;
 }
 
@@ -145,6 +198,9 @@ body{
     padding: 20px;
    
 }
+.main-my-linkk{
+    background-color: rgb(122, 48, 48);
+}
 .dashboard-computer-and-title{
     display: flex;
     align-items: center;
@@ -165,8 +221,9 @@ body{
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
-    justify-content: center;
-    width: 100%;
+    justify-content: space;
+    height: fit-content;
+    width: 1000px;
 }
 .first-section-doughnuts{
     display: flex;
@@ -246,13 +303,7 @@ body{
     background-color: rgba(255, 255, 255, 0.781);
     width: 100%;
  }
- .title-and-date-head{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding-right: 60px;
-    justify-content: space-between;
- }
+ 
  .dashboard-input-and-picture{
     display: flex;
     align-items: center;
@@ -283,5 +334,74 @@ body{
     margin-right: 10px;
  }
  .the-navigation-title{
-    font-size: large;
+    font-size: medium;
  }
+ .analytical-icons11,
+.analytical-icons22,
+.analytical-icons33,
+.analytical-icons44,
+.analytical-icons55,
+.analytical-icons66{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  font-family: -apple-system;
+  border-radius: 5px;
+  font-weight:200;
+  width: 100%;
+  height: 60px;
+  color: rgb(61, 60, 60);
+  background-color: rgb(241, 241, 241);
+}
+.analytical-icons1:hover,
+.analytical-icons2:hover,
+.analytical-icons3:hover,
+.analytical-icons4:hover,
+.analytical-icons5:hover,
+.analytical-icons6:hover{
+   cursor: pointer;
+}
+.analytical-icons1{
+ background-color: rgb(245, 245, 245);
+  color: black;
+}
+.analytical-icons2{
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+.analytical-icons3{
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+.analytical-icons4{
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+.analytical-icons5{
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+.analytical-icons6{
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+.uf{
+  background-color: rgb(167, 14, 134);
+}
+.icon-and-title2{
+    display: flex;
+    align-items: left;
+    font-size: 12px;
+    justify-content: left;
+    column-gap: 5px;    
+    width: 100%;
+    padding-left: 15px;
+    color: rgb(48, 47, 47);
+   }
+   .ecg{
+    background-color: lightgreen;
+    padding: 3px;
+    border-radius: 50%;
+   }

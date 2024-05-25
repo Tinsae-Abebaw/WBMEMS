@@ -38,12 +38,12 @@ const PieDepartment = () => {
           data: counts,
           backgroundColor: [
             'rgb(133, 6, 6)',
-            'rgba(133, 6, 6,0.9)',
-            'rgba(133, 6, 6, 0.8)',
-            'rgba(133, 6, 6, 0.7)',
-            'rgba(133, 6, 6,0.5)',
+            'rgba(2, 92, 54)',
+            'rgb(167, 14, 134)',
+            'rgba(3, 59, 38)',
+            'rgb(9, 134, 65)',
             'rgba(133, 6, 6,0.2)',
-            'rgba(133, 6, 6)'
+            'rgb(240, 14, 14)'
  
           ],
           borderColor: [

@@ -3,10 +3,13 @@ import React, { useEffect, useState } from "react";
 import './AnalyticalData.css';
 import { MdDevices, MdOutlinePendingActions } from "react-icons/md";
 import { FaRegCalendarCheck } from "react-icons/fa";
-import { GoComment } from "react-icons/go";
-import { BsClipboard2Check } from "react-icons/bs";
-import { AiOutlineFund } from "react-icons/ai";
+import { CiWavePulse1 } from "react-icons/ci";
 import PerformanceGraph from "../Performance/Performance";
+import { CiTimer } from "react-icons/ci";
+import { MdOutlineTimerOff } from "react-icons/md";
+import { SlCheck } from "react-icons/sl";
+
+
 
 const AnalyticalData = () => {
     const [deviceCounter, setDeviceCounter] = useState(null);
@@ -163,55 +166,30 @@ const AnalyticalData = () => {
 
     return (
         <div className="main-analysis-s">
-            <div className="div1">
-                <div className="analytical-icons1">
-                    <div className="icon-and-title"><MdDevices className="di1" /><h4>Total Equipments</h4></div>
-                    <div className="real-number-data">{deviceCounter}</div>
-                </div>
-                <div className="analytical-icons2">
-                    <div className="icon-and-title"><AiOutlineFund className="di1" /><h4>Spent Cost</h4></div>
-                    <div className="dollar">
-                        <div className="etb">ETB</div>
-                        <div className="real-number-data">{costCounter}</div>
-                    </div>
-                </div>
-                <div className="analytical-icons3">
-                    <div className="icon-and-title"><GoComment className="di1" /><h4>Total Requests</h4></div>
-                    <div className="real-number-data">{requestCounter}</div>
-                </div>
-                <div className="analytical-icons4">
-                    <div className="icon-and-title"><BsClipboard2Check className="di1" /><h4>Accepted Requests</h4></div>
-                    <div className="real-number-data">{requestAcceptedCounter}</div>
-                </div>
-                <div className="analytical-icons5">
-                    <div className="icon-and-title"><MdOutlinePendingActions className="di1" /><h4>Pending Requests</h4></div>
-                    <div className="real-number-data">{requestPendingCounter}</div>
-                </div>
-                <div className="analytical-icons6">
-                    <div className="icon-and-title"><FaRegCalendarCheck className="di1" /><h4>Completed Requests</h4></div>
-                    <div className="real-number-data">{requestCompletedCounter}</div>
-                </div>
-                
-            </div>
             <div className="div2">
             <div className="analytical-icons7">
-                    <div className="icon-and-title"><FaRegCalendarCheck className="di1" /><h4>Mean Time To Repair (hours)</h4></div>
-                    <div className="real-number-data">{averageDuration ? averageDuration.toFixed(2) : 0}</div>
+                    <div className="icon-and-titlee"><CiTimer className="di1" />Mean Time To Repair</div>
+                    <div className="real-number-data">{averageDuration ? averageDuration.toFixed(2) : 0} <span className="hour-class">Hours</span> </div>
                 </div>
                 <div className="analytical-icons8">
-                    <div className="icon-and-title"><FaRegCalendarCheck className="di1" /><h4>Average Downtime (hours)</h4></div>
-                    <div className="real-number-data">{averageDowntime}</div>
+                    <div className="icon-and-titlee"><MdOutlineTimerOff  className="di1" />Average Downtime</div>
+                    <div className="real-number-data">{averageDowntime} <span className="hour-class">Hours</span></div>
                 </div>
                 <div className="analytical-icons9">
-                    <div className="icon-and-title"><FaRegCalendarCheck className="di1" /><h4>Replacement Rate</h4></div>
+                    <div className="icon-and-titlee"><CiWavePulse1 className="di1" />Replacement Rate</div>
                     <div className="real-number-data">{replacementRate}%</div>
                 </div>
                 <div className="analytical-icons10">
-                    <div className="icon-and-title"><FaRegCalendarCheck className="di1" /><h4>Regulatory Compliance</h4></div>
-                    <div className="real-number-data">{regulatoryCompliance}%</div>
+                    <div className="icon-and-titlee"><SlCheck  className="di1" />Regulatory Compliance</div>
+                    <div className="real-number-data">{regulatoryCompliance}% </div>
                 </div>
-                
+        
             </div>
+            <div className="div3">
+             <PerformanceGraph/>
+            </div>
+           
+            
         </div>
     );
 };

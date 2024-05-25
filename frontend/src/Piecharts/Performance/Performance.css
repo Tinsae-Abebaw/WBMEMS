@@ -1,0 +1,42 @@
+.performance-graph {
+    background-color: #f0efef; /* Background color */
+    padding: 20px;
+    border-radius: 8px;
+}
+.performace-graph{
+    background-color: rgb(16, 218, 93);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.performance-graph h3 {
+    font-size: 24px; /* Font size for the heading */
+    font-family: 'Arial, sans-serif'; /* Font family */
+    color: #eb3434; /* Font color */
+  
+}
+
+.recharts-wrapper {
+    font-family: 'Arial, sans-serif'; /* Font family for the chart */
+    font-size: 14px; /* Font size for the chart labels */
+    color: red;
+    
+}
+
+.custom-tooltip {
+    background-color: rgba(20, 151, 79, 0.842);
+    border: 1px solid #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.custom-tooltip .label {
+    font-family: 'Arial, sans-serif';
+    font-size: 14px;
+    color: #f5f5f5;
+}

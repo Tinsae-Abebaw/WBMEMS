@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import './Performance.css'; // Import the CSS file
 
 const PerformanceGraph = () => {
     const [performanceData, setPerformanceData] = useState([]);
@@ -40,18 +41,18 @@ const PerformanceGraph = () => {
 
     return (
         <div className="performance-graph">
-            <h3>Performance Over Time</h3>
-            <ResponsiveContainer width="100%" height={400}>
+            <p className='performace-graph'>Performance Monitoring</p>
+            <ResponsiveContainer width="100%" height={300}>
                 <LineChart
                     data={performanceData}
                     margin={{
-                        top: 20, right: 30, left: 20, bottom: 5,
+                        top: 20, right: 10, left: 10, bottom: 5,
                     }}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="time" tickFormatter={formatXAxis} />
-                    <YAxis domain={[0, 100]} />
-                    <Tooltip content={renderTooltipContent} />
+                    <CartesianGrid strokeDasharray="1 1" />
+                    <XAxis dataKey="time" tickFormatter={formatXAxis} tick={{ fontSize: 12, fontFamily: 'Arial, sans-serif', fill: '#333' }} />
+                    <YAxis domain={[0, 100]} tick={{ fontSize: 12, fontFamily: 'Arial, sans-serif', fill: '#333' }} />
+                    <Tooltip content={renderTooltipContent} wrapperStyle={{ fontFamily: 'Arial, sans-serif', fontSize: '14px' }} />
                     <Legend />
                     <Line type="monotone" dataKey="performance" stroke="#8884d8" />
                 </LineChart>
