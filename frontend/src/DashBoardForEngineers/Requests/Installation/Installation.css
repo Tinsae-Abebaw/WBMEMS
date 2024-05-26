@@ -4,18 +4,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     column-gap: 20px;
-    background: whitesmoke; /* Replace the URL with your desired rose-like pattern */
     padding-top: 50px;
     padding-bottom: 20px;
     padding-left: 50px;
     padding-right: 100px;
-    margin-top: 0px;
-    margin-right: 50px;
-    margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
     font-size: medium;
     font-family: -apple-system;
   }

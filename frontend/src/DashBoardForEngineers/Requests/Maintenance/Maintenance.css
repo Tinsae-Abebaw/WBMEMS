@@ -25,13 +25,13 @@
     align-items: center;
   }
   
-  .maintenance-title {
+  .maintenance-title-eng {
     display: flex;
     align-items: center;
     padding-left: 30px;
     color: white;
-    height: 100px;
-   background-color: black;
+    height: 70px;
+   background-color: rgb(4, 14, 77);
    font-size: medium;
    font-family: -apple-system;
   }

@@ -63,7 +63,7 @@ const DashboardAdmin = () => {
           </div>
         <div className="short-cuts">
         <Clock/>
-          <div className="navigation-section1">
+          <div className="navigation-section11">
             <Link to='/AdminDeviceOverview' className='main-my-link'><div className="admin-dashboard-device-overview"> <div className="bell-and-notification-count"><GrOverview className="dashboard-icons-bell"/>
             </div>Device Overview</div></Link>
 
@@ -75,7 +75,7 @@ const DashboardAdmin = () => {
 
             <Link className="main-my-link" to='/adminInventoryCalendar'> <div className="dashboard-schedule-maintenance"> <FaRegCalendarAlt className="main-dashboard-icons"/>Calendar</div></Link>
           </div>
-          <div className="navigation-section2">
+          <div className="navigation-section22">
             <div className="dashboard-schedule-maintenance"><MdOutlinePendingActions className="main-dashboard-icons"/>Pending Requests</div>
             <Link to ='/SortByDepartment' className='main-my-link'><div className="dashboard-schedule-maintenance"><FaSort className="main-dashboard-icons"/>Sort By Department</div></Link>
             <Link to='/Report' className="main-my-link"><div className="dashboard-schedule-maintenance"> <TbReportAnalytics className="main-dashboard-icons"/>Reports</div></Link>
@@ -87,10 +87,6 @@ const DashboardAdmin = () => {
           <div className="admin-piechart-holder-department"><WorkOrderStatus/></div>
           <div className="admin-piechart-holder-department"><Staff/></div>           
           <div className="admin-piechart-holder-department"><RequestType/></div> 
-        </div>
-
-        <div className="head-dashboard-bottom-bar">
-
         </div>
     </div>
    );

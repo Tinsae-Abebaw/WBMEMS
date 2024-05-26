@@ -113,7 +113,7 @@ const InstallationFormEngineer = () => {
         <h2 className="Installation-Page">Installation Form</h2>
       </div>
       <div className="installation-form">
-        <div className="individual">
+        <div className="individuale">
           <label>Equipment Name*</label>
           <select
             className="installation-input"
@@ -129,7 +129,7 @@ const InstallationFormEngineer = () => {
             ))}
           </select>
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Department*</label>
           <input
             className="installation-input"
@@ -138,7 +138,7 @@ const InstallationFormEngineer = () => {
             readOnly // Assuming department is not editable
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Model*</label>
           <input
             className="installation-input"
@@ -147,7 +147,7 @@ const InstallationFormEngineer = () => {
             readOnly // Assuming model is not editable
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Serial Number*</label>
           <input
             className="installation-input"
@@ -157,7 +157,7 @@ const InstallationFormEngineer = () => {
           />
         </div>
         
-        <div className="individual">
+        <div className="individuale">
           <label>Due Date*</label>
           <input
             className="installation-input"
@@ -167,7 +167,7 @@ const InstallationFormEngineer = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Specification</label>
           <textarea
             className="installation-description-input"
@@ -175,7 +175,7 @@ const InstallationFormEngineer = () => {
             onChange={(e) => setSpecification(e.target.value)}
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Description*</label>
           <textarea
             className="installation-description-input"

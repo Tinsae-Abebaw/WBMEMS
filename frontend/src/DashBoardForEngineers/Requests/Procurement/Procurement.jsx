@@ -154,7 +154,7 @@ const ProcurementFormEngineer = () => {
   return (
     
       <div className="main-procurement-requestt">
-        <div className="procurement-title"><EngineerSidebar /><h2 className="Procurement-Page">Procurement Request Form</h2></div>
+        <div className="procurement-title-eng"><div  className="hel"><EngineerSidebar /><h2 className="Procurement-Page">Procurement Request Form</h2></div></div>
         <div className="procurement-formmm">
         <div className="individuallll">
           <label className="procurement-form-labell">Equipment Name*</label>
@@ -232,8 +232,6 @@ const ProcurementFormEngineer = () => {
         </button>
     
       </div>
-    
-    
   );
 };
 

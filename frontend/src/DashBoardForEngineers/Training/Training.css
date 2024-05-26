@@ -106,5 +106,7 @@
 .training-management-table-fields-eng {
   padding: 5px;
   font-family: -apple-system;
+  border-right: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
   font-size: medium;
 }

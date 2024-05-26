@@ -39,7 +39,7 @@ const toggleSidebar = () => {
 
   return ( 
     <div className='dodo'>
-      <FaBars onClick={toggleSidebar}  className='doctor-hum-button'/>
+      <FaBars onClick={toggleSidebar}  className='doctor-hum-buttonn'/>
       <div className={`doctor-main-menu ${sidebarOpen ? 'doctor-open' : ''}`}>
         <div className='section-one'>
         <div onClick={toggleSidebar}><CiLogout className='close-button'/></div>

@@ -135,7 +135,7 @@ const TrainingFormEngineer = () => {
         <h2 className="Training-Page">Training Form</h2>
       </div>
       <div className="training-form">
-        <div className="individual">
+        <div className="individuale">
           <label>Equipment Name*</label>
           <select
             className="training-input"
@@ -152,7 +152,7 @@ const TrainingFormEngineer = () => {
           </select>
         </div>
         
-        <div className="individual">
+        <div className="individuale">
           <label>Department*</label>
           <input
             className="training-input"
@@ -161,7 +161,7 @@ const TrainingFormEngineer = () => {
             readOnly // Assuming department is not editable
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Model*</label>
           <input
             className="training-input"
@@ -171,7 +171,7 @@ const TrainingFormEngineer = () => {
             readOnly // Assuming equipment model is not editable
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Serial Number*</label>
           <input
             className="training-input"
@@ -180,7 +180,7 @@ const TrainingFormEngineer = () => {
             readOnly // Assuming serial number is not editable
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Trainee Type*</label>
           <select
             className="training-input"
@@ -192,7 +192,7 @@ const TrainingFormEngineer = () => {
             <option value="Technical">Technical Personnel Training</option>
           </select>
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Level*</label>
           <select
             className="training-input"
@@ -206,7 +206,7 @@ const TrainingFormEngineer = () => {
           </select>
         </div>
         
-        <div className="individual">
+        <div className="individuale">
           <label>Duration*</label>
           <input
             className="training-input"
@@ -215,7 +215,7 @@ const TrainingFormEngineer = () => {
             onChange={handleDuration}
           />
         </div>
-        <div className="individual">
+        <div className="individuale">
           <label>Description*</label>
           <textarea
             className="training-description-input"

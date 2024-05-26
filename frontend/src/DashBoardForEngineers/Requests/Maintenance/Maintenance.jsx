@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './maintenance.css'
 import EngineerSidebar from "../../EngineerSidebar";
 
 
@@ -107,12 +108,12 @@ const MaintenanceFormEngineer = () => {
 
   return (
     <div className="main-maintenance-requestt">
-      <div className="maintenance-title">
+      <div className="maintenance-title-eng">
         <EngineerSidebar />
         <h2 className="Maintenance-Page">Maintenance Request Form</h2>
       </div>
       <div className="maintenance-form-requestt">
-        <div className="individualll">
+        <div className="individuallll">
           <label>Equipment Name*</label>
           <select
             className="maintenance-inputt"
@@ -128,7 +129,7 @@ const MaintenanceFormEngineer = () => {
             ))}
           </select>
         </div>
-        <div className="individualll">
+        <div className="individuallll">
           <label>Serial Number</label>
           <input
             className="maintenance-inputt"
@@ -139,7 +140,7 @@ const MaintenanceFormEngineer = () => {
           />
         </div>
       
-        <div className="individualll">
+        <div className="individuallll">
           <label>Department*</label>
           <input
             className="maintenance-inputt"
@@ -149,7 +150,7 @@ const MaintenanceFormEngineer = () => {
             readOnly
           />
         </div>
-        <div className="individualll">
+        <div className="individuallll">
           <label>Equipment Model*</label>
           <input
             className="maintenance-inputt"
@@ -159,7 +160,7 @@ const MaintenanceFormEngineer = () => {
             readOnly
           />
         </div>
-        <div className="individualll">
+        <div className="individuallll">
           <label>Priority*</label>
           <select
             className="maintenance-inputt"
@@ -172,7 +173,7 @@ const MaintenanceFormEngineer = () => {
             <option value="High">High</option>
           </select>
         </div>
-        <div className="individualll">
+        <div className="individuallll">
           <label>Due Date*</label>
           <input
             className="maintenance-inputt"
@@ -182,7 +183,7 @@ const MaintenanceFormEngineer = () => {
             onChange={handleDueDate}
           />
         </div>
-        <div className="individualll">
+        <div className="individuallll">
           <label>Issue*</label>
           <textarea
             className="maintenance-description-inputt"

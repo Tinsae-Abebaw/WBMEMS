@@ -7,7 +7,7 @@
     color: white;
     width: fit-content;
     height:100vh;
-    z-index: 100;
+    z-index: 100000;
     top: 0;
     left:0;
     bottom: 0;
@@ -93,13 +93,12 @@
     text-decoration: none;
     color: white;
 }
-.doctor-hum-button{
+.doctor-hum-buttonn{
     background: none;
     display: flex;
     color: rgb(255, 255, 255);
     font-size: small;
     margin-right: 20px;
-    height: 100px;
     font-family: -apple-system;
 }
   .doctor-open {

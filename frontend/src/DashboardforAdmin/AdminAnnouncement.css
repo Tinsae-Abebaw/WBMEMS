@@ -52,11 +52,11 @@
     margin-left: 20px;
     font-size: small;
 }
-.main-individual-admin{
+.main-individual-adminn{
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
-        minmax(300px, 329px)
+        minmax(0px, 250px)
       );
     column-gap: 10px;
     row-gap: 7px;

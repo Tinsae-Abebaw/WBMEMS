@@ -52,8 +52,9 @@ const EngineerDashboard = () => {
   return (    
     <div className="main-classs">
       <div className="the-title-navigation-main-class-engineer">
-        <EngineerSidebar />
+        
         <div className="title-and-date">
+         <EngineerSidebar />
           <h2 className="the-navigation-title">Engineer Dashboard</h2>
         </div>
       </div>
@@ -77,7 +78,7 @@ const EngineerDashboard = () => {
         </div>
         <div className="short-cuts">
           <Clock />
-          <div className="navigation-section1">
+          <div className="navigation-section111">
             <Link to='/EngineerDeviceShow' className='main-my-link'>
               <div className="admin-dashboard-device-overview">
                 <div className="bell-and-notification-count">
@@ -110,12 +111,12 @@ const EngineerDashboard = () => {
               </div>
             </Link>
           </div>
+          <div>
+            <WorkOrderStatus />
+          </div>
         </div>
       </div>
       <div className="head-piechart-in-the-dashboardd">
-        <div className="admin-piechart-holder-department">
-          <WorkOrderStatus />
-        </div>
         <div className="admin-piechart-holder-department">
           <Staff />
         </div>
@@ -123,7 +124,6 @@ const EngineerDashboard = () => {
           <RequestType />
         </div>
       </div>
-      <div className="head-dashboard-bottom-bar"></div>
     </div>
   );
 };

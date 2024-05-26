@@ -25,9 +25,10 @@ body{
      row-gap: 7px;
      height: 420px;
  }
- .navigation-section1,
- .navigation-section2{
+ .navigation-section11,
+ .navigation-section22{
      border-radius: 5px;
+     background-color: rgb(237, 237, 238);
  }
  
  .admin-schedule-maintenance:hover,
@@ -95,9 +96,8 @@ body{
    flex-direction: row;
    margin-top: 90px;
    column-gap: 7px;
-   width: fit-content;
-   margin-right: 10px;
-   margin-left: 10px;
+   padding-right: 10px;
+   padding-left: 10px;
  }
  .main-classs-admin{
      display: flex;

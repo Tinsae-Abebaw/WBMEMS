@@ -54,7 +54,7 @@ const AdminDisplayAnnouncement = () => {
   return (
     <div className='announcement-table'>
       <div className='announcement-main-head'> <AdminstratorHome/> <h2 className='announcements-main-title'>Announcements</h2></div>
-      <div className='main-individual-admin'>
+      <div className='main-individual-adminn'>
       {announcements.map((announcement) => (
         <div className='individual-announcement-display-admin' key={announcement.id}>
           <h3 className='announcement-heading'>{announcement.title} <p className='announcememnt-moment'>{announcement.announcement_time}</p><BsCheckAll className='tick-seen'/></h3>

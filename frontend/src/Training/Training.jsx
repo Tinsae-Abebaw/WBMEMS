@@ -177,12 +177,12 @@ const defaultTrainingList = async () => {
                 <tbody>
                     {filteredTraining.map((training) => (
                         <tr key={training.id}>
-                            <td className="training-management-table-fields">{training.trainingName}</td>
-                            <td className="training-management-table-fields">{training.equipmentName}</td>
-                            <td className="training-management-table-fields">{training.location}</td>
-                            <td className="training-management-table-fields">{training.department}</td>
-                            <td className="training-management-table-fields">{training.length}</td>
-                            <td className="training-management-table-fields">{new Date(training.startDate).toLocaleString('en-US', {
+                            <td className="training-management-table-fieldss">{training.trainingName}</td>
+                            <td className="training-management-table-fieldss">{training.equipmentName}</td>
+                            <td className="training-management-table-fieldss">{training.location}</td>
+                            <td className="training-management-table-fieldss">{training.department}</td>
+                            <td className="training-management-table-fieldss">{training.length}</td>
+                            <td className="training-management-table-fieldss">{new Date(training.startDate).toLocaleString('en-US', {
                                                   year: 'numeric',
                                                   month: '2-digit',
                                                   day: '2-digit',
@@ -193,7 +193,7 @@ const defaultTrainingList = async () => {
                             })}
                             
                             </td>
-                            <td className="training-management-table-fields">{new Date(training.endDate).toLocaleString('en-US', {
+                            <td className="training-management-table-fieldss">{new Date(training.endDate).toLocaleString('en-US', {
                                                   year: 'numeric',
                                                   month: '2-digit',
                                                   day: '2-digit',
@@ -206,9 +206,9 @@ const defaultTrainingList = async () => {
                             
                             
                             </td>
-                            <td className="training-management-table-fields">{training.trainingType}</td>
-                            <td className="training-management-table-fields">{training.trainingLevel}</td>
-                            <td className="training-management-table-fields"><button className="training-detail-button" onClick={() => handleDetailClick(training)}>Detail</button></td>
+                            <td className="training-management-table-fieldss">{training.trainingType}</td>
+                            <td className="training-management-table-fieldss">{training.trainingLevel}</td>
+                            <td className="training-management-table-fieldss"><button className="training-detail-button" onClick={() => handleDetailClick(training)}>Detail</button></td>
                         </tr>
                     ))}
                 </tbody>

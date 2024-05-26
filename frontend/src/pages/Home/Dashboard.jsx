@@ -152,7 +152,7 @@ const FetchTotalNumberOfRequests = async () => {
         </div>
       <div className="three-sections">
           <div className="analytical-data-and-charts"> 
-            <div className="analytical-device-data"><div className="doooooo"></div><AnalyticalData/></div>
+            <div className="analytical-device-data"><AnalyticalData/></div>
 
             <div className="first-section-doughnuts">
               <div className="admin-piechart-holder-status111"><Piechart/></div>
@@ -223,9 +223,6 @@ const FetchTotalNumberOfRequests = async () => {
 
         </div>
         <div className="admin-piechart-holder-department"><PerformanceGraph/></div> 
-        <div className="head-dashboard-bottom-bar">
-
-        </div>
     </div>
    );
 }
