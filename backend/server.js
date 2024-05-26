@@ -12,6 +12,8 @@ const notificationRoutes = require('./routes/alertAndNotification');
 const requestOptions= require('./routes/requestOptions');
 const reportOptions= require('./routes/reportOptions');
 const contract= require('./routes/Contract');
+const Manuals = require('./models/Manuals'); // Import Manuals model
+const fs = require('fs'); // Import fs module
 // Middleware
 app.use(express.json()); // Body parser middleware
 app.use(cors());
@@ -25,9 +27,12 @@ app.use('/api/requestOptions', requestOptions);
 app.use('/api/alertAndNotification', notificationRoutes);
 app.use('/api/reportOptions',reportOptions );
 app.use('/api/contract',contract);
-// Serve static files (like profile pictures)
-const uploadsDirectory = '/uploads';
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Serve static files (like profile pictures and manuals)
+const uploadsDirectory = path.join(__dirname, 'uploads');
+app.use('/uploads', express.static(uploadsDirectory));
+
+
 
 // Start server
 const PORT = process.env.PORT || 7000;

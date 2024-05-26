@@ -2,7 +2,8 @@
 const express = require('express');
 const router = express.Router();
 const Inventorys = require('../models/Inventory');
-const multer = require('multer');
+const Manuals = require('../models/Manuals');
+const multer  = require('multer');
 const path = require('path');
 
 // Multer configuration
@@ -18,23 +19,81 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // POST create a new user with image upload
-router.post('/', upload.single('equipmentImage'), async (req, res) => {
-  const {  equipmentName, model, serialNumber, equipmentDepartment,preventiveMaintenancePerAnnual,
+router.post('/', upload.fields([
+  { name: 'equipmentImage', maxCount: 1 },
+  { name: 'userManual', maxCount: 1 },
+  { name: 'serviceManual', maxCount: 1 }
+]), async (req, res) => {
+  const {
+    equipmentName, model, serialNumber, equipmentDepartment, preventiveMaintenancePerAnnual,
     equipmentDescription, maintenanceHistory, manufacturer,
-    countryOfOrigin, warrantyExpiryDate, status } = req.body;
-  const equipmentImage = req.file ? req.file.path : null; // Store image path if uploaded, otherwise null
+    countryOfOrigin, warrantyExpiryDate, status
+  } = req.body;
+  
+  const equipmentImage = req.files['equipmentImage'] ? req.files['equipmentImage'][0].path : null;
+  const userManual = req.files['userManual'] ? req.files['userManual'][0].path : null;
+  const serviceManual = req.files['serviceManual'] ? req.files['serviceManual'][0].path : null;
 
   try {
-    const newDevice = await Inventorys.create({ equipmentName, model, serialNumber, equipmentDepartment,
-        equipmentDescription, maintenanceHistory, manufacturer,preventiveMaintenancePerAnnual,
-        countryOfOrigin, warrantyExpiryDate,equipmentImage, status});
-    res.json(newDevice);
+    const newDevice = await Inventorys.create({
+      equipmentName, model, serialNumber, equipmentDepartment,
+      equipmentDescription, maintenanceHistory, manufacturer, preventiveMaintenancePerAnnual,
+      countryOfOrigin, warrantyExpiryDate, equipmentImage, status
+    });
+
+    const newManuals = await Manuals.create({
+      serialNumber, userManual, serviceManual
+    });
+
+    res.json({ newDevice, newManuals });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
   }
 });
+router.get('/manuals', async (req, res) => {
+  const { serialNumber } = req.query; // Use req.query to get query parameters
 
+  try {
+    // Find manuals by serial number
+    const manuals = await Manuals.findOne({ where: { serialNumber } });
+
+    if (manuals) {
+      // If manuals found, send them in the response
+      res.json(manuals);
+    } else {
+      // If no manuals found for the serial number, send null values for both manuals
+      res.json({ userManual: null, serviceManual: null });
+    }
+  } catch (error) {
+    console.error('Error fetching manuals:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// GET route for downloading user manual
+router.get('/userManuals/download/uploads/:userManuals', (req, res) => {
+  const { userManuals} = req.params;
+  const filePath = path.join(__dirname, '..', 'uploads', userManuals); // Adjust the path to your uploads folder
+  res.download(filePath, (err) => {
+    if (err) {
+      console.error('Error downloading user manual:', err);
+      res.status(500).send('Error downloading file');
+    }
+  });
+});
+
+// GET route for downloading service manual
+router.get('/serviceManuals/download/uploads/:serviceManuals', (req, res) => {
+  const { serviceManuals } = req.params;
+  const filePath = path.join(__dirname, '..', 'uploads', serviceManuals); // Adjust the path to your uploads folder
+  res.download(filePath, (err) => {
+    if (err) {
+      console.error('Error downloading service manual:', err);
+      res.status(500).send('Error downloading file');
+    }
+  });
+});
 
 // GET all devices
 router.get('/', async (req, res) => {

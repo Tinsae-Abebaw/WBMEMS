@@ -5,3 +5,5 @@ backend/uploads/equipmentImage-1710954174577.png
 backend/uploads/equipmentImage-1710955815221.jpg
 backend/uploads/equipmentImage-1710957223764.avif
 backend/uploads/equipmentImage-1710957417300.webp
+*.jpg
+*.pdf
