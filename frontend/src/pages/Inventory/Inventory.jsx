@@ -94,8 +94,10 @@ const Inventory = () => {
     <div className="">
       <div className="main-inventoryy">
         <div className="inventory-titlee">
+          <div className="invent">
           <Home />
           <h2 className="Inventory-Page">Inventory Page</h2>
+          </div>
         </div>
         <div className="sub-inventoryy">
           <div className="inventory-individual">

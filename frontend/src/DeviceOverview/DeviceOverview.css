@@ -6,6 +6,14 @@
   border-radius: 7px;
   background-color: aliceblue;
 }
+.manual-link{
+   text-decoration: none;
+   background-color: rgb(0, 128, 85);
+   color: white;
+   padding-right: 15px;
+   padding-left: 15px;
+   border-radius: 5px;
+}
 .individual-device:hover {
   transition: all 0.3s;
   cursor: pointer;
@@ -106,10 +114,9 @@
   color: white;
   padding-left: 20px;
   height: 70px;
-  padding-bottom: 10px;
-  font-size: x-small;
+  font-size: 12px;
   font-family: -apple-system;
-  background-color: rgb(2, 26, 70);
+  background-color: rgb(15, 139, 52);
   z-index: 100;
 }
 .de-device-description {
@@ -121,7 +128,7 @@
 }
 
 .dispose-button-head {
-  background-color: rgb(2, 26, 70);
+  background-color: rgb(15, 139, 52);
   color: white;
   width: 100%;
   border-bottom-left-radius: 7px;
@@ -136,8 +143,8 @@
   color: white;
 }
 .dispose-button-head:hover {
-  transition: all 0.3s;
-  color: red;
+  transition: all 0.5s;
+  background-color: rgb(226, 14, 14);
 }
 .grand-device {
   flex-direction: column;
@@ -228,7 +235,10 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .detail-title {
+  display: flex;
+  align-items: center;
   color: black;
+  justify-content: space-between;
   font-weight: bold;
   padding: 3px;
   font-family: -apple-system;
@@ -236,6 +246,7 @@
   background-color: #ece8e8;
 }
 .device-manufacturer {
+
   color: black;
   font-weight: 500;
   font-size: large;
@@ -340,4 +351,10 @@
   background-color: rgb(67, 243, 120);
   padding: 2px;
   border-radius: 50%;
+}
+.export-document-button{
+  background-color: rgb(5, 107, 82);
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
 }

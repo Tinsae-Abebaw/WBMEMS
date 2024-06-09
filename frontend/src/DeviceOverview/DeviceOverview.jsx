@@ -170,8 +170,9 @@ const DeviceOverview = () => {
       )}
       <div className='grand-device'>
         <div className='device-main-head'>
-          <div><Home /></div>
+          <div className='invent'><Home />
           <h2>Equipment Information</h2>
+          </div>
         </div>
         <div className='device-table'>
           {deviceOverview.map((device) => (
@@ -245,8 +246,9 @@ const DeviceOverview = () => {
                 <p className='device-manufacturer'><p className='detail-title'>Status</p>{detailed.status}</p>
                 {detailed.userManual ? (
                       <p className='device-manufacturer'>
-                        <p className='detail-title'>User Manual</p>
-                        <a href={`http://localhost:7000/${detailed.userManual}`} target="_blank" rel="noopener noreferrer">Open</a>
+                        <p className='detail-title'>User Manual <a href={`http://localhost:7000/${detailed.userManual}`} target="_blank" rel="noopener noreferrer"
+                        className='manual-link'>Open</a></p>
+                        
                       </p>
                     ) : (
                       <p className='device-manufacturer'>
@@ -257,8 +259,8 @@ const DeviceOverview = () => {
 
                     {detailed.serviceManual ? (
                       <p className='device-manufacturer'>
-                        <p className='detail-title'>Service Manual</p>
-                        <a href={`http://localhost:7000/${detailed.serviceManual}`} target="_blank" rel="noopener noreferrer">Open</a>
+                        <p className='detail-title'>Service Manual <a href={`http://localhost:7000/${detailed.serviceManual}`} target="_blank" rel="noopener noreferrer"
+                        className='manual-link'>Open</a></p>     
                       </p>
                     ) : (
                       <p className='device-manufacturer'>

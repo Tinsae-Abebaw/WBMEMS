@@ -3,14 +3,14 @@
     flex-direction: column;
     justify-content: center;
 }
-.disposed-device-main{
+.disposed-devicemain{
     display: flex;
-    align-items: center;
+    align-items: end;
     color:white;
-    background-color: rgb(2, 26, 70);
+    background-color: rgb(15, 139, 52);
     padding-left: 30px;
     height: 70px;
-    font-size: small;
+    font-size: 12px;
     font-family: -apple-system;
 }
 .disposed-individual-device{

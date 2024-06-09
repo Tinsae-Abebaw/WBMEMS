@@ -135,9 +135,9 @@ const defaultTrainingList = async () => {
 
   return (
     <div className="training-containerr">
-      <div className="training-home-and-sort-title-head">
-        <Home />
-        <h2>Training Management</h2>
+      <div className="training-home-and-sort-titlehead">
+       <div className="invent"> <Home />
+        <h2>Training Management</h2></div>
       </div>
       <div className="training-search-and-export">
         <div className="training-export-buttons">

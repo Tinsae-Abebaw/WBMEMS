@@ -20,10 +20,11 @@
 }
 .home-container{
     display: flex;
-    align-items: center;
-    background-color: rgb(2, 26, 70);    padding-left: 20px;
+    align-items: end;
+    background-color: rgb(15, 139, 52);    
+    padding-left: 20px;
     height: 70px;
-    font-size: small;
+    font-size: 12px;
     padding-left: 30px;
     font-family: -apple-system;
 }
@@ -66,14 +67,14 @@
     flex-direction: column;
 }
 .clear-announcement-button{
-    background-color: rgb(2, 26, 70);    color: white;
+    background-color: rgb(15, 139, 52);;    color: white;
     font-size: medium;
     font-family: -apple-system;
     width: 100px;
     border-radius: 5px;
 }
 .announcement-button{
-    background-color: rgb(2, 26, 70);    width: 100px;
+    background-color: rgb(15, 139, 52);    width: 100px;
     font-size: medium;
     font-family: -apple-system;
     margin-right: 20px;
@@ -81,7 +82,7 @@
 }
 .clear-announcement-button:hover,
 .announcement-button:hover{
-    background-color: rgba(2, 26, 70, 0.938);}
+    background-color: rgb(8, 92, 33);;}
 .the-two-buttons{
     display: flex;
     align-items: center;

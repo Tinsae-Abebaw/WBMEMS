@@ -61,7 +61,7 @@ const AnnouncementForm = ({ setNotificationCount }) => {
 
   return (
     <div className='ma'>
-      <div className='home-container'><Home/><h2 className='announcement-title'>Make Announcement</h2></div>
+      <div className='home-container'><div className='invent'><Home/><h2 className='announcement-title'>Make Announcement</h2></div></div>
       <div className='main-announcement'>
         <div className='under-title'>
           <label className="title-label">Announcement Title</label>

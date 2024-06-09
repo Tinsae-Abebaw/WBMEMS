@@ -34,7 +34,7 @@ const StaffInformation = () => {
 
   return ( 
   <div>
-   <div  className='user-main'><Home/><h2>Staff Information</h2></div> 
+   <div  className='usermain'><div className='invent'><Home/><h2>Staff Information</h2></div></div> 
       <div className='user-table'>
         {staffInformation.map((user) => (
           <div className='individual-user' key={user.id}>

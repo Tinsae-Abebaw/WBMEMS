@@ -101,7 +101,7 @@ const CreateAccount = () => {
 
   return (
     <div className="createAccount-section">
-      <div className="create-account-title-icon"><Home/> <h2 className="account-title-section">Create Account Form</h2></div>
+      <div className="create-account-titleicon"><div className="invent"><Home/> <h2 className="account-title-section">Create Account Form</h2></div></div>
       <div className="main-create-account">
       <div className="sub-create-account">
        <div className="create-label-and-input">
@@ -182,7 +182,7 @@ const CreateAccount = () => {
                 {showPassword ? <RxEyeOpen  onClick={handleTogglePasswordVisibility} /> : <TbEyeClosed onClick={handleTogglePasswordVisibility} />}
              </div>
         </div >
-            <label className="descriptions-for-password">
+            <label className="descriptions-forpassword">
                 <p className="password-description-title">Password should contain:</p>
                 <p className="password-description">- at least one letter</p>
                 <p className="password-description">- at least one number</p>
@@ -209,7 +209,7 @@ const CreateAccount = () => {
             onChange={handleProfilePicture}
             />
         </div>
-        <button onClick={handlePost} className="create-account-buttonn" >Create Account</button>
+        <button onClick={handlePost} className="create-accountbuttonn" >Create Account</button>
       </div>
       </div>
     </div>

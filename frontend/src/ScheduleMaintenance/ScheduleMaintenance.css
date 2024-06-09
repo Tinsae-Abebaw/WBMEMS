@@ -12,19 +12,17 @@
   
   .schedule-Maintenance-Page {
     display: flex;
-    align-items: center;
-    font-size: largr;
     font-family: -apple-system;
   }
   
   .schedule-maintenance-titlee {
     display: flex;
-    align-items: center;
+    align-items: end;
     padding-left: 30px;
     color: white;
     height: 70px;
-    background-color: rgb(2, 26, 70); 
-    font-size: smaller;
+    background-color: rgb(15, 139, 52);
+    font-size: 12px;
     font-family: -apple-system;
   }
   
@@ -73,7 +71,7 @@
     height: 30px;
     width: 150px;
     color: white;
-    background-color: rgba(0, 99, 58, 0.897); 
+    background-color: rgb(15, 139, 52);
     border-radius: 5px;
     font-size: medium;
     font-family: -apple-system;

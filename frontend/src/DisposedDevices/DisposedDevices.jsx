@@ -40,7 +40,7 @@ useEffect(()=>{
     };
     return ( 
         <div className="disposed-grand-device">
-            <div className="disposed-device-main"><Home/><h2>Disposed Devices</h2></div>
+            <div className="disposed-devicemain"><div className="invent"><Home/><h2>Disposed Devices</h2></div></div>
             <div className="disposed-main-grid">
             {disposedDevices.map((deviceDisposed) =>(
                     <div className="disposed-individual-device" key={deviceDisposed.id}>

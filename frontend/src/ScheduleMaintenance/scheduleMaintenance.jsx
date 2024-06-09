@@ -92,8 +92,10 @@ const ScheduleMaintenanceForm = () => {
   return (
     <div className="schedule-maintenance-request">
       <div className="schedule-maintenance-titlee">
+       <div className="invent">
         <Home />
-        <h2 className="schedule-Maintenance-Page">Work Scheduler Form</h2>
+          <h2 className="schedule-Maintenance-Page">Work Scheduler Form</h2>
+       </div>
       </div>
       <div className="schedule-maintenance-form-requestt">
         <div className="schedule-individual">

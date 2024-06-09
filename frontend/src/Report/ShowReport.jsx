@@ -105,7 +105,7 @@ const SortByReportType = () => {
 
     return (
         <div className="sort-by-reportType-main-report">
-            <div className="home-and-sort-title-report"><Home /><h2>Task Report</h2></div>
+            <div className="home-and-sort-title-report"><div className="invent"><Home /><h2>Task Report</h2></div></div>
             <div className="select-and-body-report">
                 <select className="sort-by-reportType-input-report" required type='text' value={reportType} onChange={handleReportType}>
                     <option value=""> All Reports</option>

@@ -139,7 +139,7 @@ const SortByRequestType = () => {
 return (
 <div className='show-request-body-head'>
     <div className="sort-by-requestType-main">
-    <div className="home-and-sort-title-request-head"><Home /><h2>Request</h2></div>
+    <div className="home-and-sort-title-request-head"><div className="invent"><Home /><h2>Requests</h2></div></div>
     <div className="sort-and-main-head">
         <select className="sortt-by-request" required type='text' value={RequestType} onChange={handleRequestType}>
             <option value=""> All Requests</option>
@@ -184,7 +184,7 @@ return (
                         </button>
                         <button
                             onClick={()=>getByIdReport(RequestByType.id)}
-                            className={(RequestByType.status === 'Completed')&&(RequestByType.requestType !== 'procurement')&&(RequestByType.requestType !== 'training') ? 'viewReportButton' : 'deleteButton'}
+                            className={(RequestByType.status === 'Completed')&&(RequestByType.requestType !== 'procurement')&&(RequestByType.requestType !== 'training') ? 'viewReport-Button' : 'deleteButton'}
                         >
                             View Report
                         </button>
@@ -192,7 +192,7 @@ return (
                         
                         {users.length > 0 && RequestByType.status==='Accepted'&&(RequestByType.requestType !== 'procurement')&&(RequestByType.requestType !== 'training')&& (
                             <select 
-                                className="user-selecter"
+                                className="userselecter"
                                 onChange={(e) => handleUserSelect(RequestByType.id, e.target.value)}
                             >
                                 <option value="None" selected>Select Enginner</option>
